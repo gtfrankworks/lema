@@ -3,25 +3,31 @@ name: Deploy VuePress site to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # 根据你的默认分支调整
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 20
 
-      - run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-      - run: npm run docs:build
+      - name: Build VuePress site
+        run: npm run docs:build
 
-      - uses: peaceiris/actions-gh-pages@v4
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/.vuepress/dist
           force_orphan: true
+          allow_empty_commit: true
