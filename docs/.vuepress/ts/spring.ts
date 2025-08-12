@@ -15,6 +15,7 @@ export default defineNoteConfig({
       items: [
         //{ text: '介绍', link: 'intro', icon: 'ph:info-light' }, 
         { text: 'Spring框架基础知识', link: 'spring-01' },
+        { text: 'Spring框架AOP详解', link: 'spring-2' },
       ],
     },
   ]
