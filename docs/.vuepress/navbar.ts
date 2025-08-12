@@ -4,6 +4,7 @@
  * Navbar 配置文件，它在 `.vuepress/plume.config.ts` 中被导入。
  */
 
+import { icon } from 'mermaid/dist/rendering-util/rendering-elements/shapes/icon.js'
 import { defineNavbarConfig } from 'vuepress-theme-plume'
 
 export default defineNavbarConfig([
@@ -21,6 +22,20 @@ export default defineNavbarConfig([
   { text: '首页', link: '/', icon: 'material-symbols:home-outline' },
   { text: '面试', link: '/interview/', icon: 'material-symbols:favorite' },
   { text: '博客', link: '/blog/', icon: 'material-symbols:article-outline' },
+   { text: '工具资源',  icon: 'material-symbols:construction',
+    items: [
+      { text: 'Git基础知识和使用指南', 
+        icon:'material-symbols:construction',
+        items: [
+          {
+            text: 'Git基础知识',
+            link: '/tools/git/README.md',
+            badge: '核心'
+          },
+        ]
+      },
+    ]
+    },
    { text: 'Spring体系',icon: 'material-symbols:article-outline',
     items: [
       { text: 'Spring体系技术',
@@ -78,20 +93,16 @@ export default defineNavbarConfig([
             ],
           },
           {
-            text: 'Vuepress Plugin',
+            text: 'NoSQL数据库',
             icon: 'mingcute:plugin-2-fill',
             badge: { text: '徽章', type: 'warning' },
             items: [
               {
-                text: 'caniuse',
-                link: '/vuepress-plugin/caniuse/',
+                text: 'Redis数据库',
+                link: '/db/redis/README.md',
                 icon: 'pajamas:feature-flag',
               },
-              {
-                text: 'auto-frontmatter',
-                link: '/vuepress-plugin/auto-frontmatter/',
-                icon: 'material-symbols:move-selection-down-rounded',
-              },
+              
             
             ],
           },

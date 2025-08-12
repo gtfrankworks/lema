@@ -26,6 +26,8 @@ import  databases  from './ts/databases'
 import  mybatis  from './ts/mybatis'
 import  interview  from './ts/interview'
 import  spring  from './ts/spring'
+import redis from './ts/redis'
+import git from './ts/git'
 export default defineNotesConfig({
   dir:'/notes/',
   link:'/',
@@ -37,5 +39,7 @@ export default defineNotesConfig({
       mybatis,
     interview,
     spring,
+    redis,
+    git
   ]
 })
