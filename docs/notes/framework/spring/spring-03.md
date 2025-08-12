@@ -1,5 +1,5 @@
 ---
-title: spring-03
+title: Spring框架的事务管理
 createTime: 2025/08/12 11:23:13
 permalink: /framework/spring/7lf0unoo/
 ---
