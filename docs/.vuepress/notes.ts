@@ -25,6 +25,7 @@ import { defineNotesConfig } from 'vuepress-theme-plume'
 import  databases  from './ts/databases'
 import  mybatis  from './ts/mybatis'
 import  interview  from './ts/interview'
+import  spring  from './ts/spring'
 export default defineNotesConfig({
   dir:'/notes/',
   link:'/',
@@ -35,5 +36,6 @@ export default defineNotesConfig({
       databases,
       mybatis,
     interview,
+    spring,
   ]
 })
