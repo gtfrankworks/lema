@@ -1,0 +1,37 @@
+{
+  "name": "lema-web-site",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "乐码职说",
+  "author": "gtfrankdou <douhaitao0423@126.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "^20.6.0 || >=22.0.0"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:dev-clean": "vuepress dev docs --clean-cache --clean-temp",
+    "docs:build": "vuepress build docs --clean-cache --clean-temp",
+    "docs:preview": "http-server docs/.vuepress/dist",
+    "vp-update": "npx vp-update",
+   
+    "deploy": "gh-pages -d docs/.vuepress/dist -r https://github.com/gtfrankworks/lemastack.git"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-vite": "2.0.0-rc.24",
+    "gh-pages": "^6.3.0",
+    "http-server": "^14.1.1",
+    "typescript": "^5.9.2",
+    "vue": "^3.5.18",
+    "vuepress": "2.0.0-rc.24",
+    "vuepress-theme-plume": "^1.0.0-rc.160"
+  },
+  "dependencies": {
+    "artplayer": "^5.2.5",
+    "chart.js": "^4.5.0",
+    "echarts": "^5.6.0",
+    "flowchart.ts": "^3.0.1",
+    "mermaid": "^11.9.0",
+    "pyodide": "^0.28.1"
+  }
+}
