@@ -15,7 +15,7 @@ import { defineNoteConfig, plumeTheme } from 'vuepress-theme-plume'
 import notes from './notes'
 export default defineUserConfig({
  // base: '/',
-  base: '/lemastack/',
+  base: '/lema/',
  lang: 'zh-CN',
  // title: '乐码职说',
   description: '乐码职说',    
