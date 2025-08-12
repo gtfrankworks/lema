@@ -23,5 +23,5 @@ npm run vp-update
 
 ## Documents
 
-- [test](https://vuepress.vuejs.org/)
+- [tests](https://vuepress.vuejs.org/)
 - [vuepqqqqress-theme-plume](https://theme-plume.vuejs.press/)
