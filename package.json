@@ -13,9 +13,8 @@
     "docs:dev-clean": "vuepress dev docs --clean-cache --clean-temp",
     "docs:build": "vuepress build docs --clean-cache --clean-temp",
     "docs:preview": "http-server docs/.vuepress/dist",
-    "vp-update": "npx vp-update",
-   
-    "deploy": "gh-pages -d docs/.vuepress/dist -r https://github.com/gtfrankworks/lemastack.git"
+    "vp-update": "npx vp-update"
+
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.24",
