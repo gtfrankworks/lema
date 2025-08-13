@@ -37,7 +37,7 @@ config:
 
     - title: 全栈开发
       icon: 🌐
-      details: 以 Java 为核心，掌握后端 + 前端 + DevOps 的一体化开发。
+      details: 以项目核心，掌握后端 + 前端 + DevOps 的一体化开发。
 
     - title: 就业服务
       icon: 🚀
