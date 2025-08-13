@@ -20,7 +20,7 @@ export default defineNavbarConfig([
   // },
 
   { text: '首页', link: '/', icon: 'material-symbols:home-outline' },
-  { text: '面试', link: '/interview/', icon: 'material-symbols:favorite' },
+  { text: '面试锦囊', link: '/interview/', icon: 'material-symbols:favorite' },
   { text: '就业资讯', link: '/blog/', icon: 'material-symbols:article-outline' },
    { text: '工具资源',  icon: 'material-symbols:construction',
     items: [
