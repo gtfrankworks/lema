@@ -28,6 +28,7 @@ import  interview  from './ts/interview'
 import  spring  from './ts/spring'
 import redis from './ts/redis'
 import git from './ts/git'
+import introd from './ts/introd'
 export default defineNotesConfig({
   dir:'/notes/',
   link:'/',
@@ -40,6 +41,7 @@ export default defineNotesConfig({
     interview,
     spring,
     redis,
-    git
+    git,
+    introd,
   ]
 })

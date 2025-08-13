@@ -21,7 +21,7 @@ export default defineNavbarConfig([
 
   { text: '首页', link: '/', icon: 'material-symbols:home-outline' },
   { text: '面试', link: '/interview/', icon: 'material-symbols:favorite' },
-  { text: '博客', link: '/blog/', icon: 'material-symbols:article-outline' },
+  { text: '就业资讯', link: '/blog/', icon: 'material-symbols:article-outline' },
    { text: '工具资源',  icon: 'material-symbols:construction',
     items: [
       { text: 'Git基础知识和使用指南', 
@@ -36,7 +36,7 @@ export default defineNavbarConfig([
       },
     ]
     },
-   { text: 'Spring体系',icon: 'material-symbols:article-outline',
+   { text: 'Spring体系',icon: 'material-symbols:docs',
     items: [
       { text: 'Spring体系技术',
         icon:'mdi:idea',
@@ -73,7 +73,7 @@ export default defineNavbarConfig([
     },
   {
         text: '数据库',
-        icon: 'mdi:idea',
+        icon: 'material-symbols:dataset',
         items: [
           {
             text: '数据库基础和原理',
@@ -149,6 +149,6 @@ export default defineNavbarConfig([
           // },
         ],
       },
-      
-      
+      { text: '关于我们', link: '/introd/', icon:'mdi:paper-airplane' },
+
 ])
