@@ -52,7 +52,8 @@ export default defineUserConfig({
       organization: '快程乐码',        // 组织/公司
               // GitHub 用户名
     },
-
+    lastUpdated: false,
+    contributors: false,
   
 
     /* 文章字数统计、阅读时间，设置为 false 则禁用 */
