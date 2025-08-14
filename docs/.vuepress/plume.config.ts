@@ -78,7 +78,7 @@ export default defineThemeConfig({
   //   appearance: 'fade',  // 启用 深色模式切换过渡动画, 或配置过渡动画类型
   // },
   footer: {
-    message: "MIT Licensed | Copyright © 2025 乐码职说 | 粤ICP备2022222222号",
+    message: "快程乐码| Copyright © 2025 乐码职说 | 苏ICP备2024062796号-1"
   
   }
 })
