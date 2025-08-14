@@ -48,9 +48,10 @@ export default defineThemeConfig({
    * @see https://theme-plume.vuejs.press/config/basic/#profile
    */
   profile: {
-    avatar: 'https://theme-plume.vuejs.press/plume.png',
-    name: 'lema web site',
-    description: '乐码职说',
+    //avatar: '/kclm2.png',
+     avatar: '/images/blog12.png',
+    name: '乐码职说',
+    description: '就业形势和就业趋势',
     // circle: true,
     // location: '',
     // organization: '',

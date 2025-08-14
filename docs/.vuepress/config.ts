@@ -43,7 +43,15 @@ export default defineUserConfig({
     /* 本地搜索, 默认启用 */
     search: { provider: 'local' },
 
- 
+    // 站点配置
+    profile: {
+      avatar: '/images/bolglog.png',     // 头像
+      name: '乐码职说',               // 名称
+      description: 'The Theme for Vuepress 2.0', // 描述
+      location: 'China',      // 位置
+      organization: '快程乐码',        // 组织/公司
+              // GitHub 用户名
+    },
 
   
 
