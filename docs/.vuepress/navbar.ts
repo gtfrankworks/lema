@@ -20,8 +20,8 @@ export default defineNavbarConfig([
   // },
 
   { text: '首页', link: '/', icon: 'material-symbols:home-outline' },
-  { text: '面试锦囊', link: '/interview/', icon: 'material-symbols:favorite' },
-  { text: '就业资讯', link: '/blog/', icon: 'material-symbols:article-outline' },
+  { text: '面试锦囊', link: '/interview/', icon: 'material-symbols:work' },
+  { text: '就业资讯', link: '/blog/', icon: 'material-symbols:news' },
    { text: '工具资源',  icon: 'material-symbols:construction',
     items: [
       { text: 'Git基础知识和使用指南', 
@@ -46,7 +46,7 @@ export default defineNavbarConfig([
       },
     ]
     },
-   { text: 'Spring体系',icon: 'material-symbols:docs',
+   { text: 'Spring体系',icon: 'material-symbols:document-scanner-sharp',
     items: [
       { text: 'Spring体系技术',
         icon:'mdi:idea',
@@ -83,11 +83,11 @@ export default defineNavbarConfig([
     },
   {
         text: '数据库',
-        icon: 'material-symbols:dataset',
+        icon: 'material-symbols:database',
         items: [
           {
             text: '数据库基础和原理',
-            icon: 'material-symbols:database',
+            icon: 'material-symbols:docs',
             items: [
               {
                 text: '数据库原理',
@@ -104,7 +104,7 @@ export default defineNavbarConfig([
           },
           {
             text: 'NoSQL数据库',
-            icon: 'mingcute:plugin-2-fill',
+            icon: 'material-symbols:doc',
             badge: { text: '徽章', type: 'warning' },
             items: [
               {
