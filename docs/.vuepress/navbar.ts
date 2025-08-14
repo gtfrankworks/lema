@@ -34,6 +34,16 @@ export default defineNavbarConfig([
           },
         ]
       },
+      { text: '项目中常见的工具', 
+        icon:'material-symbols:construction',
+        items: [
+          {
+            text: '项目常用的工具',
+            link: '/tools/project/README.md',
+            badge: '核心'
+          },
+        ]
+      },
     ]
     },
    { text: 'Spring体系',icon: 'material-symbols:docs',

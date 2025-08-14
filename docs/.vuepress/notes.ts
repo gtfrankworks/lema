@@ -29,6 +29,7 @@ import  spring  from './ts/spring'
 import redis from './ts/redis'
 import git from './ts/git'
 import introd from './ts/introd'
+import project from './ts/project'
 export default defineNotesConfig({
   dir:'/notes/',
   link:'/',
@@ -43,5 +44,6 @@ export default defineNotesConfig({
     redis,
     git,
     introd,
+    project,
   ]
 })
