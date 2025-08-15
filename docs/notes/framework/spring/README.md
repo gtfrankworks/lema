@@ -1,5 +1,5 @@
 ---
-title: spring
+title: Spring Framework 6 简介
 createTime: 2025/08/12 10:31:32
 permalink: /framework/spring/
 ---
