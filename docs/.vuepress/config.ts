@@ -54,7 +54,8 @@ export default defineUserConfig({
     },
     lastUpdated: false,
     contributors: false,
-  
+    //配置首页右侧的github的图标
+   social: [],
 
     /* 文章字数统计、阅读时间，设置为 false 则禁用 */
     // readingTime: true,

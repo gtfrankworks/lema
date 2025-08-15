@@ -18,6 +18,7 @@ export default defineNoteConfig({
         { text: '什么是 STAR 法则', link: 'interview-2' },
         { text: '面试中实际的问题', link: 'interview-4' },
         { text: '自我介绍的重要性', link: 'interview-5' },
+        { text: 'HR面试通常关注的维度', link: 'interview-6' },
       ],
     },
   ]
