@@ -12,7 +12,7 @@ config:
       actions:
         - theme: brand
           text: 关于我们
-          link: /blog/
+          link: /introd/
         - theme: alt
           text: 学习平台 →
           link: https://itp.kclmedu.com/owep_pc/#/login
