@@ -39,8 +39,8 @@ config:
         details: 职业发展全周期服务：从简历精修、面试特训到技能强化、职场适应一站式解决方案。
 
   - type: image-text
-    title: 面试锦囊
-    description: 核心技巧速览，助你从容应对面试，应急使用。
+    title: 面试必备锦囊
+    description: 面试是求职过程中最关键的一环，而掌握核心技巧往往比死记题库更能助你脱颖而出。“面试必备锦囊”为你提供了高效、实用的应试策略
     image: /images/plume-1.svg
     list:
       - title: 自我介绍
