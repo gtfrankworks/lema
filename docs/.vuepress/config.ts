@@ -45,18 +45,18 @@ export default defineUserConfig({
 
     // 站点配置
     profile: {
-      avatar: '/images/bolglog.png',     // 头像
+      avatar: '/images/blog12.png',     // 头像
       name: '乐码职说',               // 名称
-      description: 'The Theme for Vuepress 2.0', // 描述
-      location: 'China',      // 位置
-      organization: '快程乐码',        // 组织/公司
-              // GitHub 用户名
+      description: '就业形势和就业趋势', // 描述
+      location: '中国苏州',      // 位置
+      organization: '快程乐码',  
+            // 组织/公司
     },
     lastUpdated: false,
-    contributors: false,
+   contributors: false,
     //配置首页右侧的github的图标
    social: [],
-
+  
     /* 文章字数统计、阅读时间，设置为 false 则禁用 */
     // readingTime: true,
 
@@ -110,7 +110,14 @@ export default defineUserConfig({
 
     watermark: true,
     notes:notes,
-     
+     comment: {
+      provider: 'Giscus', // "Artalk“ | "Giscus" | "Twikoo" | "Waline"
+      comment: true,
+      repo: 'gtfrankworks/lemacomment', 
+      repoId: 'R_kgDOPfapTA', 
+      category: 'Announcements', 
+      categoryId: 'DIC_kwDOPfapTM4CuRbg', 
+    }
    
   }),
 })

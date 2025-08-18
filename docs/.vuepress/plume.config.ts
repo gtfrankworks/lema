@@ -21,9 +21,9 @@ export default defineThemeConfig({
   logo: 'kclm.jpg',
 
   appearance: true,  // 配置 深色模式
-  social: [
-     { icon: 'github', link: '/' },
-   ],
+  // social: [
+  //    { icon: 'github', link: '/' },
+  //  ],
   // navbarSocialInclude: ['github'], // 允许显示在导航栏的 social 社交链接
   // aside: true, // 页内侧边栏， 默认显示在右侧
   // outline: [2, 3], // 页内大纲， 默认显示 h2, h3
@@ -47,16 +47,6 @@ export default defineThemeConfig({
   /**
    * @see https://theme-plume.vuejs.press/config/basic/#profile
    */
-  profile: {
-    //avatar: '/kclm2.png',
-     avatar: '/images/blog12.png',
-    name: '乐码职说',
-    description: '就业形势和就业趋势',
-    // circle: true,
-    // location: '',
-    // organization: '',
-  },
-
   navbar,
   notes,
 
