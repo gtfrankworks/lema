@@ -1,0 +1,50 @@
+/* 导航栏图标颜色定制 */
+.navbar {
+  // 首页图标 (material-symbols:home-outline)
+  .icon-material-symbols-home-outline {
+    color: #FF5733 !important; // 橙色
+    fill: #FF5733 !important;
+  }
+
+  // 面试锦囊图标 (material-symbols:work)
+  .icon-material-symbols-work {
+    color: #3498DB !important; // 蓝色
+    fill: #3498DB !important;
+  }
+
+  // 就业资讯图标 (material-symbols:news)
+  .icon-material-symbols-news {
+    color: #2ECC71 !important; // 绿色
+    fill: #2ECC71 !important;
+  }
+
+  // 工具资源图标 (material-symbols:construction)
+  .icon-material-symbols-construction {
+    color: #9B59B6 !important; // 紫色
+    fill: #9B59B6 !important;
+  }
+
+  // Spring体系图标 (material-symbols:document-scanner-sharp)
+  .icon-material-symbols-document-scanner-sharp {
+    color: #E74C3C !important; // 红色
+    fill: #E74C3C !important;
+  }
+
+  // 数据库图标 (material-symbols:database)
+  .icon-material-symbols-database {
+    color: #F39C12 !important; // 橙色
+    fill: #F39C12 !important;
+  }
+
+  // ORM框架图标 (mdi:idea)
+  .icon-mdi-idea {
+    color: #1ABC9C !important; // 青绿色
+    fill: #1ABC9C !important;
+  }
+
+  // 关于我们图标 (mdi:paper-airplane)
+  .icon-mdi-paper-airplane {
+    color: #7F8C8D !important; // 灰色
+    fill: #7F8C8D !important;
+  }
+}

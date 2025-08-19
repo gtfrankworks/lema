@@ -18,11 +18,11 @@ export default defineNavbarConfig([
   //   items: [{ text: '示例', link: '/notes/demo/README.md' }]
   // },
 
-  { text: '首页', link: '/', icon: 'material-symbols:home-outline' },
- //{ text: '首页', link: '/', icon: 'iconfont icon-shouye' },
-  { text: '面试锦囊', link: '/interview/', icon: 'material-symbols:work' },
-  { text: '就业资讯', link: '/blog/', icon: 'material-symbols:news' },
-   { text: '工具资源',  icon: 'material-symbols:construction',
+ // { text: '首页', link: '/', icon: 'material-symbols:home-outline' },
+ { text: '首页', link: '/', icon: 'iconfont icon-shouye' },
+  { text: '面试锦囊', link: '/interview/', icon: 'iconfont icon-works' },
+  { text: '就业资讯', link: '/blog/', icon: 'iconfont icon-xinwenzixun' },
+   { text: '工具资源',  icon: 'iconfont icon-gongju_gongju_xuanzhong',
     items: [
       { text: 'Git基础知识和使用指南', 
         icon:'material-symbols:construction',
@@ -46,7 +46,7 @@ export default defineNavbarConfig([
       },
     ]
     },
-   { text: 'Spring体系',icon: 'material-symbols:document-scanner-sharp',
+   { text: 'Spring体系',icon: 'iconfont icon-wendangku-lan',
     items: [
       { text: 'Spring体系技术',
         icon:'mdi:idea',
@@ -83,7 +83,7 @@ export default defineNavbarConfig([
     },
   {
         text: '数据库',
-        icon: 'material-symbols:database',
+        icon: 'iconfont icon-yunshujuku-copy',
         items: [
           {
             text: '数据库基础和原理',
@@ -120,7 +120,7 @@ export default defineNavbarConfig([
       },
       {
         text: 'ORM框架',
-        icon: 'mdi:idea',
+        icon: 'iconfont icon-kuangjia-',
         items: [
           {
             text: 'MyBatis框架技术',
@@ -159,6 +159,6 @@ export default defineNavbarConfig([
           // },
         ],
       },
-      { text: '关于我们', link: '/introd/', icon:'mdi:paper-airplane' },
+      { text: '关于我们', link: '/introd/', icon:'iconfont  icon-guanyuwomen' },
 
 ])

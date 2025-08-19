@@ -12,7 +12,7 @@ export default defineNoteConfig({
     {
       text: 'Git介绍及其安装',
       badge: { text: '重点', type: 'danger' }, 
-      icon: 'ep:guide',
+      icon: 'iconfont icon-gongju_gongju_xuanzhong',
       collapsed: false,
       items: [
         //{ text: '介绍', link: 'intro', icon: 'ph:info-light' }, 

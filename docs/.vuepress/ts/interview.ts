@@ -19,6 +19,9 @@ export default defineNoteConfig({
         { text: '面试中实际的问题', link: 'interview-4' },
         { text: '自我介绍的重要性', link: 'interview-5' },
         { text: 'HR面试通常关注的维度', link: 'interview-6' },
+        { text: 'HR面试常见陷阱答题', link: 'interview-7' },
+        { text: 'HR面试常见陷阱与应对', link: 'interview-8' },
+
       ],
     },
   ]
