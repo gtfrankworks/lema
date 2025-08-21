@@ -2,13 +2,23 @@
 import { defineNoteConfig } from 'vuepress-theme-plume'
 
 export default defineNoteConfig({
- dir: 'bigcompany',
+  dir: 'bigcompany',
   link: '/bigcompany/',
   sidebar: [
     {
-      text: '企业面试真实面试题',
-    badge: { text: '重点', type: 'danger' }, 
-  icon: 'material-symbols:document-scanner-sharp',
+      text: '高频面试题汇总',
+      badge: { text: '重点', type: 'danger' },
+      icon: 'material-symbols:document-scanner-sharp',
+      collapsed: false,
+      items: [
+        { text: 'Java面试题', link: '/mianshiti/ms-01' },
+        
+      ]
+    },
+    {
+      text: '企业笔试真题',
+      badge: { text: '重点', type: 'danger' },
+      icon: 'material-symbols:document-scanner-sharp',
       collapsed: false,
       items: [
         { text: '1.阿里巴巴-Java工程师', link: '阿里巴巴java工程师' },
@@ -28,7 +38,7 @@ export default defineNoteConfig({
         { text: '15.软通动力-Java工程师', link: '软通动力-Java工程师' },
       ]
     },
-    
-   
+
+
   ]
 })

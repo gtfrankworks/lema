@@ -23,23 +23,19 @@ export default defineNavbarConfig([
   //{ text: '面试锦囊', link: '/interview/', icon: 'material-symbols:work' },
   { text: '面试锦囊',  icon: 'material-symbols:work',
     items: [
-      { text: '面试常见问题', 
+      { text: '直通无忧陪跑', 
         icon:'material-symbols:construction',
         items: [
           {
-            text: 'HR常见面问题',
+            text: '面试常见面问题',
             link: '/interview/README.md',
-            badge: '核心'
-          },
-          {
-            text: '面试题集锦',
-            link: '/tools/maven/README.md',
-            badge: '集锦'
+            //badge: '软技能'
+          badge: '软技能'
           },
            {
-            text: '企业面试题实战',
+            text: '面试题实战准备',
             link: '/bigcompany/README.md',
-            badge: '实战'
+            badge: '硬核实力'
           },
         ]
       },
