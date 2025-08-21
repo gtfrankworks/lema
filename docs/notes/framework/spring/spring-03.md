@@ -1,8 +1,9 @@
 ---
-title: Spring框架的事务管理
-createTime: 2025/08/12 11:23:13
-permalink: /framework/spring/7lf0unoo/
+title: Spring框架事务讲解
+createTime: 2025/08/20 14:11:00
+permalink: /article/mcclvniw/
 ---
+
 ## Spring框架的事务管理支持两种方式
 
 > **编程式事务**  

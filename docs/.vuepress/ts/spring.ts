@@ -13,10 +13,14 @@ export default defineNoteConfig({
       icon: 'ep:guide',
       collapsed: false,
       items: [
-        //{ text: '介绍', link: 'intro', icon: 'ph:info-light' }, 
-        { text: 'Spring框架基础知识', link: 'spring-01' },
-        { text: 'Spring框架AOP详解', link: 'spring-2' },
+        { text: 'Spring框架介绍', link: 'intro', icon: 'ph:info-light' }, 
+         { text: 'Spring框架基础知识', link: 'spring-01' },
+         { text: 'Spring框架AOP详解', link: 'spring-2' },
         { text: 'Spring框架事务详解', link: 'spring-03' },
+        // { text: 'Spring框架基础知识', link: 'spring-01' },
+        // { text: 'Spring的入门案例', link: 'spring-02' },
+        // { text: 'Spring的IOC的容器', link: 'spring-03' },
+        // { text: 'Spring基于XML管理Bean', link: 'spring-04' },
       ],
     },
   ]

@@ -30,6 +30,8 @@ import redis from './ts/redis'
 import git from './ts/git'
 import introd from './ts/introd'
 import project from './ts/project'
+import maven from './ts/maven'
+import bigcompany from './ts/bigcompany'
 export default defineNotesConfig({
   dir:'/notes/',
   link:'/',
@@ -45,5 +47,7 @@ export default defineNotesConfig({
     git,
     introd,
     project,
+    maven,
+    bigcompany,
   ]
 })

@@ -20,7 +20,32 @@ export default defineNavbarConfig([
 
   { text: '首页', link: '/', icon: 'material-symbols:home-outline' },
  //{ text: '首页', link: '/', icon: 'iconfont icon-shouye' },
-  { text: '面试锦囊', link: '/interview/', icon: 'material-symbols:work' },
+  //{ text: '面试锦囊', link: '/interview/', icon: 'material-symbols:work' },
+  { text: '面试锦囊',  icon: 'material-symbols:work',
+    items: [
+      { text: '面试常见问题', 
+        icon:'material-symbols:construction',
+        items: [
+          {
+            text: 'HR常见面问题',
+            link: '/interview/README.md',
+            badge: '核心'
+          },
+          {
+            text: '面试题集锦',
+            link: '/tools/maven/README.md',
+            badge: '集锦'
+          },
+           {
+            text: '企业面试题实战',
+            link: '/bigcompany/README.md',
+            badge: '实战'
+          },
+        ]
+      },
+      
+    ]
+    },
   { text: '就业资讯', link: '/blog/', icon: 'material-symbols:news' },
    { text: '工具资源',  icon: 'material-symbols:construction',
     items: [
@@ -31,6 +56,11 @@ export default defineNavbarConfig([
             text: 'Git基础知识',
             link: '/tools/git/README.md',
             badge: '核心'
+          },
+          {
+            text: 'Maven操作指南',
+            link: '/tools/maven/README.md',
+            badge: '工具'
           },
         ]
       },
