@@ -1,5 +1,5 @@
 
-import { defineNoteConfig } from 'vuepress-theme-plume'
+ import { defineNoteConfig } from 'vuepress-theme-plume'
 
 export default defineNoteConfig({
   dir: 'bigcompany',
@@ -8,18 +8,24 @@ export default defineNoteConfig({
     {
       text: '高频面试题汇总',
       badge: { text: '重点', type: 'danger' },
-      icon: 'material-symbols:document-scanner-sharp',
+      icon: 'material-symbols:docs',
       collapsed: false,
+      prefix: 'mianshiti/',
       items: [
-        { text: 'Java面试题', link: '/mianshiti/ms-01' },
-        
+        { text: '1.Java面试题', link: 'java1' },
+        { text: '2.Java基础', link: 'java2' },
+        { text: '3.Java集合高频面试题', link: 'javacollection' },
+         { text: '5. Java108问必须知道[实习]', link: 'java108问' },
+        { text: '4. Mysql事务', link: 'mysql事务' },
+       
       ]
     },
     {
       text: '企业笔试真题',
       badge: { text: '重点', type: 'danger' },
-      icon: 'material-symbols:document-scanner-sharp',
+      icon: 'material-symbols:summarize',
       collapsed: false,
+       prefix: 'company/',  
       items: [
         { text: '1.阿里巴巴-Java工程师', link: '阿里巴巴java工程师' },
         { text: '2.阿里云-Java实习生', link: '阿里云-Java实习生' },
@@ -42,3 +48,4 @@ export default defineNoteConfig({
 
   ]
 })
+

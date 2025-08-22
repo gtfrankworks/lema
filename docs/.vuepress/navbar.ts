@@ -26,17 +26,19 @@ export default defineNavbarConfig([
       { text: '直通无忧陪跑', 
         icon:'material-symbols:construction',
         items: [
-          {
-            text: '面试常见面问题',
-            link: '/interview/README.md',
-            //badge: '软技能'
-          badge: '软技能'
-          },
-           {
-            text: '面试题实战准备',
-            link: '/bigcompany/README.md',
-            badge: '硬核实力'
-          },
+          // {
+          //   text: '面试常见面问题',
+          //   link: '/interview/README.md',
+          //   //badge: '软技能'
+          // badge: '软技能'
+          // },
+          //  {
+          //   text: '面试题实战准备',
+          //   link: '/bigcompany/README.md',
+          //   badge: '硬核实力'
+          // },
+          { text: '面试常见面问题', link: '/interview/README.md', badge: '软技能' },
+          { text: '面试题实战准备', link: '/bigcompany/README.md', badge: '硬核实力' },
         ]
       },
       

@@ -1,5 +1,5 @@
 ---
-title: 企业面试题精选
+title: 面试题精选
 createTime: 2025/08/21 11:19:00
 permalink: /bigcompany/
 ---
