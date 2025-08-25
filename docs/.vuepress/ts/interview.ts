@@ -24,7 +24,10 @@ export default defineNoteConfig({
         { text: '9.人事相关面常见试题', link: 'interview-9' },
         { text: '10.为什么要离职', link: 'interview-10' },
         { text: '11.人事面试介绍环节', link: 'interview-11' },
-        { text: '12.罗永浩新东方万字求职信', link: 'interview-12' },
+          { text: '12.和人事薪资谈判', link: '薪资谈判' },
+          { text: '13.项目经理面试方面', link: '项目经理面试问题' },
+        
+        { text: '14.罗永浩新东方万字求职信', link: 'interview-12' },
 
 
       ],
