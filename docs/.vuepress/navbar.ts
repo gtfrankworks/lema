@@ -118,32 +118,19 @@ export default defineNavbarConfig([
             icon: 'material-symbols:docs',
             items: [
               {
-                text: '数据库原理',
+                text: 'MySQL数据库',
                 link: '/notes/db/base/README.md',
-                //icon: 'mdi:paper-airplane',
+               icon: 'material-symbols:database',
                 badge: '徽章'
               },
               {
-                text: 'SQL语言',
-                link: '#',
-               // icon: 'material-symbols:database',
+                text: 'MongoDB 数据库',
+                link: '/notes/mongodb/README.md',
+               icon: 'material-symbols:database-outline',
               },
             ],
           },
-          {
-            text: 'NoSQL数据库',
-            icon: 'material-symbols:doc',
-            badge: { text: '徽章', type: 'warning' },
-            items: [
-              {
-                text: 'Redis数据库',
-                link: '/db/redis/README.md',
-                icon: 'pajamas:feature-flag',
-              },
-              
-            
-            ],
-          },
+          
         ],
       },
       {

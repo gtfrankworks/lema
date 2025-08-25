@@ -13,7 +13,7 @@ Java集合类主要由两个根接口**Collection**和**Map**派生出来的，C
 
 Java集合框架图如下：
 
-
+![](/images/collection/noteImage/image-20210403163733569.png)
 
 ![](/images/collection/noteImage/image-20210403163751501.png)
 

@@ -32,6 +32,7 @@ import introd from './ts/introd'
 import project from './ts/project'
 import maven from './ts/maven'
 import bigcompany from './ts/bigcompany'
+import mg from './ts/mg'
 export default defineNotesConfig({
   dir:'/notes/',
   link:'/',
@@ -49,5 +50,7 @@ export default defineNotesConfig({
     project,
     maven,
     bigcompany,
+    mg,
+    
   ]
 })
