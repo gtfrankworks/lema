@@ -7,20 +7,9 @@
 
 import { defineNavbarConfig } from 'vuepress-theme-plume'
 export default defineNavbarConfig([
-  // { text: '首页', link: '/' },
-  // { text: '博客', link: '/blog/' },
-  // { text: '关于我们', link: '/about/' },
-  // { text: '学习平台', link: '/platform/' },
-  // { text: '标签', link: '/blog/tags/' },
-  // { text: '归档', link: '/blog/archives/' },
-  // {
-  //   text: '笔记',
-  //   items: [{ text: '示例', link: '/notes/demo/README.md' }]
-  // },
+
 
   { text: '首页', link: '/', icon: 'material-symbols:home-outline' },
- //{ text: '首页', link: '/', icon: 'iconfont icon-shouye' },
-  //{ text: '面试锦囊', link: '/interview/', icon: 'material-symbols:work' },
   { text: '面试锦囊',  icon: 'material-symbols:work',
     items: [
       { text: '直通无忧陪跑', 
@@ -121,15 +110,28 @@ export default defineNavbarConfig([
                 text: 'MySQL数据库',
                 link: '/notes/db/base/README.md',
                icon: 'material-symbols:database',
-                badge: '徽章'
+                badge: '关系数据库'
               },
-              {
-                text: 'MongoDB 数据库',
-                link: '/notes/mongodb/README.md',
-               icon: 'material-symbols:database-outline',
+               {
+                text: 'PostgreSQL数据库',
+                link: '/notes/PostgreSQL/README.md',
+                icon: 'material-symbols:database-outline',
+                badge: 'NoSQl数据库'
               },
+              
             ],
           },
+          { text: 'NoSQL数据库技术',
+        icon:'mdi:idea',
+        items: [
+          {
+            text: 'NoSQL数据库',
+                link: '/notes/nosqldb/redises/README.md',
+                icon: 'material-symbols:database-outline',
+                badge: 'NoSQl数据库'
+          },
+        ]
+       }
           
         ],
       },
@@ -148,30 +150,15 @@ export default defineNavbarConfig([
                 badge: '徽章'
               },
               {
-                text: 'SQL语言',
-                link: '#',
-               // icon: 'material-symbols:database',
+                text: 'MyBatisFlex框架技术',
+                link: '/notes/mybatisflex/README.md',
+                //icon: 'mdi:paper-airplane',
+                badge: '徽章'
               },
             ],
           },
-          // {
-          //   text: 'Vuepress Plugin',
-          //   icon: 'mingcute:plugin-2-fill',
-          //   badge: { text: '徽章', type: 'warning' },
-          //   items: [
-          //     {
-          //       text: 'caniuse',
-          //       link: '/vuepress-plugin/caniuse/',
-          //       icon: 'pajamas:feature-flag',
-          //     },
-          //     {
-          //       text: 'auto-frontmatter',
-          //       link: '/vuepress-plugin/auto-frontmatter/',
-          //       icon: 'material-symbols:move-selection-down-rounded',
-          //     },
-            
-          //   ],
-          // },
+          
+          
         ],
       },
       { text: '关于我们', link: '/introd/', icon:'mdi:paper-airplane' },

@@ -26,13 +26,16 @@ import  databases  from './ts/databases'
 import  mybatis  from './ts/mybatis'
 import  interview  from './ts/interview'
 import  spring  from './ts/spring'
-import redis from './ts/redis'
 import git from './ts/git'
 import introd from './ts/introd'
 import project from './ts/project'
 import maven from './ts/maven'
 import bigcompany from './ts/bigcompany'
 import mg from './ts/mg'
+import pg from './ts/pg'
+import mf from './ts/mf'
+
+
 export default defineNotesConfig({
   dir:'/notes/',
   link:'/',
@@ -44,13 +47,13 @@ export default defineNotesConfig({
       mybatis,
     interview,
     spring,
-    redis,
     git,
     introd,
     project,
     maven,
     bigcompany,
     mg,
-    
+    pg,
+    mf,
   ]
 })

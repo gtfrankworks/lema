@@ -12,7 +12,7 @@ export default defineNoteConfig({
     {
       text: '数据库理论知识',
       badge: { text: '理解', type: 'danger' }, 
-      icon: 'ep:guide',
+        icon: 'material-symbols:docs',
       collapsed: false,
       prefix: 'base/',
       items: [
@@ -26,7 +26,7 @@ export default defineNoteConfig({
     {
       text: 'SQL语言基础',
       badge: { text: '理解', type: 'danger' }, 
-      icon: 'ep:guide',
+      icon: 'material-symbols:docs',
       collapsed: false,
       prefix: 'sql/',
       items: [
@@ -40,7 +40,7 @@ export default defineNoteConfig({
     {
       text: 'MySQL数据库',
       badge: { text: 'MySql', type: 'danger' }, 
-      icon: 'ep:guide',
+      icon: 'material-symbols:docs',
       prefix: 'mysql/',
        collapsed: false,
       items: [
@@ -48,7 +48,6 @@ export default defineNoteConfig({
        { text: 'MySQL数据库基础架构分析', link: '2' },
        { text: 'MySQL数据优化', link: '3' },
        { text: 'MySQL隐式转换造成索引失效', link: '4' },
-
         { text: ' MySQL自增主键一定是连续的吗', link: '6' },
         { text: ' MySQL高性能优化规范建议总结', link: '7' },
          { text: ' MySQL索引详解', link: '8' },
