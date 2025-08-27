@@ -35,7 +35,7 @@ import mg from './ts/mg'
 import pg from './ts/pg'
 import mf from './ts/mf'
 import springboot from './ts/springboot'
-
+import design from './ts/degin'
 
 
 export default defineNotesConfig({
@@ -58,5 +58,6 @@ export default defineNotesConfig({
     pg,
     mf,
     springboot,
+    design,
   ]
 })

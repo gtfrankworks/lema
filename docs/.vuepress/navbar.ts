@@ -70,12 +70,12 @@ export default defineNavbarConfig([
         items: [
           {
             text: 'Java的技术',
-            link: '/notes/framework/spring/README.md',
+            link: '/notes/framework/design/README.md',
             badge: '核心'
           },
            {
             text: 'Java中常用的设计模式',
-            link: '/notes/framework/springboot/README.md',
+            link: '/notes/design/README.md',
             badge: '重点'
           },
         ]
