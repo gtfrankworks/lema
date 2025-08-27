@@ -140,7 +140,7 @@ export default defineNavbarConfig([
         icon: 'mdi:idea',
         items: [
           {
-            text: 'MyBatis框架技术',
+            text: '常用ORM框架技术',
             icon: 'material-symbols:database',
             items: [
               {
@@ -151,7 +151,7 @@ export default defineNavbarConfig([
               },
               {
                 text: 'MyBatisFlex框架技术',
-                link: '/notes/mybatisflex/README.md',
+                link: '/mybatisflex/README.md',
                 //icon: 'mdi:paper-airplane',
                 badge: '徽章'
               },
