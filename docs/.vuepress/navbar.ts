@@ -63,6 +63,27 @@ export default defineNavbarConfig([
       },
     ]
     },
+    { text: 'Java知识',icon: 'mdi:file-document-multiple',
+    items: [
+      { text: 'Java知识汇总',
+        icon:'mdi:file-document-multiple',
+        items: [
+          {
+            text: 'Java的技术',
+            link: '/notes/framework/spring/README.md',
+            badge: '核心'
+          },
+           {
+            text: 'Java中常用的设计模式',
+            link: '/notes/framework/springboot/README.md',
+            badge: '重点'
+          },
+        ]
+       },
+     
+    ]
+
+    },
    { text: 'Spring体系',icon: 'material-symbols:document-scanner-sharp',
     items: [
       { text: 'Spring体系技术',
@@ -75,7 +96,7 @@ export default defineNavbarConfig([
           },
            {
             text: 'SpringBoot框架技术',
-            link: '/notes/framework/spring/README.md',
+            link: '/notes/framework/springboot/README.md',
             badge: '重点'
           },
         ]

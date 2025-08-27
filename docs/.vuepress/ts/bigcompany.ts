@@ -15,12 +15,12 @@ export default defineNoteConfig({
         { text: '1.Java面试题', link: 'java1' },
         { text: '2.Java基础', link: 'java2' },
         { text: '3.Java集合高频面试题', link: 'javacollection' },
-         { text: '4. Java108问必须知道[实习]', link: 'java108问' },
+         { text:'4. Java108问必须知道[实习]', link: 'java108问' },
         { text: '5. Mysql事务', link: 'mysql事务' },
         { text: '6. Mybatis常见问题', link: 'mybatis常见问题' },
         { text: '7. Redis的面试题', link: 'redis' },
         { text: '8. Redis踩坑', link: 'redis踩坑.md' },
-
+        { text: '9. 面试八股文MySQL', link: '面试八股文MySQL' },
        
       ]
     },
