@@ -74,11 +74,6 @@ export default defineNavbarConfig([
             badge: '核心'
           },
            {
-            text: 'SpringMVC框架技术',
-            link: '/notes/framework/springmvc/README.md',
-            badge: '了解'
-          },
-           {
             text: 'SpringBoot框架技术',
             link: '/notes/framework/spring/README.md',
             badge: '重点'
