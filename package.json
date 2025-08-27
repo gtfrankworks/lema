@@ -16,7 +16,7 @@
     "vp-update": "npx vp-update"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.24",
+    "@vuepress/bundler-vite": "^2.0.0-rc.24",
     "gh-pages": "^6.3.0",
     "http-server": "^14.1.1",
     "typescript": "^5.9.2",
