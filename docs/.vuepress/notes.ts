@@ -34,6 +34,7 @@ import bigcompany from './ts/bigcompany'
 import mg from './ts/mg'
 import pg from './ts/pg'
 import mf from './ts/mf'
+import springmvc from './ts/springmvc'
 
 
 export default defineNotesConfig({
@@ -55,5 +56,6 @@ export default defineNotesConfig({
     mg,
     pg,
     mf,
+    springmvc,
   ]
 })

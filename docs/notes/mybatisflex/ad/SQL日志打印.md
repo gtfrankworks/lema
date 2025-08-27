@@ -9,7 +9,7 @@ permalink: /mybatisflex/6x4p31aj/
 
 MyBatis-Flex 内置了 SQL 打印分析的功能，其是使用 SQL 审计模块进行完成的，开启 SQL 日志打印代码如下：
 
-java
+
 
 ```
 //开启审计功能
@@ -33,7 +33,7 @@ Flex exec sql took 3 ms >>>  INSERT INTO `tb_account`(`user_name`, `age`, `birth
 
 或者在 Spring 工程里，将 SQL 打印到日志中，可以通过配置日志级别控制是否输出 SQL ，通过配置日志 Appender 控制 SQL 输出目的地。
 
-java
+
 
 ```
 import com.mybatisflex.core.audit.AuditManager;
@@ -67,7 +67,7 @@ public class MyBatisFlexConfiguration {
 
 通过 `bootstrap.setLogImpl()` 方法来指定 MyBatis 输出日志：
 
-java
+
 
 ```
 DataSource dataSource = ...;
@@ -83,7 +83,7 @@ MybatisFlexBootstrap bootstrap = MybatisFlexBootstrap.getInstance()
 
 通过自定义 `ConfigurationCustomizer` 来为 `configuration` 配置 `LogImpl`：
 
-java
+
 
 ```
 @Configuration
