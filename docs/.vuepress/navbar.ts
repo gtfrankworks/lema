@@ -70,11 +70,13 @@ export default defineNavbarConfig([
         items: [
           {
             text: 'Java的技术',
+            icon:'mdi:idea',
             link: '/notes/framework/design/README.md',
             badge: '核心'
           },
            {
             text: 'Java中常用的设计模式',
+           icon: 'material-symbols:document-scanner-sharp',
             link: '/notes/design/README.md',
             badge: '重点'
           },
@@ -91,11 +93,13 @@ export default defineNavbarConfig([
         items: [
           {
             text: 'Spring框架技术',
+             icon:'mdi:file-document-multiple',
             link: '/notes/framework/spring/README.md',
             badge: '核心'
           },
            {
             text: 'SpringBoot框架技术',
+             icon:'mdi:file-document-multiple',
             link: '/notes/framework/springboot/README.md',
             badge: '重点'
           },
