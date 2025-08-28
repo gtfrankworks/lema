@@ -71,7 +71,7 @@ export default defineNavbarConfig([
           {
             text: 'Java的技术',
             icon:'mdi:idea',
-            link: '/notes/framework/design/README.md',
+            link: '/notes/java-tutorial/base/README.md',
             badge: '核心'
           },
            {

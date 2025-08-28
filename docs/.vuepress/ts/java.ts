@@ -1,0 +1,66 @@
+
+import { defineNoteConfig } from 'vuepress-theme-plume'
+
+export default defineNoteConfig({
+ dir: 'java-tutorial',
+  link: '/java-tutorial/',
+  sidebar: [
+ {
+       text: 'Java基础学习',
+      badge: { text: '理解', type: 'danger' }, 
+      icon: 'ep:guide',
+      collapsed: false,
+      prefix: 'base/',
+      items: [
+        //{ text: '介绍', link: 'intro', icon: 'ph:info-light' }, 
+        { text: 'Java的介绍及其发展', link: 'Java的介绍及其发展' },
+        { text: '开发环境搭建及入门程序', link: '开发环境搭建及入门程序' },
+        { text: '利用IDEA进行Java开发', link: '利用 IDEA 进行 Java 开发' },
+        { text: 'Java的变量与运算符', link: '变量与运算符' },
+        { text: 'Java的流程控制语句', link: '流程控制语句' },
+        { text: 'Java的流程控制知识大闯关', link: '流程控制知识大闯关' },
+         { text: 'Java的数组', link: '数组' },
+         { text: 'Java的面向对象编程基础', link: '面向对象编程基础' },
+         { text: 'Java的面向对象编程进阶', link: '面向对象编程(进阶)' },
+         { text: 'Java的面向对象编程高级', link: '面向对象编程(高级)' },
+        // { text: '常用进制转换', link: '常用进制转换' },
+        // { text: '操作符', link: '操作符' },
+        // { text: '流程控制', link: '控制流程' },
+        // { text: '流程控制知识大闯关', link: '流程控制知识大闯关' },
+        // { text: '数组操作的奇技', link: '数组操作的奇技' },
+        // { text: '面向对象的知识点', link: '面向对象的知识点' },
+        // { text: '类的相关知识', link: '类的相关知识' },
+        // { text: '包和jar文件的创建', link: '包和 jar文件的创建' },
+        // { text: '变量', link: '变量' },
+        // { text: 'static和final小课堂', link: 'static和final小课堂' },
+        // { text: '抽象接口和内部类', link: '抽象接口和内部类' },
+      ],
+    },
+    {
+       text: 'Java高级技术',
+      badge: { text: '理解', type: 'danger' }, 
+      icon: 'ep:guide',
+      collapsed: false,
+      prefix: 'advance/',
+      items: [
+        //{ text: '介绍', link: 'intro', icon: 'ph:info-light' }, 
+        { text: 'Java的异常处理', link: '异常处理' },
+        { text: 'Java的多线程', link: '多线程' },
+        { text: 'Java的常用类和基础API', link: '常用类和基础API' },
+        { text: 'Java的集合框架', link: '集合框架' },
+        { text: 'Java的泛型', link: '泛型' },
+        { text: 'Java的数据结构与集合源码', link: '数据结构与集合源码' },
+         { text: 'Java的File类与IO流', link: 'File类与IO流' },
+           { text: 'Java的网络编程', link: '网络编程' },
+             { text: 'Java的反射机制', link: '反射机制' },
+          { text: 'JDK8-17新特性上', link: 'JDK8-17新特性1' },
+           { text: 'JDK8-17新特性下', link: 'JDK8-17新特性下' },
+        
+        { text: '深入浅出Java注解', link: '深入浅出Java注解' },
+        { text: '拥抱Junit单元测试', link: '拥抱Junit单元测试' },
+        { text: 'Lombok安装及使用指南', link: 'Lombok安装及使用指南' },
+        { text: 'Mockito+JUnit单元测试实例', link: 'Mockito和JUnit 单元测试实例.md' },
+      ],
+    },
+  ]
+})
