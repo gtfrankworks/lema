@@ -196,6 +196,7 @@ export default defineNavbarConfig([
                icon:'mdi:file-document-multiple',
                 badge: '趋势'
               },
+              //测试
               {
                 text: '智能体项目案例',
                 link: '#',
