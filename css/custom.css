@@ -1,0 +1,35 @@
+/* 设置图标大小和基础样式 */
+.iconfont {
+  font-size: 36px; /* 根据需要调整图标大小 */
+  vertical-align: middle;
+}
+/* 新闻*/
+.icon-xinwenzixun{
+  color: rgba(102, 238, 116, 0.953) !important;
+}
+
+/* 关于我们 - 粉色 */
+.icon-guanyuwomen {
+  color: #ec638c !important;
+}
+
+/* 首页 - 蓝色 */
+.icon-shouye {
+  color: #db3734 !important;
+}
+/*巩固*/
+.icon-gongju_gongju_xuanzhong{
+  color: #db3445 !important;
+}
+.icon-works{
+  color: #6a5bbe !important;
+}
+.icon-kuangjia- {
+  color: chocolate !important;
+}
+.icon-wendangku-lan{
+  color: #3450db !important;
+}
+.icon-yunshujuku-copy{
+  color: darkorchid !important;
+}
