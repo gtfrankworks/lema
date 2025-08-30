@@ -26,8 +26,8 @@ export default defineNavbarConfig([
           //   link: '/bigcompany/README.md',
           //   badge: '硬核实力'
           // },
-          { text: '面试常见面问题', link: '/interview/README.md', badge: '软技能' },
-          { text: '面试题实战准备', link: '/bigcompany/README.md', badge: '硬核实力' },
+          { text: '面试常见面问题', link: '/interview/README.md', icon:'mdi:file-document-multiple',  badge: '软技能' },
+          { text: '面试题实战准备', link: '/bigcompany/README.md', icon:'mdi:file-document-multiple',badge: '硬核实力' },
         ]
       },
       
@@ -42,10 +42,12 @@ export default defineNavbarConfig([
           {
             text: 'Git基础知识',
             link: '/tools/git/README.md',
+            icon:'mdi:file-document-multiple',
             badge: '核心'
           },
           {
             text: 'Maven操作指南',
+            icon:'mdi:file-document-multiple',
             link: '/tools/maven/README.md',
             badge: '工具'
           },
@@ -56,6 +58,7 @@ export default defineNavbarConfig([
         items: [
           {
             text: '项目常用的工具',
+            icon:'mdi:file-document-multiple',
             link: '/tools/project/README.md',
             badge: '核心'
           },
@@ -86,7 +89,7 @@ export default defineNavbarConfig([
     ]
 
     },
-   { text: 'Spring体系',icon: 'material-symbols:document-scanner-sharp',
+   { text: '开源框架',icon: 'material-symbols:document-scanner-sharp',
     items: [
       { text: 'Spring体系技术',
         icon:'mdi:idea',
@@ -103,18 +106,42 @@ export default defineNavbarConfig([
             link: '/notes/framework/springboot/README.md',
             badge: '重点'
           },
+          {
+            text: 'SpringCloud体系技术',
+             icon:'mdi:file-document-multiple',
+            link: '/notes/framework/spring/README.md',
+            badge: '重点'
+          },
         ]
        },
       { text: 'SpringAI体系技术',
         icon:'mdi:idea',
         items: [
           {
-            text: 'Spring框架技术',
+            text: 'SpringAI技术',
+             icon:'mdi:file-document-multiple',
             link: '/notes/framework/spring/README.md',
-            badge: '徽章'
+            badge: '未来'
           },
         ]
        },
+       { text: 'ORM框架技术',
+        icon:'mdi:idea',
+        items: [
+          {
+            text: 'MyBatis框架技术',
+             icon:'mdi:file-document-multiple',
+            link: '/notes/framework/mybatis/README.md',
+            badge: '核心'
+          },
+          {
+            text: 'MyBatisFlex框架技术',
+             icon:'mdi:file-document-multiple',
+            link: '/framework/mybatisflex/README.md',
+            badge: '未来'
+          },
+        ]
+       }
     ]
 
     },
@@ -156,24 +183,24 @@ export default defineNavbarConfig([
         ],
       },
       {
-        text: 'ORM框架',
-        icon: 'mdi:idea',
+        text: 'AI相关技术',
+        icon: 'material-symbols:demography',
         items: [
           {
-            text: '常用ORM框架技术',
-            icon: 'material-symbols:database',
+            text: '智能体发展',
+            icon: 'material-symbols:demography',
             items: [
               {
-                text: 'MyBatis技术介绍',
-                link: '/notes/framework/mybatis/README.md',
-                //icon: 'mdi:paper-airplane',
-                badge: '徽章'
+                text: '智能体技术',
+                link: '#',
+               icon:'mdi:file-document-multiple',
+                badge: '趋势'
               },
               {
-                text: 'MyBatisFlex框架技术',
-                link: '/mybatisflex/README.md',
-                //icon: 'mdi:paper-airplane',
-                badge: '徽章'
+                text: '智能体项目案例',
+                link: '#',
+                icon:'mdi:file-document-multiple',
+                badge: '趋势'
               },
             ],
           },

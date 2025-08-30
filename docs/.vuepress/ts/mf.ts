@@ -2,8 +2,8 @@
  import { defineNoteConfig } from 'vuepress-theme-plume'
 
 export default defineNoteConfig({
-  dir: 'mybatisflex',
-  link: '/mybatisflex/',
+  dir: 'framework/mybatisflex',
+  link: '/framework/mybatisflex/',
   sidebar: [
     {
       text: 'MyBatisFlex基础',
