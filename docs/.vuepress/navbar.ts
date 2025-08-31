@@ -192,7 +192,7 @@ export default defineNavbarConfig([
             items: [
               {
                 text: '智能体技术',
-                link: '#',
+                link: '/notes/ai/agent/README.md',
                icon:'mdi:file-document-multiple',
                 badge: '趋势'
               },
