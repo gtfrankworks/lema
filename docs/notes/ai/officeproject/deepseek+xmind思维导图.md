@@ -1,0 +1,69 @@
+---
+title: deepseek+xmind思维导图
+createTime: 2025/09/01 09:47:30
+permalink: /ai/officeproject/d7j9xm2d/
+---
+## 一、打开deepseek的官网【https://www.deepseek.com/】
+
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NWQwZTA2OGJhMGNkMTUxZDU5YjBhZjgwMzA1NDQwNjlfNDJxU04xc005OVY5S3JwR2o5RWNERHBmdFNtc3J1b1JfVG9rZW46WDY4OWJsTEcxb09XTFV4M3RaRmNQVDhLbjVkXzE3NTY2OTEyODU6MTc1NjY5NDg4NV9WNA)
+
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmU3YmVhZWI5OGZhMjg1N2Q3MTNmYjY5ZmRjZjhlZGFfcmhVQmhwczBDVEdLYm1ua3o0aTJXOWdtY29YMTRtOVpfVG9rZW46RTBPT2JVcVNrb09TQ094SUoyamNiUElxbm1mXzE3NTY2OTEyODU6MTc1NjY5NDg4NV9WNA)
+
+## 二、输入提示词
+
+1. 以前目前火爆的《哪吒》电影为案例
+
+```SQL
+我生成一份《哪吒3》的电影剧情的大纲，并以markdown格式输出
+```
+
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=Yjc4OGYzYzdhNWU4YjQ1NTdkZTYzZDM4NDFjOWZmMjJfSUd1YWVQZDd2aDV0NktmZnBiVE1GbFZ3Zlh4TTljWWRfVG9rZW46VFVLVmJFQ1c1b0hPSVR4NmlHZWNyRDRXbkNiXzE3NTY2OTEyODU6MTc1NjY5NDg4NV9WNA)
+
+1. 生层的内容
+
+```Markdown
+# 《哪吒3》电影剧情大纲
+
+## 一、开篇设定：因果轮回与命运重启
+- **哪吒重生后的困境**：哪吒虽在《哪吒2》结尾重塑混元之体，但体内混沌之力与灵珠能量的冲突仍未平息，导致他时常陷入暴走状态。与此同时，母亲殷夫人的魂魄因天劫残留而游离三界，成为哪吒新的执念:cite[7]:cite[8]。
+- **通天教主的交易**：为复活母亲，哪吒被迫与神秘势力“通天教主”达成协议，后者承诺以幽冥血海秘术唤回殷夫人魂魄，但代价是释放被封印的上古魔神:cite[1]:cite[7]。
+
+## 二、核心冲突：三界阴谋与信仰之战
+- **天庭的隐秘布局**：元始天尊借封神榜操控众生信仰之力，意图通过哪吒的混沌之体重启“混元大道计划”，而通天教主实为元始天尊的暗棋，旨在借魔神之乱清洗三界:cite[7]:cite[9]。
+- **龙族的复仇与分裂**：东海龙王因敖丙牺牲与龙族诅咒加深，联合申公豹策划夺取定海神针（金箍棒），试图以东海之力颠覆天庭统治，却无意中释放了被镇压的九婴妖兽:cite[7]:cite[10]。
+
+## 三、关键情节：试炼与背叛
+1. **幽冥血海之旅**：哪吒与敖丙（从玄冰深渊挣脱）潜入血海，遭遇申公豹操控的魔神军团。战斗中，哪吒发现母亲魂魄被囚于血海核心，需以自身混沌能量为引破除禁制:cite[7]:cite[8]。
+2. **金箍棒的秘密**：定海神针现世引发多方争夺，揭示其不仅是兵器，更是女娲补天石的碎片。通天教主意图集齐碎片重启“补天计划”，重塑天道规则:cite[7]:cite[10]。
+3. **无量仙翁的后手**：阐教仙翁暗中策反太乙真人，揭露当年分裂混元珠的真相——实为元始天尊为制造可控的“天道漏洞”而设的局:cite[7]:cite[9]。
+
+## 四、高潮对决：逆天改命与众生抉择
+- **双重战场**：
+  - **东海决战**：哪吒与敖丙联手对抗东海龙王操控的九婴妖兽，敖丙以灵珠之力净化龙族血脉，自身化作镇海石柱，永久封印妖兽:cite[7]:cite[10]。
+  - **天道之巅**：哪吒直面元始天尊，以混沌之体吸收封神榜信仰之力，逆转天道规则。殷夫人魂魄最终选择自我消散，换取哪吒摆脱宿命枷锁:cite[1]:cite[9]。
+- **申公豹的觉醒**：原本为反派的申公豹在最终时刻背叛通天教主，以女娲石碎片修复血海裂隙，暗示其真实身份与上古神族有关:cite[7]:cite[10]。
+
+## 五、结局与伏笔：新纪元的序章
+- **开放式收尾**：哪吒以孩童形态重生，额间混沌印记化为金色神纹，与敖丙的镇海石柱遥相呼应，预示“共生之契”将成三界新平衡:cite[7]:cite[8]。
+- **彩蛋线索**：
+  - 金箍棒落入神秘角色之手（疑似孙悟空前世），背景音传来“花果山”的低语:cite[7]:cite[10]。
+  - 女娲石碎片散落人间，元始天尊在昆仑山低语：“封神，不过是下一场棋局的开始……”:cite[9]:cite[10]。
+```
+
+1. 保存刚才生成的markdow内容，保存结尾md的文件
+
+暂时无法在飞书文档外展示此内容
+
+## 三、打开xmind
+
+1. 打开xmind
+
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjgzOTVjOTBlNjk0YzI1ZGJiMDNjMTVjNTBjZWRjMGNfaklybFJQdXFtWDZpUkxQNU9OUmNKUTBOeVJHVHE1TDhfVG9rZW46TWVZT2JLZ2lrb3lLZ2N4Tm9IVmNqUjBFbkdmXzE3NTY2OTEyODU6MTc1NjY5NDg4NV9WNA)
+
+1. 导入刚才生成的markdwon内容
+
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=OTcyYThkOTczZGM2OWFjMTU5MjFkZWRkMmJhMDZlZDBfQVJVMTFnd1JwMG9oTWI1dDkzZThwSkNTcHliRjNXVndfVG9rZW46TWw4YmJtUkxwb3ZCOUF4aWFaRGMwd1lGbnNmXzE3NTY2OTEyODU6MTc1NjY5NDg4NV9WNA)
+
+1. 生成思维导图
+
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YTUyYTZkMjI2OGU2NjU2MDAzY2VhMzIyM2JlMjJiMjJfRGk1Tm56SU9JUjVwUkJ3OUl2eWFBN3ZVUTRSNWJsam5fVG9rZW46TkRiTGJ2dzZkb3JUVVZ4ZTJ2d2NOdW5YbkwyXzE3NTY2OTEyODU6MTc1NjY5NDg4NV9WNA)

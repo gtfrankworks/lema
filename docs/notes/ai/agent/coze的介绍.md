@@ -1,7 +1,7 @@
 ---
 title: coze的介绍
 createTime: 2025/08/31 22:22:35
-permalink: /ai/6kn4yt3u/
+permalink: /ai/agent/6kn4yt3u/
 ---
 扣子是新一代 AI Agent 开发平台。无论你是否有编程基础，都可以在扣子上快速搭建基于大模型的各类 AI 应用，并将 AI 应用发布到各个社交平台、通讯软件，也可以通过 API 或 SDK 将 AI 应用集成到你的业务系统中。 
 

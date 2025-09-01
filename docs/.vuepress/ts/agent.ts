@@ -2,11 +2,11 @@
 import { defineNoteConfig } from 'vuepress-theme-plume'
 
 export default defineNoteConfig({
- dir: 'ai',
+ dir: 'ai/agent',
   // `dir` 所指向的目录中的所有 markdown 文件，其 permalink 需要以 `link` 配置作为前缀
   // 如果 前缀不一致，则无法生成侧边栏。
   // 所以请确保  markdown 文件的 permalink 都以 `link` 开头
-  link: '/ai/',
+  link: '/ai/agent/',
   sidebar: [
     
     {
@@ -14,7 +14,7 @@ export default defineNoteConfig({
       badge: { text: '必须学习', type: 'danger' }, 
       icon: 'material-symbols:construction',
       collapsed: false,
-      prefix: 'agent/',
+    //  prefix: 'agent/',
       items: [
         //{ text: '介绍', link: 'intro', icon: 'ph:info-light' }, 
         //{ text: '1.创建型模式', link: '创建型模式' },

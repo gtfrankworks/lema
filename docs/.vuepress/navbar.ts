@@ -199,7 +199,7 @@ export default defineNavbarConfig([
               //测试
               {
                 text: '智能体项目案例',
-                link: '#',
+                link: '/notes/ai/officeproject/README.md',
                 icon:'mdi:file-document-multiple',
                 badge: '趋势'
               },

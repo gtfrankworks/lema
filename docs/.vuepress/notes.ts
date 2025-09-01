@@ -38,7 +38,7 @@ import springboot from './ts/springboot'
 import design from './ts/degin'
 import java from './ts/java'
 import agent from './ts/agent'
-
+import agentproject from './ts/agentproject'
 
 export default defineNotesConfig({
   dir:'/notes/',
@@ -63,5 +63,6 @@ export default defineNotesConfig({
     design,
     java,
     agent,
+    agentproject,
   ]
 })

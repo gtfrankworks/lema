@@ -1,7 +1,7 @@
 ---
 title: Agent的介绍
 createTime: 2025/08/31 22:15:04
-permalink: /ai/8puzeqeb/
+permalink: /ai/agent/8puzeqeb/
 ---
 ## 一、Agent 的基本概念
 
