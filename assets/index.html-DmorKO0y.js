@@ -1,0 +1,7 @@
+import{a as t,c as o,b as n,o as r}from"./app-ZQgO6-gU.js";const a={};function i(s,e){return r(),o("div",null,e[0]||(e[0]=[n(`<p>MyBatis-Flex 乐观锁 使用场景 用于当有多个用户（或者多场景）去同时修改同一条数据的时候，只允许有一个修改成功。</p><p>实现原理 使用一个字段，用于记录数据的版本，当修改数据的时候，会去检测当前版本是否是正在修改的版本，同时修改成功后会把 版本号 + 1。</p><p>更新数据时，执行的 SQL 如下：</p><p>sql UPDATE account SET nickname = ?, version = version + 1 WHERE id = ? AND version = ? 在以上的 SQL 中，若两个场景同时读取的是同一个 version 的内容，那么必然只最优先执行的 SQL 执行成功。</p><p>以下是 示例代码：</p><p>@Table(&quot;tb_account&quot;) public class Account {</p><pre><code>@Column(version = true)
+private Long version;
+
+//Getter Setter...
+</code></pre><p>} 需要注意的是：</p><p>1、在同一张表中，只能有一个被 @Column(version = true) 修饰的字段。 2、Account 在插入数据时，若 version 未设置值，那么会自动被 MyBatis-Flex 设置为 0。 全局配置乐观锁字段 在 MyBatis-Flex 中，可以使用 FlexGlobalConfig 在 MyBatis-Flex 启动之前，指定项目中的乐观锁列的列名。</p><p>FlexGlobalConfig.getDefaultConfig().setVersionColumn(&quot;version&quot;); 这样就可以省略实体类属性上的 @Column(version = true) 注解了。</p><p>public class Account {</p><pre><code>// @Column(version = true)
+private Integer version;
+</code></pre><p>}</p>`,13)]))}const p=t(a,[["render",i]]),c=JSON.parse('{"path":"/framework/mybatisflex/ad/05cbflho/","title":"MyBatis-Flex 乐观锁","lang":"zh-CN","frontmatter":{"title":"MyBatis-Flex 乐观锁","createTime":"2025/08/27 09:43:45","permalink":"/framework/mybatisflex/ad/05cbflho/"},"readingTime":{"minutes":1.08,"words":323},"git":{"createdTime":1756736713000},"filePathRelative":"notes/framework/mybatisflex/ad/MyBatis-Flex乐观锁.md","headers":[]}');export{p as comp,c as data};

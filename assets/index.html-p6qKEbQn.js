@@ -1,0 +1,49 @@
+import{a,c as n,b as e,o as i}from"./app-ZQgO6-gU.js";const l={};function p(r,s){return i(),n("div",null,s[0]||(s[0]=[e(`<p>MyBatis-Flex 的读写分离功能是基于 【<a href="https://mybatis-flex.com/zh/core/multi-datasource.html" target="_blank" rel="noopener noreferrer">多数据源</a>】 功能来实现的。</p><p>读写分离的功能，要求当前环境必须是多个数据库（也可理解为多个数据源），其原理是： 让主数据库（master）处理事务性操作，比如：增、删、改（INSERT、DELETE、UPDATE），而从数据库（slave）处理查询（SELECT）操作。</p><h2 id="实现原理" tabindex="-1"><a class="header-anchor" href="#实现原理"><span>实现原理</span></a></h2><p>在 MyBatis 框架中，我们知道： 所有关于数据库的的操作都是通过 Mapper 来进行的，Mapper 里的一个方法，往往是和一个执行 SQL 一一对应。</p><p>因此，在 MyBatis-Flex 中，提供了一种基于 Mapper 方法的读写分离策略。</p><h2 id="数据源分片策略" tabindex="-1"><a class="header-anchor" href="#数据源分片策略"><span>数据源分片策略</span></a></h2><p>在 MyBatis-Flex 框架中，我们需要通过实现 <code>DataSourceShardingStrategy</code> 接口来自定义自己的数据源读写分离策略（分片策略）例如：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>public class MyStrategy implements DataSourceShardingStrategy {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public String doSharding(String currentDataSourceKey</span></span>
+<span class="line"><span>        , Object mapper, Method mapperMethod, Object[] methodArgs){</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        //返回新的数据源 key</span></span>
+<span class="line"><span>        return &quot;newDataSourceKey&quot;;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>doSharding 的参数分别为：</p><ul><li>currentDataSourceKey：当前使用的数据源 key</li><li>mapper：当前的 mapper 对象</li><li>mapperMethod: 当前的 mapper 方法</li><li>methodArgs：当前的 mapper 方法的参数内容</li></ul><p>自定义好 数据源分片策略后，在项目启动时，需要通过 <code>DataSourceManager</code> 配置自己的自定义分片策略：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>DataSourceManager.setDataSourceShardingStrategy(new MyStrategy());</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><h2 id="示例代码" tabindex="-1"><a class="header-anchor" href="#示例代码"><span>示例代码</span></a></h2><p>假设数据源配置如下：</p><p>yaml</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>mybatis-flex:</span></span>
+<span class="line"><span>  datasource:</span></span>
+<span class="line"><span>    master:</span></span>
+<span class="line"><span>      type: druid</span></span>
+<span class="line"><span>      url: jdbc:mysql://127.0.0.1:3306/master-db</span></span>
+<span class="line"><span>      username: root</span></span>
+<span class="line"><span>      password: 123456</span></span>
+<span class="line"><span>    slave1:</span></span>
+<span class="line"><span>      type: com.your.datasource.type2</span></span>
+<span class="line"><span>      url: jdbc:mysql://127.0.0.1:3306/slave1</span></span>
+<span class="line"><span>      username: root</span></span>
+<span class="line"><span>      password: 123456</span></span>
+<span class="line"><span>    slave2:</span></span>
+<span class="line"><span>      type: com.your.datasource.type2</span></span>
+<span class="line"><span>      url: jdbc:mysql://127.0.0.1:3306/slave2</span></span>
+<span class="line"><span>      username: root</span></span>
+<span class="line"><span>      password: 123456</span></span>
+<span class="line"><span>    other:</span></span>
+<span class="line"><span>      type: com.your.datasource.type2</span></span>
+<span class="line"><span>      url: jdbc:mysql://127.0.0.1:3306/other</span></span>
+<span class="line"><span>      username: root</span></span>
+<span class="line"><span>      password: 123456</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>以上配置中，一共有 4 个数据源，分别为 <code>master</code>、<code>slave1</code>、<code>slave2</code>、<code>other</code>。 我们的需求是：在 增删改 时，走 master 数据源，而在查询时，随机自动使用 <code>slave1</code>、<code>slave2</code> 数据源进行负载均衡。</p><p>那么，我们的分片策略代码如下：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>public class MyStrategy implements DataSourceShardingStrategy {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public String doSharding(String currentDataSourceKey</span></span>
+<span class="line"><span>        , Object mapper, Method mapperMethod, Object[] methodArgs){</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        // 不管 other 数据源的情况</span></span>
+<span class="line"><span>        if (&quot;other&quot;.equals(currentDataSourceKey)){</span></span>
+<span class="line"><span>            return currentDataSourceKey;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        // 如果 mapper 的方法属于 增删改，使用 master 数据源</span></span>
+<span class="line"><span>        if (StringUtil.startWithAny(mapperMethod.getName(),</span></span>
+<span class="line"><span>            &quot;insert&quot;, &quot;delete&quot;, &quot;update&quot;)){</span></span>
+<span class="line"><span>            return &quot;master&quot;;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        //其他场景，使用 slave1 或者 slave2 进行负载均衡</span></span>
+<span class="line"><span>        return &quot;slave*&quot;;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="注意事项" tabindex="-1"><a class="header-anchor" href="#注意事项"><span>注意事项</span></a></h2><blockquote><p>MyBatis-Flex 的读写分离组件，只进行数据查询和数据操作时的读写分离，并不涉及主从数据库之间的数据同步，主从数据库同步需要用户自己在数据库服务器，通过第三方组件去实现。</p></blockquote>`,21)]))}const c=a(l,[["render",p]]),t=JSON.parse('{"path":"/framework/mybatisflex/ad/nrs60oyk/","title":"MyBatis-Flex读写分离","lang":"zh-CN","frontmatter":{"title":"MyBatis-Flex读写分离","createTime":"2025/08/27 09:54:20","permalink":"/framework/mybatisflex/ad/nrs60oyk/"},"readingTime":{"minutes":2.11,"words":634},"git":{"createdTime":1756736713000},"filePathRelative":"notes/framework/mybatisflex/ad/读写分离.md","headers":[]}');export{c as comp,t as data};

@@ -1,0 +1,573 @@
+import{a as n,c as a,b as e,o as i}from"./app-ZQgO6-gU.js";const l={};function p(d,s){return i(),a("div",null,s[0]||(s[0]=[e(`<p>在 MyBatis-Flex 中，我们内置了 3 种方案，帮助用户进行关联查询，比如 <code>一对多</code>、<code>一对一</code>、<code>多对一</code>、<code>多对多</code>等场景，他们分别是：</p><ul><li>方案1：Relations 注解</li><li>方案2：Field Query</li><li>方案3：Join Query</li></ul><h2 id="方案-1-relations-注解" tabindex="-1"><a class="header-anchor" href="#方案-1-relations-注解"><span>方案 1：Relations 注解</span></a></h2><p>在 MyBatis-Flex 中，提供了 4 个 Relations 注解，他们分别是：</p><ul><li><strong>RelationOneToOne</strong>：用于一对一的场景</li><li><strong>RelationOneToMany</strong>：用于一对多的场景</li><li><strong>RelationManyToOne</strong>：用于多对一的场景</li><li><strong>RelationManyToMany</strong>：用于多对多的场景</li></ul><p>添加了以上配置的实体类，在通过 <code>BaseMapper</code> 的方法查询数据时，需要调用 select***<strong>WithRelations</strong>() 方法，Relations 注解才能生效。 否则 MyBatis-Flex 自动忽略 Relations 注解。</p><p>BaseMapper 提供的 withRelations 方法列表，详情点击<a href="https://mybatis-flex.com/zh/base/query.html#relations-%E6%B3%A8%E8%A7%A3%E6%9F%A5%E8%AF%A2" target="_blank" rel="noopener noreferrer">这里</a>。</p><h2 id="一对一-relationonetoone" tabindex="-1"><a class="header-anchor" href="#一对一-relationonetoone"><span>一对一 <code>@RelationOneToOne</code></span></a></h2><p>假设有一个账户，账户有身份证，账户和身份证的关系是一对一的关系，代码如下所示：</p><p>Account.java :</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>public class Account implements Serializable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Id(keyType = KeyType.Auto)</span></span>
+<span class="line"><span>    private Long id;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private String userName;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationOneToOne(selfField = &quot;id&quot;, targetField = &quot;accountId&quot;)</span></span>
+<span class="line"><span>    private IDCard idCard;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>IDCard.java :</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>@Table(value = &quot;tb_idcard&quot;)</span></span>
+<span class="line"><span>public class IDCard implements Serializable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Long accountId;</span></span>
+<span class="line"><span>    private String cardNo;</span></span>
+<span class="line"><span>    private String content;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code>@RelationOneToOne</code> 配置描述：</p><ul><li><strong>selfField</strong> 当前实体类的属性</li><li><strong>targetField</strong> 目标对象的关系实体类的属性</li></ul><blockquote><p>PS: 若 <strong>selfField</strong> 是主键，且当前表只有 1 个主键时，可以不填写。因此，以上的配置可以简化为 <code>@RelationOneToOne(targetField = &quot;accountId&quot;)</code></p></blockquote><p>假设数据库 5 条 Account 数据，然后进行查询：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>List&lt;Account&gt; accounts = accountMapper.selectAllWithRelations();</span></span>
+<span class="line"><span>System.out.println(accounts);</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><p>其执行的 SQL 如下：</p><p>sql</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>SELECT \`id\`, \`user_name\`, \`age\` FROM \`tb_account\`</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>SELECT \`account_id\`, \`card_no\`, \`content\` FROM \`tb_idcard\`</span></span>
+<span class="line"><span>WHERE account_id IN (1, 2, 3, 4, 5)</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>查询打印的结果如下：</p><p>txt</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span> [</span></span>
+<span class="line"><span> Account{id=1, userName=&#39;孙悟空&#39;, age=18, idCard=IDCard{accountId=1, cardNo=&#39;0001&#39;, content=&#39;内容1&#39;}},</span></span>
+<span class="line"><span> Account{id=2, userName=&#39;猪八戒&#39;, age=19, idCard=IDCard{accountId=2, cardNo=&#39;0002&#39;, content=&#39;内容2&#39;}},</span></span>
+<span class="line"><span> Account{id=3, userName=&#39;沙和尚&#39;, age=19, idCard=IDCard{accountId=3, cardNo=&#39;0003&#39;, content=&#39;内容3&#39;}},</span></span>
+<span class="line"><span> Account{id=4, userName=&#39;六耳猕猴&#39;, age=19, idCard=IDCard{accountId=4, cardNo=&#39;0004&#39;, content=&#39;内容4&#39;}},</span></span>
+<span class="line"><span> Account{id=5, userName=&#39;王麻子叔叔&#39;, age=19, idCard=IDCard{accountId=5, cardNo=&#39;0005&#39;, content=&#39;内容5&#39;}}</span></span>
+<span class="line"><span> ]</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>注意事项 1：</strong></p><p>在以上的 <code>@RelationOneToOne</code> 注解中，若 <code>IDCard.java</code> 是 VO、DTO 等，而不是一个带有 <code>@Table</code> 注解的 Entity 类， 则需要在 <code>@RelationOneToOne</code> 配置上 <code>targetTable</code> 用于指定查询的表名。</p><p>例如：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>public class Account implements Serializable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Id(keyType = KeyType.Auto)</span></span>
+<span class="line"><span>    private Long id;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private String userName;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    // 假设 IDCard 类是 vo 或者 dto，需要配置 targetTable</span></span>
+<span class="line"><span>    @RelationOneToOne(selfField = &quot;id&quot;, targetField = &quot;accountId&quot;</span></span>
+<span class="line"><span>        , targetTable = &quot;tb_idcard&quot;)</span></span>
+<span class="line"><span>    private IDCard idCard;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>注意事项 2：</strong></p><p>在 <code>Account.java</code> 和 <code>IDCard.java</code> 示例中，若他们的关联关系是通过 <strong>中间表</strong> 的方式进行关联，则需要添加 <code>joinTable</code>、 <code>joinSelfColumn</code>、 <code>joinTargetColumn</code> 配置，如下所示：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>public class Account implements Serializable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Id(keyType = KeyType.Auto)</span></span>
+<span class="line"><span>    private Long id;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private String userName;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationOneToOne(</span></span>
+<span class="line"><span>         joinTable = &quot;tb_idcard_mapping&quot;</span></span>
+<span class="line"><span>        ,joinSelfColumn = &quot;account_id&quot;</span></span>
+<span class="line"><span>        ,joinTargetColumn = &quot;idcard_id&quot;</span></span>
+<span class="line"><span>        ,selfField = &quot;id&quot;</span></span>
+<span class="line"><span>        ,targetField = &quot;accountId&quot;)</span></span>
+<span class="line"><span>    private IDCard idCard;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其他场景：一对多（<code>@RelationOneToMany</code>）、多对一（<code>@RelationManyToOne</code>）、多对多（<code>@RelationManyToMany</code>） 也是如此。</p><h2 id="一对多-relationonetomany" tabindex="-1"><a class="header-anchor" href="#一对多-relationonetomany"><span>一对多 <code>@RelationOneToMany</code></span></a></h2><p>假设一个账户有很多本书籍，一本书只能归属一个账户所有；账户和书籍的关系是一对多的关系，代码如下：</p><p>Account.java :</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>public class Account implements Serializable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Id(keyType = KeyType.Auto)</span></span>
+<span class="line"><span>    private Long id;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private String userName;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationOneToMany(selfField = &quot;id&quot;, targetField = &quot;accountId&quot;)</span></span>
+<span class="line"><span>    private List&lt;Book&gt; books;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Book.java :</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>@Table(value = &quot;tb_book&quot;)</span></span>
+<span class="line"><span>public class Book implements Serializable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Id(keyType = KeyType.Auto)</span></span>
+<span class="line"><span>    private Long id;</span></span>
+<span class="line"><span>    private Long accountId;</span></span>
+<span class="line"><span>    private String title;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code>@RelationOneToMany</code> 配置描述：</p><ul><li><strong>selfField</strong> 当前实体类的属性</li><li><strong>targetField</strong> 目标对象的关系实体类的属性</li></ul><blockquote><p>PS: 若 <strong>selfField</strong> 是主键，且当前表只有 1 个主键时，可以不填写。因此，以上的配置可以简化为 <code>@RelationOneToOne(targetField = &quot;accountId&quot;)</code></p></blockquote><p>假设数据库 5 条 Account 数据，然后进行查询：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>List&lt;Account&gt; accounts = accountMapper.selectAllWithRelations();</span></span>
+<span class="line"><span>System.out.println(accounts);</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><p>其执行的 SQL 如下：</p><p>sql</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>SELECT \`id\`, \`user_name\`, \`age\` FROM \`tb_account\`</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>SELECT \`id\`, \`account_id\`, \`title\`, \`content\` FROM \`tb_book\`</span></span>
+<span class="line"><span>WHERE account_id IN (1, 2, 3, 4, 5)</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>Map 映射</strong></p><p>若 <code>Account.books</code> 是一个 <code>Map</code>，而非 <code>List</code>，那么，我们需要通过配置 <code>mapKeyField</code> 来指定使用 <code>Book</code> 的那个列来充当 <code>Map</code> 的 <code>Key</code>， 如下代码所示：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>public class Account implements Serializable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Id(keyType = KeyType.Auto)</span></span>
+<span class="line"><span>    private Long id;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private String userName;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationOneToMany(selfField = &quot;id&quot;, targetField = &quot;accountId&quot;</span></span>
+<span class="line"><span>        , mapKeyField = &quot;id&quot;) //使用 Book 的 id 来填充这个 map 的 key</span></span>
+<span class="line"><span>    private Map&lt;Long, Book&gt; books;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //注意 map 的 key 的类型，可以和 Book 的 id 类型不一致也是支持的</span></span>
+<span class="line"><span>    //比如：</span></span>
+<span class="line"><span>    //private Map&lt;String, Book&gt; books;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote><p>多对多注解 <code>@RelationManyToMany</code> 也是如此。</p></blockquote><p><strong>selfValueSplitBy 分割查询</strong> ^ v1.6.8</p><p>若 <code>selfField</code> 的值是一个 <code>由字符拼接而成的列表（如: &quot;1,2,3&quot; )</code>，那么，我们可以通过配置 <code>selfValueSplitBy</code> 来指定使用 <code>selfField</code> 的值根据字符切割后查询， 如下代码所示：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>@Table(value = &quot;tb_patient&quot;)</span></span>
+<span class="line"><span>public class PatientVO1 implements Serializable {</span></span>
+<span class="line"><span>    private static final long serialVersionUID = -2298625009592638988L;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * ID</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    @Id</span></span>
+<span class="line"><span>    private Integer patientId;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 姓名</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private String name;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 所患病症(对应字符串类型) 英文逗号 分割</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private String diseaseIds;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    /**</span></span>
+<span class="line"><span>     * 患者标签(对应数字类型) / 分割</span></span>
+<span class="line"><span>     */</span></span>
+<span class="line"><span>    private String tagIds;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationOneToMany(</span></span>
+<span class="line"><span>        selfField = &quot;diseaseIds&quot;,</span></span>
+<span class="line"><span>        selfValueSplitBy = &quot;,&quot;, //使用 &quot;,&quot; 对 diseaseIds 的值进行分割</span></span>
+<span class="line"><span>        targetTable = &quot;tb_disease&quot;, //只获取某个字段值需要填入目标表名</span></span>
+<span class="line"><span>        targetField = &quot;diseaseId&quot;, //测试目标字段是字符串类型是否正常转换</span></span>
+<span class="line"><span>        valueField = &quot;name&quot; //测试只获取某个字段值是否正常</span></span>
+<span class="line"><span>    )</span></span>
+<span class="line"><span>    private List&lt;String&gt; diseaseNameList;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationOneToMany(</span></span>
+<span class="line"><span>        selfField = &quot;tagIds&quot;,</span></span>
+<span class="line"><span>        selfValueSplitBy = &quot;/&quot;, //使用 &quot;/&quot; 对 tagIds 的值进行分割</span></span>
+<span class="line"><span>        targetField = &quot;tagId&quot; //测试目标字段是数字类型是否正常转换</span></span>
+<span class="line"><span>    )</span></span>
+<span class="line"><span>    private List&lt;Tag&gt; tagList;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationOneToMany(</span></span>
+<span class="line"><span>        selfField = &quot;diseaseIds&quot;,</span></span>
+<span class="line"><span>        selfValueSplitBy = &quot;,&quot;, //使用 &quot;,&quot; 对 diseaseIds 的值进行分割</span></span>
+<span class="line"><span>        targetField = &quot;diseaseId&quot;, //测试目标字段是字符串类型是否正常转换</span></span>
+<span class="line"><span>        mapKeyField = &quot;diseaseId&quot; //测试Map映射</span></span>
+<span class="line"><span>    )</span></span>
+<span class="line"><span>    private Map&lt;String, Disease&gt; diseaseMap;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter toString</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>进行查询</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>QueryWrapper qw = QueryWrapper.create().orderBy(PatientVO1::getPatientId, false).limit(1)</span></span>
+<span class="line"><span>PatientVO1 patientVO1 = patientMapper.selectOneWithRelationsByQueryAs(qw, PatientVO1.class);</span></span>
+<span class="line"><span>System.out.println(JSON.toJSONString(patientVO1));</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其执行的 SQL 如下：</p><p>sql</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>SELECT \`patient_id\`, \`name\`, \`disease_ids\`, \`tag_ids\` FROM \`tb_patient\` ORDER BY \`patient_id\` DESC LIMIT 1;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>SELECT disease_id, name FROM \`tb_disease\` WHERE \`disease_id\` IN (&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;);</span></span>
+<span class="line"><span>SELECT \`tag_id\`, \`name\` FROM \`tb_tag\` WHERE \`tag_id\` IN (1, 2, 3);</span></span>
+<span class="line"><span>SELECT \`disease_id\`, \`name\` FROM \`tb_disease\` WHERE \`disease_id\` IN (&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;);</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>查询结果：</p><p>json</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>{</span></span>
+<span class="line"><span>  &quot;patientId&quot;: 4,</span></span>
+<span class="line"><span>  &quot;name&quot;: &quot;赵六&quot;,</span></span>
+<span class="line"><span>  &quot;diseaseIds&quot;: &quot;1,2,3,4&quot;,</span></span>
+<span class="line"><span>  &quot;tagIds&quot;: &quot;1/2/3&quot;,</span></span>
+<span class="line"><span>  &quot;diseaseNameList&quot;: [</span></span>
+<span class="line"><span>    &quot;心脑血管疾病&quot;,</span></span>
+<span class="line"><span>    &quot;消化系统疾病&quot;,</span></span>
+<span class="line"><span>    &quot;神经系统疾病&quot;,</span></span>
+<span class="line"><span>    &quot;免疫系统疾病&quot;</span></span>
+<span class="line"><span>  ],</span></span>
+<span class="line"><span>  &quot;tagList&quot;: [</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>      &quot;name&quot;: &quot;VIP&quot;,</span></span>
+<span class="line"><span>      &quot;tagId&quot;: 1</span></span>
+<span class="line"><span>    },</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>      &quot;name&quot;: &quot;JAVA开发&quot;,</span></span>
+<span class="line"><span>      &quot;tagId&quot;: 2</span></span>
+<span class="line"><span>    },</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>      &quot;name&quot;: &quot;Web开发&quot;,</span></span>
+<span class="line"><span>      &quot;tagId&quot;: 3</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  ],</span></span>
+<span class="line"><span>  &quot;diseaseMap&quot;: {</span></span>
+<span class="line"><span>    &quot;1&quot;: {</span></span>
+<span class="line"><span>      &quot;diseaseId&quot;: &quot;1&quot;,</span></span>
+<span class="line"><span>      &quot;name&quot;: &quot;心脑血管疾病&quot;</span></span>
+<span class="line"><span>    },</span></span>
+<span class="line"><span>    &quot;2&quot;: {</span></span>
+<span class="line"><span>      &quot;diseaseId&quot;: &quot;2&quot;,</span></span>
+<span class="line"><span>      &quot;name&quot;: &quot;消化系统疾病&quot;</span></span>
+<span class="line"><span>    },</span></span>
+<span class="line"><span>    &quot;3&quot;: {</span></span>
+<span class="line"><span>      &quot;diseaseId&quot;: &quot;3&quot;,</span></span>
+<span class="line"><span>      &quot;name&quot;: &quot;神经系统疾病&quot;</span></span>
+<span class="line"><span>    },</span></span>
+<span class="line"><span>    &quot;4&quot;: {</span></span>
+<span class="line"><span>      &quot;diseaseId&quot;: &quot;4&quot;,</span></span>
+<span class="line"><span>      &quot;name&quot;: &quot;免疫系统疾病&quot;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="多对一-relationmanytoone" tabindex="-1"><a class="header-anchor" href="#多对一-relationmanytoone"><span>多对一 <code>@RelationManyToOne</code></span></a></h2><p>假设一个账户有很多本书籍，一本书只能归属一个账户所有；账户和书籍的关系是一对多的关系，书籍和账户的关系为多对一的关系，代码如下：</p><p>Account.java:</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>public class Account implements Serializable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Id(keyType = KeyType.Auto)</span></span>
+<span class="line"><span>    private Long id;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private String userName;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Book.java 多对一的配置:</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>@Table(value = &quot;tb_book&quot;)</span></span>
+<span class="line"><span>public class Book implements Serializable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Id(keyType = KeyType.Auto)</span></span>
+<span class="line"><span>    private Long id;</span></span>
+<span class="line"><span>    private Long accountId;</span></span>
+<span class="line"><span>    private String title;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationManyToOne(selfField = &quot;accountId&quot;, targetField = &quot;id&quot;)</span></span>
+<span class="line"><span>    private Account account;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code>@RelationManyToOne</code> 配置描述：</p><ul><li><strong>selfField</strong> 当前实体类的属性</li><li><strong>targetField</strong> 目标对象的关系实体类的属性</li></ul><blockquote><p>PS: 若 <strong>targetField</strong> 目标对象的是主键，且目标对象的表只有 1 个主键时，可以不填写。因此，以上的配置可以简化为 <code>@RelationManyToOne(selfField = &quot;accountId&quot;)</code></p></blockquote><h2 id="多对多-relationmanytomany" tabindex="-1"><a class="header-anchor" href="#多对多-relationmanytomany"><span>多对多 <code>@RelationManyToMany</code></span></a></h2><p>假设一个账户可以有多个角色，一个角色也可以有多个账户，他们是多对多的关系，需要通过中间件表 <code>tb_role_mapping</code> 来维护：</p><p><code>tb_role_mapping</code> 的表结构如下：</p><p>sql</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>CREATE TABLE  \`tb_role_mapping\`</span></span>
+<span class="line"><span>(</span></span>
+<span class="line"><span>    \`account_id\`  INTEGER ,</span></span>
+<span class="line"><span>    \`role_id\`  INTEGER</span></span>
+<span class="line"><span>);</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Account.java 多对多的配置:</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>public class Account implements Serializable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Id(keyType = KeyType.Auto)</span></span>
+<span class="line"><span>    private Long id;</span></span>
+<span class="line"><span>    private String userName;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationManyToMany(</span></span>
+<span class="line"><span>            joinTable = &quot;tb_role_mapping&quot;, // 中间表</span></span>
+<span class="line"><span>            selfField = &quot;id&quot;, joinSelfColumn = &quot;account_id&quot;,</span></span>
+<span class="line"><span>            targetField = &quot;id&quot;, joinTargetColumn = &quot;role_id&quot;</span></span>
+<span class="line"><span>    )</span></span>
+<span class="line"><span>    private List&lt;Role&gt; roles;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Role.java 多对多的配置:</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>@Table(value = &quot;tb_role&quot;)</span></span>
+<span class="line"><span>public class Role implements Serializable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Long id;</span></span>
+<span class="line"><span>    private String name;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code>@RelationManyToMany</code> 配置描述：</p><ul><li>selfField 当前实体类的属性</li><li>targetField 目标对象的关系实体类的属性</li><li>joinTable 中间表</li><li>joinSelfColumn 当前表和中间表的关系字段</li><li>joinTargetColumn 目标表和中间表的关系字段</li></ul><blockquote><p>注意：selfField 和 targetField 配置的是类的属性名，joinSelfColumn 和 joinTargetColumn 配置的是中间表的字段名。</p><p>若 <strong>selfField</strong> 和 <strong>targetField</strong> 分别是两张关系表的主键，且表只有 1 个主键时，可以不填写。因此，以上配置可以简化如下：</p></blockquote><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>public class Account implements Serializable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Id(keyType = KeyType.Auto)</span></span>
+<span class="line"><span>    private Long id;</span></span>
+<span class="line"><span>    private String userName;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationManyToMany(</span></span>
+<span class="line"><span>            joinTable = &quot;tb_role_mapping&quot;, // 中间表</span></span>
+<span class="line"><span>            joinSelfColumn = &quot;account_id&quot;,</span></span>
+<span class="line"><span>            joinTargetColumn = &quot;role_id&quot;</span></span>
+<span class="line"><span>    )</span></span>
+<span class="line"><span>    private List&lt;Role&gt; roles;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="只查询一个字段值-v1-6-6" tabindex="-1"><a class="header-anchor" href="#只查询一个字段值-v1-6-6"><span>只查询一个字段值 v1.6.6</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>RelationOneToOne\`、\`RelationOneToMany\`、\`RelationManyToOne\`、\`RelationManyToMany\`新增属性\`valueField</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>/**</span></span>
+<span class="line"><span> * 目标对象的关系实体类的属性绑定</span></span>
+<span class="line"><span> * &lt;p&gt;</span></span>
+<span class="line"><span> * 当字段不为空串时,只进行某个字段赋值(使用对应字段类型接收)</span></span>
+<span class="line"><span> * @return 属性名称</span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>String valueField() default &quot;&quot;;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote><p>注解其他属性配置使用不变，当配置了<code>valueField</code>值时，只提取目标对象关系实体类的该属性</p><p><strong>使用场景</strong>：例如，操作日志中有个 <code>createBy</code> (操作人)字段，此时在日志信息中需要显示操作人名称，且只需要这一个字段，此时使用实体接收会导致不必要的字段出现，接口文档也会变得混乱。</p></blockquote><p>假设一个账户实体类 <code>UserVO5.java</code></p><ul><li>每个账户有一个唯一对应的<code>id_number</code>列在表<code>tb_id_card</code>中</li><li>一个账户可以有多个角色，一个角色也可以分配给多个账户，他们通过中间表<code>tb_user_role</code>进行关系映射</li></ul><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>@Table(&quot;tb_user&quot;)</span></span>
+<span class="line"><span>public class UserVO5 {</span></span>
+<span class="line"><span>    @Id</span></span>
+<span class="line"><span>    private Integer userId;</span></span>
+<span class="line"><span>    private String userName;</span></span>
+<span class="line"><span>    private String password;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationOneToOne(</span></span>
+<span class="line"><span>            selfField = &quot;userId&quot;,</span></span>
+<span class="line"><span>            targetTable = &quot;tb_id_card&quot;,</span></span>
+<span class="line"><span>            targetField = &quot;id&quot;,</span></span>
+<span class="line"><span>            valueField = &quot;idNumber&quot;</span></span>
+<span class="line"><span>    )</span></span>
+<span class="line"><span>    //该处可以定义其他属性名，不一定要是目标对象的字段名</span></span>
+<span class="line"><span>    private String idNumberCustomFieldName;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationManyToMany(</span></span>
+<span class="line"><span>            selfField = &quot;userId&quot;,</span></span>
+<span class="line"><span>            targetTable = &quot;tb_role&quot;,</span></span>
+<span class="line"><span>            targetField = &quot;roleId&quot;,</span></span>
+<span class="line"><span>            valueField = &quot;roleName&quot;,</span></span>
+<span class="line"><span>            joinTable = &quot;tb_user_role&quot;,</span></span>
+<span class="line"><span>            joinSelfColumn = &quot;user_id&quot;,</span></span>
+<span class="line"><span>            joinTargetColumn = &quot;role_id&quot;</span></span>
+<span class="line"><span>    )</span></span>
+<span class="line"><span>    private List&lt;String&gt; roleNameList;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter toString</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>进行查询</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>List&lt;UserVO5&gt; userVO5List = userMapper.selectListWithRelationsByQueryAs(QueryWrapper.create(), UserVO5.class);</span></span>
+<span class="line"><span>System.out.println(JSON.toJSONString(userVO5List));</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><p>输出结果</p><p>json</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>[</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>        userId = 1,</span></span>
+<span class="line"><span>        userName = &#39;张三&#39;,</span></span>
+<span class="line"><span>        password = &#39;12345678&#39;,</span></span>
+<span class="line"><span>        idNumberCustomFieldName = &#39;F281C807-C40B-472D-82F5-6130199C6328&#39;,</span></span>
+<span class="line"><span>        roleNameList = [普通用户]</span></span>
+<span class="line"><span>    },</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>        userId = 2,</span></span>
+<span class="line"><span>        userName = &#39;李四&#39;,</span></span>
+<span class="line"><span>        password = &#39;87654321&#39;,</span></span>
+<span class="line"><span>        idNumberCustomFieldName = &#39;6176E9AD-36EF-4201-A5F7-CCE89B254952&#39;,</span></span>
+<span class="line"><span>        roleNameList = [普通用户, 贵族用户]</span></span>
+<span class="line"><span>    },</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>        userId = 3,</span></span>
+<span class="line"><span>        userName = &#39;王五&#39;,</span></span>
+<span class="line"><span>        password = &#39;09897654&#39;,</span></span>
+<span class="line"><span>        idNumberCustomFieldName = &#39;A038E6EA-1FDE-4191-AA41-06F78E91F6C2&#39;,</span></span>
+<span class="line"><span>        roleNameList = [普通用户, 贵族用户, 超级贵族用户]</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>]</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="父子关系查询" tabindex="-1"><a class="header-anchor" href="#父子关系查询"><span>父子关系查询</span></a></h2><p>比如在一些系统中，比如菜单会有一些父子关系，例如菜单表如下：</p><p>sql</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>CREATE TABLE \`tb_menu\`</span></span>
+<span class="line"><span>(</span></span>
+<span class="line"><span>    \`id\`        INTEGER auto_increment,</span></span>
+<span class="line"><span>    \`parent_id\`        INTEGER,</span></span>
+<span class="line"><span>    \`name\`      VARCHAR(100)</span></span>
+<span class="line"><span>);</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Menu.java 定义如下：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>@Table(value = &quot;tb_menu&quot;)</span></span>
+<span class="line"><span>public class Menu implements Serializable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Long id;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private Long parentId;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private String name;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationManyToOne(selfField = &quot;parentId&quot;, targetField = &quot;id&quot;)</span></span>
+<span class="line"><span>    private Menu parent;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationOneToMany(selfField = &quot;id&quot;, targetField = &quot;parentId&quot;)</span></span>
+<span class="line"><span>    private List&lt;Menu&gt; children;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>查询顶级菜单：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>QueryWrapper qw = QueryWrapper.create();</span></span>
+<span class="line"><span>qw.where(MENU.PARENT_ID.eq(0));</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>List&lt;Menu&gt; menus = menuMapper.selectListWithRelationsByQuery(qw);</span></span>
+<span class="line"><span>System.out.println(JSON.toJSONString(menus));</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>SQL 执行如下：</p><p>sql</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>SELECT \`id\`, \`parent_id\`, \`name\` FROM \`tb_menu\` WHERE \`parent_id\` = 0</span></span>
+<span class="line"><span>SELECT \`id\`, \`parent_id\`, \`name\` FROM \`tb_menu\` WHERE id = 0</span></span>
+<span class="line"><span>SELECT \`id\`, \`parent_id\`, \`name\` FROM \`tb_menu\` WHERE parent_id IN (1, 2, 3)</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>JSON 输出内容如下：</p><p>json</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>[</span></span>
+<span class="line"><span>  {</span></span>
+<span class="line"><span>    &quot;children&quot;: [</span></span>
+<span class="line"><span>      {</span></span>
+<span class="line"><span>        &quot;id&quot;: 4,</span></span>
+<span class="line"><span>        &quot;name&quot;: &quot;子菜单&quot;,</span></span>
+<span class="line"><span>        &quot;parentId&quot;: 1</span></span>
+<span class="line"><span>      },</span></span>
+<span class="line"><span>      {</span></span>
+<span class="line"><span>        &quot;id&quot;: 5,</span></span>
+<span class="line"><span>        &quot;name&quot;: &quot;子菜单&quot;,</span></span>
+<span class="line"><span>        &quot;parentId&quot;: 1</span></span>
+<span class="line"><span>      }</span></span>
+<span class="line"><span>    ],</span></span>
+<span class="line"><span>    &quot;id&quot;: 1,</span></span>
+<span class="line"><span>    &quot;name&quot;: &quot;顶级菜单1&quot;,</span></span>
+<span class="line"><span>    &quot;parentId&quot;: 0</span></span>
+<span class="line"><span>  },</span></span>
+<span class="line"><span>  {</span></span>
+<span class="line"><span>    &quot;children&quot;: [],</span></span>
+<span class="line"><span>    &quot;id&quot;: 2,</span></span>
+<span class="line"><span>    &quot;name&quot;: &quot;顶级菜单2&quot;,</span></span>
+<span class="line"><span>    &quot;parentId&quot;: 0</span></span>
+<span class="line"><span>  },</span></span>
+<span class="line"><span>  {</span></span>
+<span class="line"><span>    &quot;children&quot;: [</span></span>
+<span class="line"><span>      {</span></span>
+<span class="line"><span>        &quot;id&quot;: 6,</span></span>
+<span class="line"><span>        &quot;name&quot;: &quot;子菜单&quot;,</span></span>
+<span class="line"><span>        &quot;parentId&quot;: 3</span></span>
+<span class="line"><span>      },</span></span>
+<span class="line"><span>      {</span></span>
+<span class="line"><span>        &quot;id&quot;: 7,</span></span>
+<span class="line"><span>        &quot;name&quot;: &quot;子菜单&quot;,</span></span>
+<span class="line"><span>        &quot;parentId&quot;: 3</span></span>
+<span class="line"><span>      },</span></span>
+<span class="line"><span>      {</span></span>
+<span class="line"><span>        &quot;id&quot;: 8,</span></span>
+<span class="line"><span>        &quot;name&quot;: &quot;子菜单&quot;,</span></span>
+<span class="line"><span>        &quot;parentId&quot;: 3</span></span>
+<span class="line"><span>      }</span></span>
+<span class="line"><span>    ],</span></span>
+<span class="line"><span>    &quot;id&quot;: 3,</span></span>
+<span class="line"><span>    &quot;name&quot;: &quot;顶级菜单3&quot;,</span></span>
+<span class="line"><span>    &quot;parentId&quot;: 0</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>]</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在以上的父子关系查询中，默认的递归查询深度为 3 个层级，若需要查询指定递归深度，需要添加如下配置：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>QueryWrapper qw = QueryWrapper.create();</span></span>
+<span class="line"><span>qw.where(MENU.PARENT_ID.eq(0));</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>//设置递归查询深度为 10 层</span></span>
+<span class="line"><span>RelationManager.setMaxDepth(10);</span></span>
+<span class="line"><span>List&lt;Menu&gt; menus = menuMapper.selectListWithRelationsByQuery(qw);</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote><p><code>RelationManager.setMaxDepth(10)</code> 的配置，只在当前第一次查询有效，查询后会清除设置。</p></blockquote><h2 id="忽略部分-relation-注解" tabindex="-1"><a class="header-anchor" href="#忽略部分-relation-注解"><span>忽略部分 Relation 注解</span></a></h2><p>在很多场景中，一个类里可能会有多个 <code>@RelationXXX</code> 注解配置的属性，例如：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>@Table(value = &quot;tb_account&quot;)</span></span>
+<span class="line"><span>public class Account implements Serializable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Id(keyType = KeyType.Auto)</span></span>
+<span class="line"><span>    private Long id;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private String userName;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationOneToOne(targetField = &quot;accountId&quot;)</span></span>
+<span class="line"><span>    private IDCard idCard;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationOneToMany(targetField = &quot;accountId&quot;)</span></span>
+<span class="line"><span>    private List&lt;Book&gt; books;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationManyToMany(</span></span>
+<span class="line"><span>            joinTable = &quot;tb_role_mapping&quot;,</span></span>
+<span class="line"><span>            joinSelfColumn = &quot;account_id&quot;,</span></span>
+<span class="line"><span>            joinTargetColumn = &quot;role_id&quot;</span></span>
+<span class="line"><span>    )</span></span>
+<span class="line"><span>    private List&lt;Role&gt; roles;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>默认情况下，我们通过 <code>BaseMapper</code> 的 withRelation 方法查询时，会查询 Account 所有带有 <code>@RelationXXX</code> 注解的属性： <code>idCard</code> <code>books</code> <code>roles</code>。但是可能在我们的个别业务中，不需要那么多的关联数据，比如假设我们只需要查询 <code>roles</code>，而忽略掉 <code>idCard</code> <code>books</code>，此时，代码如下：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>RelationManager.addIgnoreRelations(&quot;idCard&quot;,&quot;books&quot;);</span></span>
+<span class="line"><span>List&lt;Account&gt; accounts = accountMapper.selectAllWithRelations();</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><blockquote><p><code>addIgnoreRelations()</code> 方法的配置，只在当前第一次查询有效，查询后会清除设置。另外需要注意的是： <code>addIgnoreRelations()</code> 的设置，是会影响其所有嵌套的 Relations 配置的。在嵌套的场景中，如果存在同名的属性， 比如 <code>class A </code>和 <code>class B</code> 都有相同的属性 <code>x</code>，假设我们想忽略 <code>class A</code> 中的 <code>x</code> 而 <code>class B</code> 的 <code>x</code> 不忽略， 那么我们需要添加上类名的前缀，例如：<code>addIgnoreRelations(&quot;A.x&quot;)</code>。</p></blockquote><h2 id="只查询部分-relation-注解" tabindex="-1"><a class="header-anchor" href="#只查询部分-relation-注解"><span>只查询部分 Relation 注解</span></a></h2><p>和【忽略部分注解】相反，如下代码中配置了多个 <code>@Relation***</code> 修饰的字段：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>@Table(value = &quot;tb_account&quot;)</span></span>
+<span class="line"><span>public class Account implements Serializable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Id(keyType = KeyType.Auto)</span></span>
+<span class="line"><span>    private Long id;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private String userName;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationOneToOne(targetField = &quot;accountId&quot;)</span></span>
+<span class="line"><span>    private IDCard idCard;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationOneToMany(targetField = &quot;accountId&quot;)</span></span>
+<span class="line"><span>    private List&lt;Book&gt; books;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationManyToMany(</span></span>
+<span class="line"><span>            joinTable = &quot;tb_role_mapping&quot;,</span></span>
+<span class="line"><span>            joinSelfColumn = &quot;account_id&quot;,</span></span>
+<span class="line"><span>            joinTargetColumn = &quot;role_id&quot;</span></span>
+<span class="line"><span>    )</span></span>
+<span class="line"><span>    private List&lt;Role&gt; roles;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>假设我们只想查询 <code>books</code> 和 <code>roles</code> 字段，而忽略其他所有 <code>@Relation***</code> 修饰的字段，可以通过如下的配置：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>RelationManager.addQueryRelations(&quot;books&quot;,&quot;roles&quot;);</span></span>
+<span class="line"><span>List&lt;Account&gt; accounts = accountMapper.selectAllWithRelations();</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><p>这个有一个好处是：以后 Account 代码无论如何变动，比如添加了新的 <code>@Relation***</code> 修饰的字段，那么都不会影响到原来的业务。</p><p><strong>注意：</strong></p><blockquote><p><code>RelationManager</code> 的 <code>addIgnoreRelations</code> （忽略）配置优先于 <code>addQueryRelations</code>（查询），假设 <code>addIgnoreRelations</code> 和 <code>addQueryRelations</code> 都配置了相同的字段，那么这个字段将会被忽略。</p></blockquote><h2 id="配置额外的附加条件" tabindex="-1"><a class="header-anchor" href="#配置额外的附加条件"><span>配置额外的附加条件</span></a></h2><p>在一对多（<code>@RelationOneToMany</code>）、多对多（<code>@RelationManyToMany</code>） 的场景中，除了通过其关联字段查询结果以外，可能还会要求添加一些额外的条件。 此时，我们可以通过添加 <code>extraCondition</code> 配置来满足这种场景，例如：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>@Table(value = &quot;tb_account&quot;)</span></span>
+<span class="line"><span>public class Account implements Serializable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Id(keyType = KeyType.Auto)</span></span>
+<span class="line"><span>    private Long id;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private String userName;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationManyToMany(</span></span>
+<span class="line"><span>            joinTable = &quot;tb_role_mapping&quot;,</span></span>
+<span class="line"><span>            joinSelfColumn = &quot;account_id&quot;,</span></span>
+<span class="line"><span>            joinTargetColumn = &quot;role_id&quot;,</span></span>
+<span class="line"><span>            extraCondition = &quot;(name like &#39;%2%&#39; or id &gt; 1)&quot;</span></span>
+<span class="line"><span>    )</span></span>
+<span class="line"><span>    private List&lt;Role&gt; roles;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>以上配置查询的 SQL 如下：</p><p>sql</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>SELECT \`id\`, \`name\` FROM \`tb_role\`</span></span>
+<span class="line"><span>WHERE id IN (1, 2, 3) AND (name like &#39;%2%&#39; or id &gt; 1)</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>动态参数：</strong></p><p>若 <code>extraCondition</code> 配置的条件里，需要通过外面传入参数，可以配置如下：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>@Table(value = &quot;tb_account&quot;)</span></span>
+<span class="line"><span>public class Account implements Serializable {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Id(keyType = KeyType.Auto)</span></span>
+<span class="line"><span>    private Long id;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private String userName;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @RelationManyToMany(</span></span>
+<span class="line"><span>            joinTable = &quot;tb_role_mapping&quot;,</span></span>
+<span class="line"><span>            joinSelfColumn = &quot;account_id&quot;,</span></span>
+<span class="line"><span>            joinTargetColumn = &quot;role_id&quot;,</span></span>
+<span class="line"><span>            extraCondition = &quot;(name like :name or id &gt; :id)&quot;</span></span>
+<span class="line"><span>    )</span></span>
+<span class="line"><span>    private List&lt;Role&gt; roles;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>以上的 <code>:name</code> 和 <code>:id</code> 相当于占位符，用于接受外部参数，那么外部参数如何传入呢？代码如下：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>RelationManager.addExtraConditionParam(&quot;name&quot;,&quot;%myName%&quot;);</span></span>
+<span class="line"><span>RelationManager.addExtraConditionParam(&quot;id&quot;,100);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>List&lt;Account&gt; accounts = accountMapper.selectAllWithRelations();</span></span>
+<span class="line"><span>System.out.println(JSON.toJSONString(accounts));</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>以上配置查询的 SQL 如下：</p><p>sql</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>SELECT \`id\`, \`name\` FROM \`tb_role\`</span></span>
+<span class="line"><span>WHERE id IN (1, 2, 3) AND (name like &#39;%myName%&#39; or id &gt; 100)</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="方案-2-field-query" tabindex="-1"><a class="header-anchor" href="#方案-2-field-query"><span>方案 2：Field Query</span></a></h2><p>以下是文章的 <code>多对多</code> 示例，一篇文章可能归属于多个分类，一个分类可能有多篇文章，需要用到中间表 <code>article_category_mapping</code>。</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>public class Article {</span></span>
+<span class="line"><span>    private Long id;</span></span>
+<span class="line"><span>    private String title;</span></span>
+<span class="line"><span>    private String content;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //文章的归属分类，可能是 1 个或者多个</span></span>
+<span class="line"><span>    private List&lt;Category&gt; categories;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //getter setter</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>查询代码如下：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>QueryWrapper queryWrapper = QueryWrapper.create()</span></span>
+<span class="line"><span>        .select().from(ARTICLE)</span></span>
+<span class="line"><span>        .where(ARTICLE.id.ge(100));</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>List&lt;Article&gt; articles = mapper.selectListByQuery(queryWrapper</span></span>
+<span class="line"><span>    , fieldQueryBuilder -&gt; fieldQueryBuilder</span></span>
+<span class="line"><span>        .field(Article::getCategories) // 或者 .field(&quot;categories&quot;)</span></span>
+<span class="line"><span>        .queryWrapper(article -&gt; QueryWrapper.create()</span></span>
+<span class="line"><span>            .select().from(CATEGORY)</span></span>
+<span class="line"><span>            .where(CATEGORY.id.in(</span></span>
+<span class="line"><span>                    select(&quot;category_id&quot;).from(&quot;article_category_mapping&quot;)</span></span>
+<span class="line"><span>                    .where(&quot;article_id = ?&quot;, article.getId())</span></span>
+<span class="line"><span>            )</span></span>
+<span class="line"><span>        )</span></span>
+<span class="line"><span>    );</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过以上代码可以看出，<code>Article.categories</code> 字段的结果，来源于 <code>queryWrapper()</code> 方法构建的 <code>QueryWrapper</code>。</p><p>其原理是：MyBatis-Flex 的内部逻辑是先查询出 <code>Article</code> 的数据，然后再根据 <code>Article</code> 构建出新的 SQL，查询分类，并赋值给 <code>Article.categories</code> 属性， 假设 <code>Article</code> 有 10 条数据，那么最终会进行 11 次数据库查询。</p><p>查询的 SQL 大概如下：</p><p>sql</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>select * from tb_article where id  &gt;= 100;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>-- 以上 SQL 得到结果后，再执行查询分类的 SQL，如下：</span></span>
+<span class="line"><span>select * from tb_category where id in</span></span>
+<span class="line"><span>(select category_id from article_category_mapping where article_id = 100);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>select * from tb_category where id in</span></span>
+<span class="line"><span>(select category_id from article_category_mapping where article_id = 101);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>select * from tb_category where id in</span></span>
+<span class="line"><span>(select category_id from article_category_mapping where article_id = 102);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>select * from tb_category where id in</span></span>
+<span class="line"><span>(select category_id from article_category_mapping where article_id = 103);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>select * from tb_category where id in</span></span>
+<span class="line"><span>(select category_id from article_category_mapping where article_id = 104);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>select * from tb_category where id in</span></span>
+<span class="line"><span>(select category_id from article_category_mapping where article_id = 105);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>select * from tb_category where id in</span></span>
+<span class="line"><span>(select category_id from article_category_mapping where article_id = 106);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>select * from tb_category where id in</span></span>
+<span class="line"><span>(select category_id from article_category_mapping where article_id = 107);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>select * from tb_category where id in</span></span>
+<span class="line"><span>(select category_id from article_category_mapping where article_id = 108);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>select * from tb_category where id in</span></span>
+<span class="line"><span>(select category_id from article_category_mapping where article_id = 109);</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="field-query-知识点" tabindex="-1"><a class="header-anchor" href="#field-query-知识点"><span>Field Query 知识点</span></a></h2><p>相对 <code>Relations 注解</code> ，Field Query 的学习成本是非常低的，在构建子查询时，只需要明白为哪个字段、通过什么样的 SQL 查询就可以了，以下是示例：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>List&lt;Article&gt; articles = mapper.selectListByQuery(query</span></span>
+<span class="line"><span>    , fieldQueryBuilder -&gt; fieldQueryBuilder</span></span>
+<span class="line"><span>        .field(...)        // 为哪个字段查询的？</span></span>
+<span class="line"><span>        .queryWrapper(...) // 通过什么样的 SQL 查询的？</span></span>
+<span class="line"><span>    );</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>因此，在 MyBatis-Flex 的设计中，无论是一对多、多对一、多对多... 还是其他任何一种场景，其逻辑都是一样的。</p><h2 id="field-query-更多场景" tabindex="-1"><a class="header-anchor" href="#field-query-更多场景"><span>Field Query 更多场景</span></a></h2><p>通过以上内容看出，<code>Article</code> 的任何属性，都是可以通过传入 <code>FieldQueryBuilder</code> 来构建 <code>QueryWrapper</code> 进行再次查询， 这些不仅仅只适用于 <code>一对多</code>、<code>一对一</code>、<code>多对一</code>、<code>多对多</code>等场景。任何 <code>Article</code> 对象里的属性，需要二次查询赋值的，都是可以通过这种方式进行，比如一些统计的场景。</p><h2 id="方案-3-join-query" tabindex="-1"><a class="header-anchor" href="#方案-3-join-query"><span>方案 3：Join Query</span></a></h2><p>Join Query 是通过 QueryWrapper 构建 <code>Left Join</code> 等方式进行查询，其原理是 MyBatis-Flex 自动构建了 MyBatis 的 <code>&lt;resultMap&gt;</code> ，我们只需要关注 MyBatis-Flex 的 SQL 构建即可。</p><h2 id="join-query-代码示例" tabindex="-1"><a class="header-anchor" href="#join-query-代码示例"><span>Join Query 代码示例</span></a></h2><p>这里以 <strong>用户</strong> 和 <strong>角色</strong> 的 <code>多对多</code> 关系作为例子，用户表和角色表，分别对应着用户类和角色类：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>@Table(&quot;sys_user&quot;)</span></span>
+<span class="line"><span>public class User {</span></span>
+<span class="line"><span>    @Id</span></span>
+<span class="line"><span>    private Integer userId;</span></span>
+<span class="line"><span>    private String userName;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@Table(&quot;sys_role&quot;)</span></span>
+<span class="line"><span>public class Role {</span></span>
+<span class="line"><span>    @Id</span></span>
+<span class="line"><span>    private Integer roleId;</span></span>
+<span class="line"><span>    private String roleKey;</span></span>
+<span class="line"><span>    private String roleName;</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>现在需要查询所有用户，以及每个用户对应的角色信息，并通过 UserVO 对象返回：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>public class UserVO {</span></span>
+<span class="line"><span>    private String userId;</span></span>
+<span class="line"><span>    private String userName;</span></span>
+<span class="line"><span>    private List&lt;Role&gt; roleList;</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这个操作只需要联表查询即可完成，对于联表查询的结果映射，MyBatis-Flex 会自动帮您完成：</p><p>java</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>QueryWrapper queryWrapper = QueryWrapper.create()</span></span>
+<span class="line"><span>        .select(USER.USER_ID, USER.USER_NAME, ROLE.ALL_COLUMNS)</span></span>
+<span class="line"><span>        .from(USER.as(&quot;u&quot;))</span></span>
+<span class="line"><span>        .leftJoin(USER_ROLE).as(&quot;ur&quot;).on(USER_ROLE.USER_ID.eq(USER.USER_ID))</span></span>
+<span class="line"><span>        .leftJoin(ROLE).as(&quot;r&quot;).on(USER_ROLE.ROLE_ID.eq(ROLE.ROLE_ID));</span></span>
+<span class="line"><span>List&lt;UserVO&gt; userVOS = userMapper.selectListByQueryAs(queryWrapper, UserVO.class);</span></span>
+<span class="line"><span>userVOS.forEach(System.err::println);</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>构建的联表查询 SQL 语句为：</p><p>sql</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>SELECT \`u\`.\`user_id\`,</span></span>
+<span class="line"><span>       \`u\`.\`user_name\`,</span></span>
+<span class="line"><span>       \`r\`.*</span></span>
+<span class="line"><span>FROM \`sys_user\` AS \`u\`</span></span>
+<span class="line"><span>LEFT JOIN \`sys_user_role\` AS \`ur\` ON \`ur\`.\`user_id\` = \`u\`.\`user_id\`</span></span>
+<span class="line"><span>LEFT JOIN \`sys_role\` AS \`r\` ON \`ur\`.\`role_id\` = \`r\`.\`role_id\`;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>最终自动映射的结果为：</p><p>txt</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>UserVO{userId=&#39;1&#39;, userName=&#39;admin&#39;, roleList=[Role{roleId=1, roleKey=&#39;admin&#39;, roleName=&#39;超级管理员&#39;}]}</span></span>
+<span class="line"><span>UserVO{userId=&#39;2&#39;, userName=&#39;ry&#39;, roleList=[Role{roleId=2, roleKey=&#39;common&#39;, roleName=&#39;普通角色&#39;}]}</span></span>
+<span class="line"><span>UserVO{userId=&#39;3&#39;, userName=&#39;test&#39;, roleList=[Role{roleId=1, roleKey=&#39;admin&#39;, roleName=&#39;超级管理员&#39;}, Role{roleId=2, roleKey=&#39;common&#39;, roleName=&#39;普通角色&#39;}]}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,206)]))}const t=n(l,[["render",p]]),r=JSON.parse('{"path":"/framework/mybatisflex/base/9cr28699/","title":"关联查询","lang":"zh-CN","frontmatter":{"title":"关联查询","createTime":"2025/08/26 17:21:31","permalink":"/framework/mybatisflex/base/9cr28699/"},"readingTime":{"minutes":14.98,"words":4495},"git":{"createdTime":1756736713000},"filePathRelative":"notes/framework/mybatisflex/base/关联查询.md","headers":[]}');export{t as comp,r as data};

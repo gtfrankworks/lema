@@ -1,0 +1,34 @@
+import{a,c as n,b as e,o as i}from"./app-ZQgO6-gU.js";const l={};function c(p,s){return i(),n("div",null,s[0]||(s[0]=[e(`<p>动态表名指的是用户在对数据进行 增删改查 的时候，传入表名能够根据上下文信息（比如用户信息、应用信息）等，动态修改当前的表。</p><h2 id="使用场景" tabindex="-1"><a class="header-anchor" href="#使用场景"><span>使用场景</span></a></h2><ul><li>1、多租户，不同的租户拥有不同的表</li><li>2、分库分表，减轻数据压力</li></ul><h2 id="如何使用" tabindex="-1"><a class="header-anchor" href="#如何使用"><span>如何使用</span></a></h2><p>在应用启动时，通过调用 <code>TableManager.setDynamicTableProcessor()</code> 配置动态表名处理器 <code>DynamicTableProcessor</code> 即可，如下代码所示：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>TableManager.setDynamicTableProcessor(new DynamicTableProcessor() {</span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public String process(String tableName) {</span></span>
+<span class="line"><span>        return tableName + &quot;_01&quot;;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>});</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过以上配置后，我们对数据库进行增删改查，MyBatis-Flex 都会调用 <code>DynamicTableProcessor.process</code> 方法，获得最新的表名进行 SQL 构建操作。因此，我们应该在 <code>process</code> 方法中， 判断当前的上下文（用户信息、应用信息）等，动态的返回对应的表名。</p><p>在某些情况下，我们临时修改映射关系，而非通过 <code>DynamicTableProcessor.process</code> 方法获取，可以通过如下配置：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>try{</span></span>
+<span class="line"><span>    TableManager.setHintTableMapping(&quot;tb_account&quot;, &quot;tb_account_01&quot;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    //这里写您的业务逻辑</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>} finally {</span></span>
+<span class="line"><span>    TableManager.clear();</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>那么此时，当前线程不再通过 <code>DynamicTableProcessor</code> 去获取。</p><h2 id="动态-schema" tabindex="-1"><a class="header-anchor" href="#动态-schema"><span>动态 Schema</span></a></h2><p>动态 Schema 和动态表名类似，通过 <code>TableManager.setDynamicSchemaProcessor()</code> 配置动态 Schema 处理器 <code>DynamicSchemaProcessor</code> 即可，如下代码所示：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>TableManager.setDynamicSchemaProcessor(new DynamicSchemaProcessor() {</span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public String process(String schema, String table) {</span></span>
+<span class="line"><span>        return schema + &quot;_01&quot;;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>});</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>动态 Schema 的配置，只对使用了注解 <code>@Table(schema=&quot;xxx&quot;)</code> 的 Entity 有效。</p><h2 id="springboot-支持" tabindex="-1"><a class="header-anchor" href="#springboot-支持"><span>SpringBoot 支持</span></a></h2><p>在 SpringBoot 项目下，直接通过 <code>@Configuration</code> 即可使用：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>@Configuration</span></span>
+<span class="line"><span>public class MyConfiguration {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Bean</span></span>
+<span class="line"><span>    public DynamicTableProcessor dynamicTableProcessor(){</span></span>
+<span class="line"><span>        DynamicTableProcessor processor = new ....;</span></span>
+<span class="line"><span>        return processor;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Bean</span></span>
+<span class="line"><span>    public DynamicSchemaProcessor dynamicSchemaProcessor(){</span></span>
+<span class="line"><span>        DynamicSchemaProcessor processor = new ....;</span></span>
+<span class="line"><span>        return processor;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,17)]))}const d=a(l,[["render",c]]),t=JSON.parse('{"path":"/framework/mybatisflex/ad/iv5qe32d/","title":"MyBatis-Flex动态表名","lang":"zh-CN","frontmatter":{"title":"MyBatis-Flex动态表名","createTime":"2025/08/27 09:56:29","permalink":"/framework/mybatisflex/ad/iv5qe32d/"},"readingTime":{"minutes":1.33,"words":400},"git":{"createdTime":1756736713000},"filePathRelative":"notes/framework/mybatisflex/ad/动态表名.md","headers":[]}');export{d as comp,t as data};

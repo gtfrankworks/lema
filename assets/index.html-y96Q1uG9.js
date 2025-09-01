@@ -1,0 +1,42 @@
+import{a,c as n,b as e,o as i}from"./app-ZQgO6-gU.js";const l={};function p(d,s){return i(),n("div",null,s[0]||(s[0]=[e(`<h2 id="内置方案" tabindex="-1"><a class="header-anchor" href="#内置方案"><span>内置方案</span></a></h2><p>MyBatis-Flex 内置了 SQL 打印分析的功能，其是使用 SQL 审计模块进行完成的，开启 SQL 日志打印代码如下：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>//开启审计功能</span></span>
+<span class="line"><span>AuditManager.setAuditEnable(true);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>//设置 SQL 审计收集器</span></span>
+<span class="line"><span>MessageCollector collector = new ConsoleMessageCollector();</span></span>
+<span class="line"><span>AuditManager.setMessageCollector(collector);</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过以上代码，配置 <code>AuditManager</code> 的 <code>MessageCollector</code> 为 <code>ConsoleMessageCollector</code> 后， 每次执行 SQL 请求，控制台将输入内容如下：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>Flex exec sql took 2 ms &gt;&gt;&gt;  SELECT * FROM \`tb_account\` WHERE \`id\` = 1</span></span>
+<span class="line"><span>Flex exec sql took 3 ms &gt;&gt;&gt;  INSERT INTO \`tb_account\`(\`user_name\`, \`age\`, \`birthday\`)  VALUES (&#39;lisi&#39;, 22, &#39;2023-04-07 15:28:46&#39;)</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><p>控制台输出了完整的 SQL，以及 SQL 执行消耗时间，方便我们在开发的时候，对慢 SQL 进行排查和快速定位。</p><p>或者在 Spring 工程里，将 SQL 打印到日志中，可以通过配置日志级别控制是否输出 SQL ，通过配置日志 Appender 控制 SQL 输出目的地。</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>import com.mybatisflex.core.audit.AuditManager;</span></span>
+<span class="line"><span>import org.slf4j.Logger;</span></span>
+<span class="line"><span>import org.slf4j.LoggerFactory;</span></span>
+<span class="line"><span>import org.springframework.context.annotation.Configuration;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@Configuration</span></span>
+<span class="line"><span>public class MyBatisFlexConfiguration {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    private static final Logger logger = LoggerFactory</span></span>
+<span class="line"><span>        .getLogger(&quot;mybatis-flex-sql&quot;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public MyBatisFlexConfiguration() {</span></span>
+<span class="line"><span>        //开启审计功能</span></span>
+<span class="line"><span>        AuditManager.setAuditEnable(true);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        //设置 SQL 审计收集器</span></span>
+<span class="line"><span>        AuditManager.setMessageCollector(auditMessage -&gt;</span></span>
+<span class="line"><span>            logger.info(&quot;{},{}ms&quot;, auditMessage.getFullSql()</span></span>
+<span class="line"><span>                , auditMessage.getElapsedTime())</span></span>
+<span class="line"><span>        );</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="mybatis-自带方案" tabindex="-1"><a class="header-anchor" href="#mybatis-自带方案"><span>MyBatis 自带方案</span></a></h2><h3 id="非-spring-项目" tabindex="-1"><a class="header-anchor" href="#非-spring-项目"><span>非 Spring 项目</span></a></h3><p>通过 <code>bootstrap.setLogImpl()</code> 方法来指定 MyBatis 输出日志：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>DataSource dataSource = ...;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>MybatisFlexBootstrap bootstrap = MybatisFlexBootstrap.getInstance()</span></span>
+<span class="line"><span>    .setDataSource(dataSource)</span></span>
+<span class="line"><span>    .setLogImpl(StdOutImpl.class)</span></span>
+<span class="line"><span>    .addMapper(AccountMapper.class)</span></span>
+<span class="line"><span>    .start();</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="springboot-项目" tabindex="-1"><a class="header-anchor" href="#springboot-项目"><span>SpringBoot 项目</span></a></h3><p>通过自定义 <code>ConfigurationCustomizer</code> 来为 <code>configuration</code> 配置 <code>LogImpl</code>：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span>@Configuration</span></span>
+<span class="line"><span>public class MyConfigurationCustomizer implements ConfigurationCustomizer {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public void customize(FlexConfiguration configuration) {</span></span>
+<span class="line"><span>        configuration.setLogImpl(StdOutImpl.class);</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="p6spy-方案" tabindex="-1"><a class="header-anchor" href="#p6spy-方案"><span>p6spy 方案</span></a></h2><p>我们可以把数据源配置为 p6spy 数据源，使用 p6spy 的 SQL 输出功能进行 SQL 打印。更多文档参考 p6spy 官方文档： https://p6spy.readthedocs.io/en/latest/index.html</p><p>使用 SpringBoot 的情况下，参考文档 https://github.com/gavlyukovskiy/spring-boot-data-source-decorator</p>`,18)]))}const r=a(l,[["render",p]]),c=JSON.parse('{"path":"/framework/mybatisflex/ad/6x4p31aj/","title":"SQL日志打印","lang":"zh-CN","frontmatter":{"title":"SQL日志打印","createTime":"2025/08/27 09:52:20","permalink":"/framework/mybatisflex/ad/6x4p31aj/"},"readingTime":{"minutes":1.37,"words":410},"git":{"createdTime":1756736713000},"filePathRelative":"notes/framework/mybatisflex/ad/SQL日志打印.md","headers":[]}');export{r as comp,c as data};
