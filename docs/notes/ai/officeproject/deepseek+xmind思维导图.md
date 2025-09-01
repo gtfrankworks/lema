@@ -3,11 +3,11 @@ title: deepseek+xmind思维导图
 createTime: 2025/09/01 09:47:30
 permalink: /ai/officeproject/d7j9xm2d/
 ---
-## 一、打开deepseek的官网【https://www.deepseek.com/】
+### 一、打开deepseek的官网【https://www.deepseek.com/】
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NWQwZTA2OGJhMGNkMTUxZDU5YjBhZjgwMzA1NDQwNjlfNDJxU04xc005OVY5S3JwR2o5RWNERHBmdFNtc3J1b1JfVG9rZW46WDY4OWJsTEcxb09XTFV4M3RaRmNQVDhLbjVkXzE3NTY2OTEyODU6MTc1NjY5NDg4NV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ODBmOTI2MzYzMzg4NmJlZTRjNjk3ZTdmMmEwZjI5ZDJfMlM5U3lYcFhMRVZ2Q1A0OGM0MnhROElRNHNLc1Y5ZWJfVG9rZW46WDY4OWJsTEcxb09XTFV4M3RaRmNQVDhLbjVkXzE3NTY3MTU1NzA6MTc1NjcxOTE3MF9WNA)
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmU3YmVhZWI5OGZhMjg1N2Q3MTNmYjY5ZmRjZjhlZGFfcmhVQmhwczBDVEdLYm1ua3o0aTJXOWdtY29YMTRtOVpfVG9rZW46RTBPT2JVcVNrb09TQ094SUoyamNiUElxbm1mXzE3NTY2OTEyODU6MTc1NjY5NDg4NV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MjIxYWI2YmJhZmJmOWQ2NTY5MGNmMDRmYzEyOWU4ZGZfR2tsWGRCMThteHkybFVGY1hzNEQxMTdaT2d6cW1wd2hfVG9rZW46RTBPT2JVcVNrb09TQ094SUoyamNiUElxbm1mXzE3NTY3MTU1NzA6MTc1NjcxOTE3MF9WNA)
 
 ## 二、输入提示词
 
@@ -17,7 +17,7 @@ permalink: /ai/officeproject/d7j9xm2d/
 我生成一份《哪吒3》的电影剧情的大纲，并以markdown格式输出
 ```
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=Yjc4OGYzYzdhNWU4YjQ1NTdkZTYzZDM4NDFjOWZmMjJfSUd1YWVQZDd2aDV0NktmZnBiVE1GbFZ3Zlh4TTljWWRfVG9rZW46VFVLVmJFQ1c1b0hPSVR4NmlHZWNyRDRXbkNiXzE3NTY2OTEyODU6MTc1NjY5NDg4NV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTE4NmQ0MTVjNjVkZmQ0M2NkZTc5MWRhYzEyNGNhMzRfbVU2N1JmcXYzRk40V1lOZm45YmZ6VnFoWkszN2RwTmVfVG9rZW46VFVLVmJFQ1c1b0hPSVR4NmlHZWNyRDRXbkNiXzE3NTY3MTU1NzA6MTc1NjcxOTE3MF9WNA)
 
 1. 生层的内容
 
@@ -58,12 +58,12 @@ permalink: /ai/officeproject/d7j9xm2d/
 
 1. 打开xmind
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjgzOTVjOTBlNjk0YzI1ZGJiMDNjMTVjNTBjZWRjMGNfaklybFJQdXFtWDZpUkxQNU9OUmNKUTBOeVJHVHE1TDhfVG9rZW46TWVZT2JLZ2lrb3lLZ2N4Tm9IVmNqUjBFbkdmXzE3NTY2OTEyODU6MTc1NjY5NDg4NV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTQzMjY3Y2Q0M2I0NjBhNjIyNDE3ZTg1Y2NkMmYzZDZfUmVZWHdGYWhLcUI1UmprRU40MnVlQ01aTlJsdTZaelZfVG9rZW46TWVZT2JLZ2lrb3lLZ2N4Tm9IVmNqUjBFbkdmXzE3NTY3MTU1NzA6MTc1NjcxOTE3MF9WNA)
 
 1. 导入刚才生成的markdwon内容
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=OTcyYThkOTczZGM2OWFjMTU5MjFkZWRkMmJhMDZlZDBfQVJVMTFnd1JwMG9oTWI1dDkzZThwSkNTcHliRjNXVndfVG9rZW46TWw4YmJtUkxwb3ZCOUF4aWFaRGMwd1lGbnNmXzE3NTY2OTEyODU6MTc1NjY5NDg4NV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YjM4ODAxNTA1NDFlYjNhODg3ZWEyYzgwODc1NDlkMTdfSTNlVk1XS3k0N3Z0ekhGZUk1THhLWm1abjJ6TllTNjdfVG9rZW46TWw4YmJtUkxwb3ZCOUF4aWFaRGMwd1lGbnNmXzE3NTY3MTU1NzA6MTc1NjcxOTE3MF9WNA)
 
 1. 生成思维导图
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YTUyYTZkMjI2OGU2NjU2MDAzY2VhMzIyM2JlMjJiMjJfRGk1Tm56SU9JUjVwUkJ3OUl2eWFBN3ZVUTRSNWJsam5fVG9rZW46TkRiTGJ2dzZkb3JUVVZ4ZTJ2d2NOdW5YbkwyXzE3NTY2OTEyODU6MTc1NjY5NDg4NV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTAxZDY3MmMxMGExNjhhMTRhYzJlZmRhNTY0MTQwZThfT0NFZG5ZMGtya2NDdnVZWmdkcTg1RmpXdmR0NldycThfVG9rZW46TkRiTGJ2dzZkb3JUVVZ4ZTJ2d2NOdW5YbkwyXzE3NTY3MTU1NzA6MTc1NjcxOTE3MF9WNA)

@@ -7,7 +7,7 @@ permalink: /ai/officeproject/792n9glv/
 
 ## 一、打开deepseek
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=M2Q2ZmFlMGRmMzlkZjJmZjg0NjZkNDEyNWNkYzg2NWFfczlGUGhmQkZFSmRqdTRUQWIxNVdlbW9MNXVDQlVJak9fVG9rZW46S0tzcGJRRlNYb2czWDh4SGVLcmNPWHF3bnRjXzE3NTY2OTE0ODU6MTc1NjY5NTA4NV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NTU2YjRlNWU2ZTIxZWFjZGM0NTk0YWM5NDUyZmNiOTVfUXh5TEo3N1pUcHB0TG5DMjNudU9mWU9tekpucG1aeUpfVG9rZW46S0tzcGJRRlNYb2czWDh4SGVLcmNPWHF3bnRjXzE3NTY3MTU2Mzc6MTc1NjcxOTIzN19WNA)
 
 ## 二、输入提示词
 
@@ -17,7 +17,7 @@ permalink: /ai/officeproject/792n9glv/
 用mermaid语法画一个「用户下单」的流程图
 ```
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MjI2ODMwODVmOWU3NWU5NmU0NmMwNjFjOGRhZDU1ZWJfbXhQTklIRmVqMG1HUGw5MnVKeFp2TVJ0RE5NRThHS05fVG9rZW46UzV5dGI5NkVEb0U0WFp4R3FYcmNYYTlqbkliXzE3NTY2OTE0ODU6MTc1NjY5NTA4NV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YzFmZTc2ZGFlMDYxYWUzNTBkOTI1Y2RiMDJjN2VjNjNfRWh3SU9vOXd4dHRtRFVqNVZpVGhLczVnMFlLNHNjM01fVG9rZW46UzV5dGI5NkVEb0U0WFp4R3FYcmNYYTlqbkliXzE3NTY3MTU2Mzc6MTc1NjcxOTIzN19WNA)
 
 1. 输出的结果
 
@@ -47,17 +47,17 @@ graph TD
 
 1. 打开https://www.mermaidchart.com/
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YzMzYjQ4YThiYWRlOTIwNTA5YzY5NjVkNWUxZTlkYTJfb0E0aTNyd05iWDBwZzk0VVhlVDhTSVBHVjBCU01HblVfVG9rZW46R0hTVGJnd3ZIb1R1cUZ4WGdBQmNJTlA1bjViXzE3NTY2OTE0ODU6MTc1NjY5NTA4NV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MGEzNDAyYzdjYTZkYThlM2RkZGM2ZmZjY2U3YTkyMDlfcFd2N05obHZjOFFmZ252UHlaM2VGM3hxbUprcURMekRfVG9rZW46R0hTVGJnd3ZIb1R1cUZ4WGdBQmNJTlA1bjViXzE3NTY3MTU2Mzc6MTc1NjcxOTIzN19WNA)
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2JkNGViYjRkYTI4ZjkxNjAzNzNlYmZjYTAwMDNmNGVfWWxtdk85c3JTTno4SFM0bUhmalVNVk1hdkJ5dnFYRkxfVG9rZW46U2VpdWI3Mlkwb3FSSUt4SGN4VGM2UlI2bldmXzE3NTY2OTE0ODU6MTc1NjY5NTA4NV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NTc0YjZjNTg1NmNmMTIwNTliYTQ2ZTcyZjgyMTIwOWVfVXZmVDVHU2ZuUjFkRXV4ZnJ5WHAybmJJdTlkNUp0S1dfVG9rZW46U2VpdWI3Mlkwb3FSSUt4SGN4VGM2UlI2bldmXzE3NTY3MTU2Mzc6MTc1NjcxOTIzN19WNA)
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=OWEzOTM1NzRjYjIzZjRhMGJlOTRhMmQxODJhYjU2NDJfRWpBcGhDNXp3TEl0RkVFaHo2Z0k4aGM0SkdvV0xnSlNfVG9rZW46RW1hUWJMNUdLbzB0bEd4bnZMMWNWazNJbkZjXzE3NTY2OTE0ODU6MTc1NjY5NTA4NV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YWU1MmZmYWI0ZWRmOWZkNDIxMTAxNTQ1ZjU2YjVhMjZfYXQySENKdDJaZU9DVHl0eE93S0szTXlTeHBXb0FRbUhfVG9rZW46RW1hUWJMNUdLbzB0bEd4bnZMMWNWazNJbkZjXzE3NTY3MTU2Mzc6MTc1NjcxOTIzN19WNA)
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTIzNDEzNzMyNmU5NTUyOWFiMTY0Y2VkNmFhMmU0YzRfbHZyRXprc3dibTdwM2JQdmxmZURWM2VrUUl1OTQyb0xfVG9rZW46TVpVTmJJblh6b0ZxNnl4U0F2M2NXdnhjbjhlXzE3NTY2OTE0ODU6MTc1NjY5NTA4NV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTg5ZjJiZGE1MWRkMDE2OWU5ZTQyN2ZlZGZiODcyYTRfeEJqOHU0M0Q2ZTJXWXhxTmVxbnFpNGsydDJtMXIzYUNfVG9rZW46TVpVTmJJblh6b0ZxNnl4U0F2M2NXdnhjbjhlXzE3NTY3MTU2Mzc6MTc1NjcxOTIzN19WNA)
 
 1. 输入生成的内容
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MjQyZTI0ZWRmYjlmYTZmNjU1NGQ4MzI2MGQzMWJhMzZfSjY3RjQ1VGZOeUE5bHdQeGtuM1p3Z2kzTThjN091NkpfVG9rZW46S2czeWIyYmdyb3Iyc094d09JRmN0Uk83bm1WXzE3NTY2OTE0ODU6MTc1NjY5NTA4NV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YThmMDdiZWM5ZGY5YzlhYzdkMjQwN2Q4Y2QyMDRiOTVfbnRhWHlndVRGYWdmMDhkc0lRbjBra2ZWUjhMMFA5dlFfVG9rZW46S2czeWIyYmdyb3Iyc094d09JRmN0Uk83bm1WXzE3NTY3MTU2Mzc6MTc1NjcxOTIzN19WNA)
 
 # 二、类图
 
@@ -67,7 +67,7 @@ graph TD
 提示词：使用Mermaid画一个订单的类图
 ```
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YjQ0ZDdlNmYxOGVmNzZhNzFlYzlkZDg4ZDZjMzdiOTZfQVVmcHVpYk0yTHlGNDkxUVo2Q21TQ1ZmbmxuS0NRYnVfVG9rZW46V1NNT2J2ekRpb2VCM1B4QW9Jc2NXUjkxblJjXzE3NTY2OTE0ODU6MTc1NjY5NTA4NV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=Yzk0NGNmNjViZTBhNWU2NDQwNmVlMjljYWY1ODUyM2VfYlpta2RweXZRZzE1YmJpRTV5UWN4bTZVVFViaUFLbGxfVG9rZW46V1NNT2J2ekRpb2VCM1B4QW9Jc2NXUjkxblJjXzE3NTY3MTU2Mzc6MTc1NjcxOTIzN19WNA)
 
 ## 2、输出的结果
 
@@ -103,11 +103,11 @@ classDiagram
 
 1. 打开rmaidchart.com
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MGMxN2QxY2JkNjk5MzIwN2UzOGUwNzU3MDdhNTM2ZWZfWlhEdFQyRGtiNmhGRnpDSWs4SzdKckxjT2ZRU3E0OFVfVG9rZW46VTNxeWJMbEM0b3dHMHN4djRGV2NmMXhIbkxjXzE3NTY2OTE0ODU6MTc1NjY5NTA4NV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YjY2NjJjNjJiMjllODYzMDA2NzRlNjA1NjgyNzlhMDZfOFE1dDFlV0VEanBGSmpoTHlkdEJmQnJsaExTNWR0Q0VfVG9rZW46VTNxeWJMbEM0b3dHMHN4djRGV2NmMXhIbkxjXzE3NTY3MTU2Mzc6MTc1NjcxOTIzN19WNA)
 
 ## 3、生成结果
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=N2RmYTAxNDM1ZDk4M2IwMjFlNTFmYjgyY2ExZmJlNTZfRjZxaGVrZDdJb1JrcUI5eVBLa1RUNkdUMlMyekRXbnpfVG9rZW46Wkp6YWJCZ1d2b2c2NWh4UGtNNWNtZjM2bmc4XzE3NTY2OTE0ODU6MTc1NjY5NTA4NV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YjU4MGM4MjY3ODRkNDdjOGQ1YjIyNDgwZTVjZTg1MzNfSUpmRVR5YXhPWWM5bDhXNG96S1pJWUxZRFN1VzB5MmhfVG9rZW46Wkp6YWJCZ1d2b2c2NWh4UGtNNWNtZjM2bmc4XzE3NTY3MTU2Mzc6MTc1NjcxOTIzN19WNA)
 
 # 三、时序图
 
@@ -148,4 +148,4 @@ sequenceDiagram
 
 ## 3、导入
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NDUwZTlkOWYwN2Y3Mzg1MDAwNGY3YmU4NGJhNjIzN2ZfVVR0czlaYURBR2VUVVZjcjA3T1Z6TkhBaVltTUNscU1fVG9rZW46TVRlNmI1RjFmb0JFUjR4dVlyZ2NHNGlHbnpkXzE3NTY2OTE0ODU6MTc1NjY5NTA4NV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWQ1YjRhOTQ3NzdmM2E1NmM3NDA4NDc2MWZlMDAwNTJfU3JRNXFLRDF3ZjJwSUVzanU2MG5NUzlIdklIUFhWUDBfVG9rZW46TVRlNmI1RjFmb0JFUjR4dVlyZ2NHNGlHbnpkXzE3NTY3MTU2Mzc6MTc1NjcxOTIzN19WNA)

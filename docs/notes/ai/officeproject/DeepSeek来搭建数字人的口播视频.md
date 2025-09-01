@@ -6,7 +6,7 @@ permalink: /ai/officeproject/v4wr9ocm/
 ## 一、打开deepseek的官网
 
 1. 打开deepseek的网站【https://chat.deepseek.com/】，因为目前的deepseek相对访问量大，所有的在V3和R1的版本的时候不太稳定，我们选择了硅基流动来调用的deepseek的r1的模型
-   1. ![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YWVmYzQyYWRlOWIwOWQ0OTczNGRkYzViZWMyYjQ2MDlfVEtLQ0pXREJFR1RYUWZLUlB3QlQxajQyYWtRRkFROVNfVG9rZW46UmRJY2JOM1Rpb0NnNTd4ZUJ4U2NRdXFEblBkXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+   1. ![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MzgxMTNiOWU1ODE3Yjc3NTBjYWQyNTliNzg1NGJkZjFfSUtsRE1zS1hRSldURXNud1BmQnU1NDZkNGxMRzdXa0NfVG9rZW46UmRJY2JOM1Rpb0NnNTd4ZUJ4U2NRdXFEblBkXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
 ## 二、打开硅基流动官网
 
@@ -14,27 +14,27 @@ permalink: /ai/officeproject/v4wr9ocm/
 
 1. #####  打开官网
 
-   ![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YWU2YTI0NTQ2MDVlOGFhMWU2ZjAxM2Q2NjJkZDJjY2JfVnV1TjdGekRtUEpvME1qUzM4R1FYUEVNbTZBSE1DU0lfVG9rZW46U1Z0OWJ2Smthb1dUTmN4cVMzRGM2dGJtbmZlXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+   ![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YmVmN2U3MDlhMzlhMjlkMjExZGM3MzNjNGQwMzZiNzZfaDVTdHBjYWZxdWd3dVQ2c0dUMnZRWExCM0lrZ0tqUDNfVG9rZW46U1Z0OWJ2Smthb1dUTmN4cVMzRGM2dGJtbmZlXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
 1. #####  进行注册，如果么有账号进行注册
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NjRkZDZkMTBlZGJkNTdiZThkZmQyN2IzNTlkOGM4ZmJfVk9HU0pGUWpGZWFObmp4OUpyME1BZDhBdUdGZ1FIcWtfVG9rZW46S0djUGJnVFZlb0xFWXp4T1hEbGNhcTk1bkVkXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MTJhYWExNDVjNTdlNTljNTNiNGY5NjM1MWFkOTQ3ZmNfQkNtMGQydGxCZlR6bmFZR0pvQ2hEMGZxV2N1TGQ1MTNfVG9rZW46S0djUGJnVFZlb0xFWXp4T1hEbGNhcTk1bkVkXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
 ### 2、使用硅基流动
 
 ####  2.1 在硅基流动的模型广场进行选择deepseek的模型，这里有免费的也有收费pro的模型，pro模型相对比免费的模型速度要快。
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MGY5Yzg4YmU0NjFhOGM3Y2IzYjY1ZjgxMTIwMWYzMTVfSTZoSFNvNzFkTTAzRG43ejNhUXN4d0Z3aUxUTEIyVGZfVG9rZW46VGh5b2JobXpFb1JmblF4U2tsMmMzS2hNbkdmXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YTUzZWE5ZTE3NWI1NTQ5Yjc5NWU1N2FiNjNiM2RmYjZfakUzMEYzblBobXI0bEx4bjJYZEdadHRVWnhlWnNBTEhfVG9rZW46VGh5b2JobXpFb1JmblF4U2tsMmMzS2hNbkdmXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
 ####  2.2 这里为了速度我选择了R1的pro的模型
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDQ3YWZiYjg1YTk0MjZkZTdjYWJjZTVhMjMwOTMzMDRfaUozVmVJdGRnTkFXOFJGRlM4VERyM01xbWpkZGdVaWhfVG9rZW46T0pnRGJSOUdWbzFLalV4YWs0eWM4UFZybkNoXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YjZmMzA5NzY3NjEyODdlNDhiM2FkYmUxNjg0YmQzNzFfUXpSTVJDRzNEb3VRWVZBMVJMYzd1SHMzalRCNlZGR3RfVG9rZW46T0pnRGJSOUdWbzFLalV4YWs0eWM4UFZybkNoXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
 ####  2.3 现在我们可以和deepseek的模型的进行对话。
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YzM5ZDI2NTFkMGI1OTRhNGI3OGNmYmVmZTg3ZDA3YTlfeVNQeGtJN0JXTWVJUDZncUxPeTNiMERQZFl1ZFZsWG5fVG9rZW46R2ZVSWJpWExGb0tsd3R4RkxoN2NVVjZSbmxjXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDUxZTE1YTBjMjYwZjJlMTQxYjIwZTU5MThmMmI3ZWZfWnRXWE5ITTBCdVZDSTlDeTNFNE9zRGF5bTdWcld3cUVfVG9rZW46R2ZVSWJpWExGb0tsd3R4RkxoN2NVVjZSbmxjXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YzY1ZmExYzJiYjQyOThjMmY4MTUzMDQ3YWUxMWUxYmZfd05rTmZ5d1BhaklXQzhzb1BOZmRhanowZXRta0kybURfVG9rZW46Qng0NmJXUWdtbzNMSDd4Tm9VRGNzSnI1bjhjXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=OWEyYThkNDZjY2E0OWU1NmFiNjNhNTgxYmNlOTljZDJfdkFvS2RSRzdoZ0V6c2Jrd0FvUE1RT3paamxDdkZNNXlfVG9rZW46Qng0NmJXUWdtbzNMSDd4Tm9VRGNzSnI1bjhjXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
 ## 三、进行口播视频的创作
 
@@ -46,7 +46,7 @@ permalink: /ai/officeproject/v4wr9ocm/
 我是一个就求职推荐服务的工作者，我想让总结在面试过程中自我介绍方面的注意点和常见错误，需要你说人话。
 ```
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NzljMWRmMjg1YWZjZDFmMjc2MTQ3MzliNWM0NDY0YzBfMThuSHZxT2dFb2tkYnZHY1I3bGJySDhXcnZ1cTVpSmpfVG9rZW46Q1RuYmJZM1JQb1lKNWx4SzFQMmNMM3libk1jXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YTU3MjVhMjUxYmEzMDYyZWM2ZjZmYWZhZmVmOTkwYjJfYmJXS2Zad2UwTlBRYUJ2cFFSQkJHZlRqc1FsajBhT1FfVG9rZW46Q1RuYmJZM1JQb1lKNWx4SzFQMmNMM3libk1jXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
 1. 针对上面的提示词生成的内容，如果你觉得不合适，那就可以重新修改提示词
 
@@ -127,44 +127,44 @@ permalink: /ai/officeproject/v4wr9ocm/
 
 1. 打开剪映，点击AI文案成片
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ODY3NDhkMDgxOWQwN2E2NmJlMDI4ODAwZTM0MmJhNTVfQnltd3UwVzFvWldTdlhUd2QydWdjMVhIM2V5dUNUbkxfVG9rZW46QjJGOWJrMkQyb3RROHN4OExxTmNNRnlBbmpnXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2I5ODQ3OGUzNjYxNmU5YjEwYmUwMmVlNWFiM2Q4NThfODVWcndUTE1kd3ltWFBiZ05DWFZaZktuSUpvckJwVHVfVG9rZW46QjJGOWJrMkQyb3RROHN4OExxTmNNRnlBbmpnXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ODhhYTkxODZlYzM0N2Y1Y2Y1NTVlNjdlYTE3MWYyODRfYkh5Y1ozYXZ1QzBSVWlzNlVUYjNWTU9LQnBKQVhVN0VfVG9rZW46TFBOV2J6T2ZZb01iQXN4aDhIRmMyMlh4bmdmXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=Mjg3NWY4YmNmZjc0MTdiZmUwZjZjMDM1ZjBmZTBjNWVfSjBodzhNVEFiOUdmdVV2eERPWUJoeHFhWFBnQm45QXNfVG9rZW46TFBOV2J6T2ZZb01iQXN4aDhIRmMyMlh4bmdmXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NWE4MDE3MWFmNjZmZjc1OWUxZGVkY2Y5ZTFjY2I5NjhfWkl4RVpqYkV3WkE1V0FJdGUxc3hLVm9SMHhvV3Z3ckFfVG9rZW46TDI5cWJldEhrb2VKZFF4dTVnamN0RDBjbjlkXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGIzMDRmZDYwZjlkNmY3MDZhZmRjMGE4ZWJjNjU1MDlfSUtTRE5DY2o1dkFkTEdMS1FNNG5pNG9jakkwUk16a2RfVG9rZW46TDI5cWJldEhrb2VKZFF4dTVnamN0RDBjbjlkXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
 1. 在数字人的界面，输入你的文案的内容，把deepseek的内容拷贝到这里
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YzM4YmFlZjY2NGU1ZTU4ZWE3NDAwYzFiYWRlYTkxNjRfeDNCZTF6Q3FjTWtzTXI2Q3JaWktBOHo1ZnRFclBUOU5fVG9rZW46WU4wamJ5S21rb1F6UEN4SGwwQWNITGs4bmhsXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YzVkZmEzYjA4NmI1MjkzZGJhNDlkYzlhMWMzYzgwZTRfWWJSRXVMdExTeUpsb3lYcXdqY0RJZWRDa3dDTkh6OWFfVG9rZW46WU4wamJ5S21rb1F6UEN4SGwwQWNITGs4bmhsXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MjlkZjI2YzA0NjFmYWJhZTY2MjE0MDAwNjYyY2MwODdfN0pHREpwOWxJc3FkSjEwWEp2Q2NvR3E2bU9ISTBjWUFfVG9rZW46QlpFNGJQbmRmb2NVQ1d4NUxHNWM4WHBTbm5qXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NzZlMjcyZDkzNzYyY2E0ZWQ0NDk3MzdlZmZiNjY1MGFfUDRvdlRPNW9hMHp4TWUwY09NZkNodWlPSTJNdEZCaWlfVG9rZW46QlpFNGJQbmRmb2NVQ1d4NUxHNWM4WHBTbm5qXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
 1. 输入信息后，视频就是在创作中
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=M2M5Y2RkNDg1NTA1YzEwNDY2MzBhYTcyYTY4ZjJjOTNfUU1OTjBZcEFkUDExOGtYaXlCUk44bHk5SUNrZkQ1ODdfVG9rZW46TnRNS2JOaUppb2tQeTB4d01icWN6SUJSbjRlXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NGU3MWNkMTM2NmY4YmJkN2I4YjMwMTMzYmMxZWVlOTBfVjBHVzMyUnZ4Z0xlMVNsZlhJQjZQYmJwbVg2ZVlFYU1fVG9rZW46TnRNS2JOaUppb2tQeTB4d01icWN6SUJSbjRlXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
 1. 目前到了视频的渲染的界面，同时可以根据生成的内容是否合适进行相应的调整
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NjM5NGI3NjcxODMxZjIyMmM2N2IyZjNmNzU3NGM2MGZfYXYyemd6T2ZYMERsS2V2dkJaVVRSTW85NjVQOXVheWdfVG9rZW46UjRKZmJKRzB0bzk1bVF4YU9VOGNva2d1blBlXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=Zjg5MDk4ZDJmYjU5MzUzODRjMDUzMmNhYmE4NDQxZGZfNFhSZHNWRHZDVzRxM2NDM0NJdHlHc2RpRWN4WlJVV2FfVG9rZW46UjRKZmJKRzB0bzk1bVF4YU9VOGNva2d1blBlXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
 1. 如果视频没有问题就直接点击导出按钮，在导出的时候进行相应的设置
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=N2NhMTA2ZDEzNTgzMzAyY2E4Y2Q4Y2YxYjkxNzJkMzlfVUdIM0tvQXZVRmQ4VmFSaVFPTmc3VlBvdUVYbHhKS0lfVG9rZW46WFV4UGJOaWE5b01QbjJ4M2RVNWNMS0JVbjNkXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjAzOTU2YTNiZmQxNDdiNzk4MjBhNjlmNmNmMTgyODBfdVczdkNreG1OZzZLYk5NOXJlNDZaU1ZsQXRBN3JueldfVG9rZW46WFV4UGJOaWE5b01QbjJ4M2RVNWNMS0JVbjNkXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
 1. 如果你觉得没有任何问题，等待导出生成视频即可
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MjllYWVmMDZiOGZhNmQ0MTE1NTIzZmI2ODY3MDg3MTJfVVMxaXk1enJPdllmYzZqT01RQ29CbUhNSTk3TXRmWGVfVG9rZW46QXM4eWJFb0RTb0FIMWt4Y1plaGNqMjZZbkNkXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YTdjZjNlMTY4Yjg1YTE3MGIxYmVhZTc5YTZiMDdjNGVfSWpJMWhMWVRCbElDajBKcnJHSkRlYzIzR3dlT2VaV0xfVG9rZW46QXM4eWJFb0RTb0FIMWt4Y1plaGNqMjZZbkNkXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
 1. 如果你觉得对视频还需要做微调或修改相应的样式
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MjIzMjg1NGVlN2VjNDU2ODQxZWNkMjRmMmQ0YjBiY2JfMUNpS1BzelgwTmVHUWtIeURTSXNTNmVWREYyT3JhYXNfVG9rZW46TVZOeWJtSlM0b1ZwV3l4bVFRamNFamVQbnRiXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YjJiZWRlZmE0Y2VjNThkMTM2OTQ2YzJlMTQ1YTkyNDNfazJpMUNtSTVmUXdQTXFhVDc3R3NGNklhcmw0U0phYjVfVG9rZW46TVZOeWJtSlM0b1ZwV3l4bVFRamNFamVQbnRiXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
 1. 这个时候会把视频上传到草稿箱，同时导入相应的数据
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmJhYzNhZWFkMzMyYzIxYjY5ZGQ5YzE1Y2VmMjEwNTRfNG5yTnQzTG9acHVIQUNpb3RYaGdQZm9ETXFZRG9JdFZfVG9rZW46QzNwMGJOS0prb0VUalN4YXFtNWMwRTNZbmVlXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MGI0MTZiMGEyZjg5NGI1NmQ4YzJlMmVjMDk4MGUxNTRfMDFTeUN2SnFRUjJmQ0xWMnVLbVJVRjVOc09makFhQVdfVG9rZW46QzNwMGJOS0prb0VUalN4YXFtNWMwRTNZbmVlXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
 1. 这个是我们就可以进行字体颜色的调整，添加背景音乐等等，针对你的需求自行进行调整，比如我们这里进行字体的修改
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MmJhOTc2YjhjMTZiYjI1MjI0M2QxM2UwMmU5YWMyNmFfc0drMml1U0NsUkQ4MzhVUmhsYkdibG1DQ0txT0pOOWVfVG9rZW46QjhpOWJrM1JMb0FZc2x4dUF0YWN3VjNqbnRnXzE3NTY2OTA4Nzg6MTc1NjY5NDQ3OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjNhOWFiMzk1MzJmZGI4YTAzNGRmM2Q1ZjdkZjJlODVfdDNqUFJGcXE4WWZYeFdoTnVhSFdwMXpnMmh0QzR0QmxfVG9rZW46QjhpOWJrM1JMb0FZc2x4dUF0YWN3VjNqbnRnXzE3NTY3MTUyNzk6MTc1NjcxODg3OV9WNA)
 
 1. 最后选择导出即可

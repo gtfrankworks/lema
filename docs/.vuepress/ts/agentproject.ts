@@ -12,7 +12,7 @@ export default defineNoteConfig({
     {
       text: '工作效率案例',
       badge: { text: '必须学习', type: 'danger' }, 
-      icon: 'material-symbols:construction',
+        icon:'mdi:file-document-multiple',
       collapsed: false,
       prefix: 'officeproject/',
       items: [
@@ -34,7 +34,7 @@ export default defineNoteConfig({
        {
       text: '工作流的案例',
       badge: { text: '必须学习', type: 'danger' }, 
-      icon: 'material-symbols:construction',
+      icon:'mdi:file-document-multiple',
       collapsed: false,
       prefix: 'workflow/',
       items: [

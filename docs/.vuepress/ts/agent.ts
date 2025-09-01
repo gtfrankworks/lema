@@ -12,7 +12,7 @@ export default defineNoteConfig({
     {
       text: 'Coze的开发技术',
       badge: { text: '必须学习', type: 'danger' }, 
-      icon: 'material-symbols:construction',
+      icon:'mdi:file-document-multiple',
       collapsed: false,
     //  prefix: 'agent/',
       items: [

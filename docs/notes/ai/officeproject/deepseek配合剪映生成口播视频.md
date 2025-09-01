@@ -6,7 +6,7 @@ permalink: /ai/officeproject/s343r3cz/
 ## 一、打开deepseek的官网
 
 1. 打开deepseek的网站【https://chat.deepseek.com/】，因为目前的deepseek相对访问量大，所有的在V3和R1的版本的时候不太稳定，我们选择了硅基流动来调用的deepseek的r1的模型
-   1. ![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NTcxMjdlZDFjOTMzOTAwYjMzNmE3NmQzYWYzYjBkNjlfeDAzU0JIaHVRS3E3YTJlOUcwZmdOem4yTVhiU20zUVFfVG9rZW46SnRmeGJ2RmtNb3NnSkR4WTd6QmM2djdmbmtlXzE3NTY2OTA4NDE6MTc1NjY5NDQ0MV9WNA)
+   1. ![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmUxZWVmZmMxNjMzOTgzNTJhZDlhZjY4NjUyMTUyOTZfa1Jiam00U0pDVXQ3c29VeWV4VjNrNlJuaFZMbTBWTHFfVG9rZW46SnRmeGJ2RmtNb3NnSkR4WTd6QmM2djdmbmtlXzE3NTY3MTQ5Nzk6MTc1NjcxODU3OV9WNA)
 
    2. ##  二、在deepseek中输入你的提示词
 
@@ -54,23 +54,23 @@ HR：“你能接受加班吗？”
 
 ### 1、打开剪映的客户端，点击AI文案成片
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGNhODA0MzFkM2FkYWJjYWQ5MGM3OTMyOGExZDk1MGZfeXdVbTlNQjJsSmhnOHZYOWowR1NPaURzaEhtNkxhcVFfVG9rZW46UWdVRGJ0Zkhzb1lQUEF4ekxsTmNmNG9ObkJiXzE3NTY2OTA4NDE6MTc1NjY5NDQ0MV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YTNhOGFkZDg0M2I4N2VjZjgzNGZhM2E2N2U1NjIzNDNfcmpaWVNlSlF5ZldEZkFuTGVycXVGV0wwNTNYSWU5SjZfVG9rZW46UWdVRGJ0Zkhzb1lQUEF4ekxsTmNmNG9ObkJiXzE3NTY3MTQ5Nzk6MTc1NjcxODU3OV9WNA)
 
 ### 2 、选择开始创作中的AI素材成片
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NzJhNDExZjRjNjk5MzRhOGMyZGE4NWI3YTY0NTI0ZjZfckN5ODQ2N0xReENtUTZva1dzRGVoNWJEVDI5eVl3aURfVG9rZW46VTl3aWI3OWhKb3R5ZVN4VTl6dmN3OGlHblZjXzE3NTY2OTA4NDE6MTc1NjY5NDQ0MV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=M2RmM2I3Zjk2YjcwMTUwNWYzZDMwMjk4NTdmYzEwMGFfQ2RtY1BiYkt4Q0htTzN1RE1EYklFRXNNaUI5NDNZRVJfVG9rZW46VTl3aWI3OWhKb3R5ZVN4VTl6dmN3OGlHblZjXzE3NTY3MTQ5Nzk6MTc1NjcxODU3OV9WNA)
 
 ### 3、输入deepseek的生成口播的内容
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MGFmYTg2YmIyMzRhYmM2NWRlZmE2NTdiNjdiOTdjNzdfNWxBZGxaNk5MVTdrU3BlVVVFMnBtSjVRb2hVQjNobFJfVG9rZW46THl3dmJMb3Vmb01BS1l4S2ZkQmNIUllTbllnXzE3NTY2OTA4NDE6MTc1NjY5NDQ0MV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MmM1YTViM2I5ODQwY2MxNGM4NTEwOWEzZTRjMmYzZDBfNHhydTRoaE81RUdGc3pWRWRVOU9JSkpDU2hscWNQNzJfVG9rZW46THl3dmJMb3Vmb01BS1l4S2ZkQmNIUllTbllnXzE3NTY3MTQ5Nzk6MTc1NjcxODU3OV9WNA)
 
 ### 4、视频和渲染会同时进行
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDg3MDg4MmZjMmMzZTM0NjNlYjRkZjI0ZWMyYjcxOWZfaEQ0Q09WZ3NReVhXeHR0WDlrYVFNcUtXeGFjSTB2NFFfVG9rZW46VE95cmJ4cjNEb1g0d1N4OE9Pd2NsbDNWblVlXzE3NTY2OTA4NDE6MTc1NjY5NDQ0MV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NGE2YWExMWYzNWFkNmRlN2YzZjdlZmVhNjljYmEyOWRfaDRUZ3dNOHE2ME9LU3ZlTTdZOG83T1JKdUxBYTdOZ3hfVG9rZW46VE95cmJ4cjNEb1g0d1N4OE9Pd2NsbDNWblVlXzE3NTY3MTQ5Nzk6MTc1NjcxODU3OV9WNA)
 
 ### 5、导出相应的视频
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YWJiMWQxYmU0NTg1ZDBjOGYzZTlkMWFmOTBkNDU5MTZfaEJES0hoajNMVjZTTzJpOTZaeVVnQlFOS2k1cXl5RUVfVG9rZW46TEM3Z2JGM1lMb0ZlVEN4cEdaamNLRlQzblFaXzE3NTY2OTA4NDE6MTc1NjY5NDQ0MV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGE0MWRiMjIwNmI3MGRkM2U3NGYzMDhmOTI0NzNiNjhfM2w5UW5kSlptTVhHRE1pS2lmdjUxdGFrd2JNZXFwZVpfVG9rZW46TEM3Z2JGM1lMb0ZlVEN4cEdaamNLRlQzblFaXzE3NTY3MTQ5Nzk6MTc1NjcxODU3OV9WNA)
 
 ## 四、关于网页版的剪映的功能不完整。
 
@@ -131,30 +131,30 @@ HR：“你能接受加班吗？”
 
 #### 1、根据图片的顺序进行操作
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGVhNmQ1ZTAxYmI0NTQ5NjI3OTY0NzE5OWYzZGMwY2Rfb3k3TG9EZkxPNG1LS0pld0ZGU05nWklFT0kxWnRVT3JfVG9rZW46TUQzV2I5UDhMb21HQ0x4RW9rYWMyYWE1blVmXzE3NTY2OTA4NDE6MTc1NjY5NDQ0MV9WNA)![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=Yjk4MjNjOWRiOWM2ZmQ5NDViM2I0YWM1MWQyM2M1MmVfMHh5cm9CT0RtYTlndWo2NThhcGVBeU1DQnNrNDlzUmpfVG9rZW46V1dySmJEQm5Pb1BMOTh4WUM4TWMxOGpObkJnXzE3NTY2OTA4NDE6MTc1NjY5NDQ0MV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MTYxNjUyZWE5YmFiZTMwZmUyNjU3YzY0MjE2NGQ2YmVfVEtoWnU1OUtUNWlpMjJncUpJbE56RWhBejFCRHdMNklfVG9rZW46TUQzV2I5UDhMb21HQ0x4RW9rYWMyYWE1blVmXzE3NTY3MTQ5Nzk6MTc1NjcxODU3OV9WNA)![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDZlODI4NjU4NTJhNWYyZjVjNDc4NWZmN2Y2YTMzODVfUGtJWFlRZGFIZnVsdmhvc3dNc0llcVFWRmZhTWQzUDdfVG9rZW46V1dySmJEQm5Pb1BMOTh4WUM4TWMxOGpObkJnXzE3NTY3MTQ5Nzk6MTc1NjcxODU3OV9WNA)
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YzQ3MzI5NDg4OGMyNGJmZTNiZDhkYjhhZDNiZGU1ODlfV3JISWtIZ3R0SG42R3M4WHVQRHRqdWY1ZEdocmV4NHpfVG9rZW46UnhjT2Jpa3hDb3Jsejd4aDdnQWNwbUg5bkxmXzE3NTY2OTA4NDE6MTc1NjY5NDQ0MV9WNA)![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=OGZhZThlMWRmY2MyZTU0YzYyODYwYmM4ZGE2NWZkZWVfVnlSOUtlaXpnVlZuQW1sQW93aVZQUm93QlZLWnF6UnhfVG9rZW46VGJ5WGIyNGdPb2Fsc3J4RWM2a2MwS0MxbkZMXzE3NTY2OTA4NDE6MTc1NjY5NDQ0MV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NjYxMTRkNGJmNzJkZmY2ZjNjYTg1MGM4YzU3ZTQ1NDZfbktFRkxMU3lzb3dwUDZpQlJQWDZLSGpYV3E1cVRGTWJfVG9rZW46UnhjT2Jpa3hDb3Jsejd4aDdnQWNwbUg5bkxmXzE3NTY3MTQ5Nzk6MTc1NjcxODU3OV9WNA)![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=OGJmMTFlYzI3M2NiOGM1YTBjYThhNTkzNDg5ODg2ZTNfZHhiaTVqa3U3T3JhVVY0eEpKdUhGejFheFVPNlRsMkxfVG9rZW46VGJ5WGIyNGdPb2Fsc3J4RWM2a2MwS0MxbkZMXzE3NTY3MTQ5Nzk6MTc1NjcxODU3OV9WNA)
 
 #### 2、点击应用按钮
 
-| ![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NDBkMzI4OWEzZmUxMmJlMTdjOGEyMjA3ZTMwZTY1NjlfRFIwOEZPb3lwMmRKaHV1UFZtaFhqTFFuRXBieUJPZkJfVG9rZW46SndSVGJvOUl0b25Ia0x4d0JuOWNQRlBrbk1oXzE3NTY2OTA4NDE6MTc1NjY5NDQ0MV9WNA) | 在这个界面你根据自己的需求来选择，智能匹配素材还是选用自己的素材![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NDRjOGIzMjYwNzI3MTkxYzhkZDcxNmY5YzM1YjgyMzNfeXJiN0xMdmdnbXF1ckVNUGlqOEU1YkV1VktvU3hjV0dfVG9rZW46R29EZ2JYalBOb3U4Tjl4RlpZSGNwaGQ5bmxoXzE3NTY2OTA4NDE6MTc1NjY5NDQ0MV9WNA) |      |
+| ![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NjMxMzEzNzI0ZmU0MDYyNDU4MTExNDAzOTgwNWVlMzdfRUM0YmhDNEJMbEdZUER6dEpIS2xKZVBRVjZnUEIzRzlfVG9rZW46SndSVGJvOUl0b25Ia0x4d0JuOWNQRlBrbk1oXzE3NTY3MTQ5Nzk6MTc1NjcxODU3OV9WNA) | 在这个界面你根据自己的需求来选择，智能匹配素材还是选用自己的素材![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=OGViNTE2YzU5MWE0MDE1NTc1NmRjZGYxNjZlMjljYjZfQWhPc3haTkpzNkRwOVk5WEpSbjdaWDF5cFRPMkJDN2JfVG9rZW46R29EZ2JYalBOb3U4Tjl4RlpZSGNwaGQ5bmxoXzE3NTY3MTQ5Nzk6MTc1NjcxODU3OV9WNA) |      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
 |                                                              |                                                              |      |
 
 #### 3、这里我们先选择智能匹配素材
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2JmNDZlNDIxZmE5YzZkOTkxZDViMzBkYTdjMTgyMjNfVEdWSEhyU3MzTlJKWGR2NHVRYXBjSEFvOTduaDdZVlBfVG9rZW46UlBLVGJFdTYybzR1UTd4UGN1aGNoelRabm9oXzE3NTY2OTA4NDE6MTc1NjY5NDQ0MV9WNA)![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NGMyYzBlM2MxNDM5ZmViZmRiZTc0ZjUzMTM1YjI0YmVfclY2S3IzTlN6clllYXM3VDdhOHZFQWVPR0ZWZmp1aVBfVG9rZW46UHh6TmJUbHBkb1hmVmF4azNSTGM0ZWZzblJoXzE3NTY2OTA4NDE6MTc1NjY5NDQ0MV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDc3MjkwNmMzNjM0MGNhMmFlYWE1Yjc1MzJlNTMzYTdfY3VYbGhadVpvNHRXb2g0dHl1bGNIOWd5T1hrbmIyTEJfVG9rZW46UlBLVGJFdTYybzR1UTd4UGN1aGNoelRabm9oXzE3NTY3MTQ5Nzk6MTc1NjcxODU3OV9WNA)![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MTA1ZTY1Njk4OTRkOGVjODUwOWFjNWFiMjgwYzc4MjBfRHRLSGdKTExpZUJiRGlncDBYODdjbjdMa2lYTm5iV05fVG9rZW46UHh6TmJUbHBkb1hmVmF4azNSTGM0ZWZzblJoXzE3NTY3MTQ5Nzk6MTc1NjcxODU3OV9WNA)
 
 #### 4、这个是就需要对后期的视频进行更改
 
 ##### 1、比如图片
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NDY2MDRjM2M2MzA1MWRhNDc1OGMxYjFmMzgxNzM2OGNfZE1qS2k4MEkyS1o2ZFRMSTFoUFYzek81OGFiY0ZMQVVfVG9rZW46Uk5kY2JQeTdlb053c1V4Yjl4bGMyVGRPbkxiXzE3NTY2OTA4NDE6MTc1NjY5NDQ0MV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=OWI4YjEwZDYyMzNiNTVkNTI4MTRhZDdiMDQyOWY0MzZfNG5RakNmdU5KdmJqN1BOUFNScHV3dzJUTEdmUHFBVXVfVG9rZW46Uk5kY2JQeTdlb053c1V4Yjl4bGMyVGRPbkxiXzE3NTY3MTQ5Nzk6MTc1NjcxODU3OV9WNA)
 
 ##### 2、声音
 
 因为这个是ai生成的声音，这个时候最好把他换成我们的自己的声音
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YzE3YzI3NWY1MDcwNmEzMzU1OWY4MTdiYjdjYjAwYmFfT0FINlY0R3pDU215M010RE9UaXFua0dVYkNUa2xvVXZfVG9rZW46T0JhOGJtS3lTb1Z3cUx4ek9GMWNOWUtqbm5nXzE3NTY2OTA4NDE6MTc1NjY5NDQ0MV9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NTkxYWEyMTIxYjM4MTI0YTMyYTc3Zjk5MGU3MzI2NmRfcUlkVGNSWHFCWk5VTGJPYW00Sm11ZEg5WmQ5RXZwTmxfVG9rZW46T0JhOGJtS3lTb1Z3cUx4ek9GMWNOWUtqbm5nXzE3NTY3MTQ5Nzk6MTc1NjcxODU3OV9WNA)
 
 #### 5、全部修改完毕就可以导出视频，也可以导入剪映再次剪辑

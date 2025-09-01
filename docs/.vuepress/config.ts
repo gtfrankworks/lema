@@ -21,7 +21,7 @@ export default defineUserConfig({
   description: '乐码职说',    
   head: [
     // 配置站点图标
-    ['link', { rel: 'icon', type: 'image/jpeg', href: 'kclm2.jpg' }],
+    ['link', { rel: 'icon', type: 'image/jpeg', href: 'kclm2.png' }],
   ],
 
   bundler: viteBundler(),

@@ -3,15 +3,15 @@ title: deepseek和PPT的结合
 createTime: 2025/09/01 09:25:29
 permalink: /ai/cd4eeyut/
 ---
-## 一、基础的操作
+### 一、基础的操作
 
 ### 1、打开deepseek的官网
 
 1. 如果没有注册直接进行注册
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NDVlMzJkNWY3YTJiOGY3ZDQ4MmUzMjljMmM4YTUwZGFfcVhQdVc3eXp6TUhQVVBUaG9mRWdHalp5TkdWTk5yOHFfVG9rZW46RTN4VGJMT2Vwb1ZXd1R4TDk3UmNhSUVhbk9sXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NTFjNTgwNDU1MmQwNDI2ZjNlZjNlOTBmMWE3ODhiYzFfMHMwQU1ZaU5VNTN0aTFGdEJURUhDVUNZaW14ZXdaWk5fVG9rZW46RTN4VGJMT2Vwb1ZXd1R4TDk3UmNhSUVhbk9sXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MDVjY2YxMTQ4ODcyMTE1OGYwMzU5OGQwNTkxOTU5MmZfREMyMnQ5WDI4blRBR3dqeDJPT2pZWVRIelVtbXo5UHVfVG9rZW46RnlxTGJGY1lQb3hCdG94VzExc2NVam1MbnNnXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDkyZWMzY2NjZDFjYWE5MjZhYjcyYTgyZjRjMWU2MzJfNUZkRjFUbzVyWENmZmtHM1VBQ3loaFRzMWwwSHl0eGVfVG9rZW46RnlxTGJGY1lQb3hCdG94VzExc2NVam1MbnNnXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
 1. 在对话框输入你的让deepseek帮你完成的内容
 
@@ -19,7 +19,7 @@ permalink: /ai/cd4eeyut/
 请用Markdown格式生成一份关于Ai大模型的PPT大纲，需包含封面、目录、3个核心章节（每章至少2个子论点）、总结页，语言简洁专业。”
 ```
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MjViZmZiOTI5MDkxMmFlOTk3MzQ1OWM4MDY0YzQ5OTlfOGRpMWoxSkhPWmZnUFg0OTE3NGFHbGZnekFZc0lLNUtfVG9rZW46V09lU2I5c3lKbzc5NzN4cGE5b2NYNVFLbm5mXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=OTZlODJlNGVjY2U0MGVlYmViNjlkMmQ0NmQyODM4NmRfZnQzSVBnSkt0eDE2SWF0VmFNWktZaUJnVXNMRjgxSElfVG9rZW46V09lU2I5c3lKbzc5NzN4cGE5b2NYNVFLbm5mXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
 ```Bash
 # AI大模型：技术演进与应用前景
@@ -97,41 +97,41 @@ permalink: /ai/cd4eeyut/
 
 ### 2、打开kimi的PPT助手
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MDhkMTlkM2YzMTEzOTA4MDg4MGNkNDA5MGYxMmE4MzBfVGRTTFhlNzVPZGVxR1dFUW1WaG9VMGpMam0yVm5PczRfVG9rZW46UUxLZGJpcjFrb3RYcEt4OUthN2NLSlhkbkllXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDkxZmMwODcyYWQ4YmY0MTQwMDE1MDc4NTNmZGQ3ODdfWE1pNUI0d0Jic1RJQ3ZZc1JycjljV0NKSmZMczhsaGdfVG9rZW46UUxLZGJpcjFrb3RYcEt4OUthN2NLSlhkbkllXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
 ### 3、在PPT助手进行PPT的生成
 
 1. 在ppt助手输入你在deepseek生成的内容
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MTU1YjI1M2YyYWM5MjI1NDNkNjNiNDMzMDhlZWQwYzNfcGRUZjJzV09XMmJuQjJjWWJDNW90a01YNkRRamFuc1ZfVG9rZW46UEpYcmJzUFRLb1l6MGh4ZEVXR2NNckpCbkpkXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTBlOGEzZGY1Y2UzZGVmZjQzYTk0NTk0MjFjYzM3ODRfTHJTd2o5Z3pzMWtUYTZMZkJQUjhUakd4RUY4QmFyTFhfVG9rZW46UEpYcmJzUFRLb1l6MGh4ZEVXR2NNckpCbkpkXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
 1. 点击生成
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MWU3MTgwNmY0NTRhYTVmYTcxZWQ3ZjA4ZTNmN2ViNTFfQnEzZ2x2RWllRmtEd3BhejM3NjlXcXVBZlo5TE5OUmJfVG9rZW46VXhXaWJJNmlrb2hPY1N4R0hKOGNJSGwyblhmXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTBkMDJjOWM1YWM3OGRkM2I2ZTk4OTJkYjk1ZmFkMjlfWDRUMHZTNnEwU3hIcVBoT3NXMmgzcmtCRElBb2pQcmdfVG9rZW46VXhXaWJJNmlrb2hPY1N4R0hKOGNJSGwyblhmXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
 1. 生成结束点击一键生成PPT
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=OTU1NmY5YmQzNTZkZmVlMTRkNjk1N2YxOWM4NmVkYTFfMm1sZWxXZlFnRlFhOWpBendHalJEeDVyQXZ1Rjl3YWVfVG9rZW46R2dBbWJCSVhxb25PQk94VWlyeWNkd2VObmpiXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MGM3MmI4Zjc1N2RjMWU2YmUyZGVmOGI1MWVlY2NlZDJfUHR6d05kY0o3dUh3ZlA2SFVMcXo3QXp3MWVOanhhRzJfVG9rZW46R2dBbWJCSVhxb25PQk94VWlyeWNkd2VObmpiXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
 1. 选择你需要ppt的模版
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YzVmMDBkZTBhM2E0MmNjZjkwZTNiMzE1M2Q2NTVlODlfczJwRm45R3MwZlRwRlZySTVvdlloVkJjSVAyM3VQNUxfVG9rZW46RGtPTGJkZmJlb3pmR3N4cFdsemNhSVZVbkJmXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NDQ4ZDYxMDAxZmIwYjI0OGUwNzQwNDAwOGRhM2VjZTNfam51aEg1SXB3aGZlSmtYY0tWODNLV3pJN2o3dndjUFdfVG9rZW46RGtPTGJkZmJlb3pmR3N4cFdsemNhSVZVbkJmXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
 1. 然后PPT就会自动生成中
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2U2M2VlYzFhMDY3MGFhY2Q2ZmVjNmEzNGM1MTk1NjFfbDg0OVhZbnh3QUlNbHVteTZJbGJaUjIzRjliNWwzVnJfVG9rZW46UFpISmJzSWpVb1U0bkt4SWJnT2NFc2kxbkFkXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MDdmMzcyZGQ3OTVmNTRlZmJjMjYwNmI5MzQ5YThmMGZfcHBaWWVjM1hlWnhwanhLOWF1T1RCWDdoMEpsZjNDMlJfVG9rZW46UFpISmJzSWpVb1U0bkt4SWJnT2NFc2kxbkFkXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
 1. 对PPT可以根据自己的理解进行修改或者上传自己的数据
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjI1NWRmYmE5NWQ2ZTVmYTZmNGY3MDZlOWE2NzcwN2RfMVJWRmhyOWlMbEZ1TGh0NlpERHpEdHhyQnRkS1pHYWlfVG9rZW46RnFmb2JBa2FDb01KZFV4Vk54TGNES2MwbnhlXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NjNhYTkxOTE3YzI3YzVlNmViMzQxNmRhZjQ3NzhhYmRfZDZVUVJyWng4enpyVUE5ZTNyc1hwNlVoTHFtOFI4bnZfVG9rZW46RnFmb2JBa2FDb01KZFV4Vk54TGNES2MwbnhlXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YzU3OTg0ODA3MWJmNzMyMmFiY2Q2MjBjZTRmMDZkMDNfekNmZVFCNnRGR1V6S0NCRlpTOTZGTHpoZUV2NjluU0VfVG9rZW46VGhvdWJPMDdib01ldXR4bjdJa2NveldDbnRmXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NWNkNGU2M2Y4ZjFlYzdiYjRjYTI3YThiYTZkYjcyZTJfYlhORlJxeU8xWHZYaXZXbXRRc2EzYkN1ZTJKNW9IWGFfVG9rZW46VGhvdWJPMDdib01ldXR4bjdJa2NveldDbnRmXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
 1. 最后导出PPT即可，这个是可以对PPT设置。
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MDk0ZWFjNTRkMDJjNjg0ZDRiODZkY2UwNGNkZGEzZTVfa3ZGeDQ0MzY1a0d6Zll4dm94MXZLQk0xaklPNnhWeFhfVG9rZW46TnprSGJiYzEwb0ZEdkZ4b3o5U2N0WWNSblJjXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NmZmMDFmNjU4NDI3ZTRhNDRiMDY2ZTUxNDkxZDM3ZThfQUpSR0JMQTNUWXNBSmZzb1l3ZEo2OGZQU0JoeGU3eWNfVG9rZW46TnprSGJiYzEwb0ZEdkZ4b3o5U2N0WWNSblJjXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTljMTliMmRhMmFlZGUxYTFlODYyYTNjYjQyNWE0NWFfRzhqVEJqWlRxT0hrclpySkNkZVpqSllnTXFRUENXbVhfVG9rZW46RDViMmJnTVpDb0o1UDV4WjJIbmNjeUlxblZlXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MTA2ODk3YzZiMGJlYWU1YzQ2YzMxYzAyMThmYzQ2ODFfVUhkRmNkbkc2aWY4MDlPdVlFMkRheVlFZ0k3SlhmbklfVG9rZW46RDViMmJnTVpDb0o1UDV4WjJIbmNjeUlxblZlXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
 ## 二、复杂的操作
 
@@ -176,9 +176,9 @@ permalink: /ai/cd4eeyut/
 
 ### 2、输出的结果
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=OTAxZWQ2ZDhlODUxYTdmMGUyMmMyNmRlNDE1YWMxODVfZFZNdEFOaURvaFpTODV3YVpMWFg5NXFwVlpCNXBZbkJfVG9rZW46VjJuMmJVU0hkb2V2UnN4bFFvNmNhUzhpbnpmXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YTE5MjljZGY1ZjBjNjk1MWVhOGI0MTcwZWNmOTlhNTZfSzdHMVhHRU5tTkplTUJNRnd1Sm5uNU8zc2lIUDRhZTlfVG9rZW46VjJuMmJVU0hkb2V2UnN4bFFvNmNhUzhpbnpmXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ODNjMjE1ZWEyMDk5NzEwMWNiYmIxNWFiOWZkMGMyNjlfSFlIOVJlZHY5QlhZS00zT3JjUmc1bFJZQWE5S0VmQmtfVG9rZW46RlIwc2JqMDRSb3dLaDN4Um4zWGNVVFdhbmloXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MzIxMjk1OWU2OTg5MmRjZDQwM2VmMGY4MmJkNDU3OGNfaUcxM0NoWTJaNENRMjdTUEhuc1pNTjEwZ0pHUDRmRG9fVG9rZW46RlIwc2JqMDRSb3dLaDN4Um4zWGNVVFdhbmloXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
 ### 3、给出行业
 
@@ -207,7 +207,7 @@ permalink: /ai/cd4eeyut/
 
 #### 2、【产业关系图谱】
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=M2Y2ZDc4ODVlZGUyYmNmNWUzMDI1ZjljNDk2NzFkZGNfR0FPVjJNR1FBeXBVZjQzSVNBVXJmSlNXQlQzR1VIVVNfVG9rZW46U3hPWGJGbFdQb1RuR1J4MUdhdmNNRmZGbkl2XzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MDc1NzVmNzJlZDE4MGRkNzg3OTc2NDc1MmE5N2Q1YzBfWVNsMVRLekpxSTBDc09DZ1g1QmFTQlM3anFYeXljeUVfVG9rZW46U3hPWGJGbFdQb1RuR1J4MUdhdmNNRmZGbkl2XzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
 #### 3、【PPT大纲】
 
@@ -294,7 +294,7 @@ permalink: /ai/cd4eeyut/
 产业关系图谱用mermaid格式输出
 ```
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MjBjZjA0NzI2N2NhYWQyMDdjYjdjNWFkNTFhNGE0NjdfdkJtdEc4YTlGYUw0N2Q3TDNSYXVwNTd5cFpEcko4WHRfVG9rZW46VnhBOWJOUEdNb21qRGl4UDhmbmMxN1JTbmlnXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=M2ZhOTU1OTBmZTgxODUwMzgyMWZlMjhkZWMyN2M3ZDVfQ1l4ZktUZGVwUGF4RFJzMm5lMG9VbE1WVlVwOVpWMW9fVG9rZW46VnhBOWJOUEdNb21qRGl4UDhmbmMxN1JTbmlnXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
 ```Markdown
 graph TD
@@ -340,6 +340,6 @@ graph TD
 
 把上面的代码放入到 draw.io或者https://www.mermaidchart.com/ 中
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YzhlZjY3MGQ5NTBhODVjMzAzZGM5N2VkMjI5MmMzZThfOUFCc2FpeHBTcFk3MVA2ZFg0aXRpYWE1NXJkc1lvUFVfVG9rZW46RXNYMGJqYU5yb3I5TUp4NzRBNGNCMFZmbk1lXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NTE3OGRmNGVlYjVkNzJkODFlYzJmOTQwZTU1ZDQ0NDdfejI0SzZCWmt0QjRzYjMxMmlaQ2hpaHFqTVNnT2lzMHdfVG9rZW46RXNYMGJqYU5yb3I5TUp4NzRBNGNCMFZmbk1lXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NGE3YzBjZTgwMmYwYTUxYTU1ZjI0M2UyZGY5ZDIzMzNfTVJsV0p4MUx4cnZJQk81ckxNaXVFaTh3VGNyazBlcTVfVG9rZW46QklQdWJ3R2Zyb1gwYlV4VlNRTGNMekJibmxkXzE3NTY2ODk4NjI6MTc1NjY5MzQ2Ml9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=OWM1NWQ2N2IxMDdkNGY2NmJhOGM5OTJhM2EzMTkyNjJfcmZueHl6cmF2bWdZYldSVFRpQTlFUXJoV0R2MnI1bk5fVG9rZW46QklQdWJ3R2Zyb1gwYlV4VlNRTGNMekJibmxkXzE3NTY3MTQ1Mzg6MTc1NjcxODEzOF9WNA)

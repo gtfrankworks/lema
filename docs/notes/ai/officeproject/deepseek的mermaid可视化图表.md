@@ -5,11 +5,11 @@ permalink: /ai/officeproject/em6jp88l/
 ---
 ## 一、打开deepseek
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NzM4NDRlN2ZiMjVhMDNhNzBlNDNiNmY3ZjZkYTA3ZjNfT3NJNnBEUmZzZXg4cGhLbkRHQmIzWEZLbk44RkVFQzZfVG9rZW46Wjk1SWJoWWQzb3o0SXF4dnRvbGNEdmFCbkZiXzE3NTY2OTEzNDg6MTc1NjY5NDk0OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YTQ3Y2Y1OWNkNzdlMThkYjEyNDVjZjRjNTlkNmI0OTFfS001dW1mZFl4UlNJd1hOSWx0Zk9xdWlzcXdzQXVpZXZfVG9rZW46Wjk1SWJoWWQzb3o0SXF4dnRvbGNEdmFCbkZiXzE3NTY3MTU1OTY6MTc1NjcxOTE5Nl9WNA)
 
 ## 二、上传需要解析的文件
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MDViNmNjNDk5NGQwM2ZiNjFiZWMyYTEzMjNmYzY0MDdfaEdtdmJKaVdudU5XbXNoY3lpU04xbUZyTlh2Z2NXcFpfVG9rZW46Q040amJFVm45bzZDMWR4YnRlOWNrWU91bjZkXzE3NTY2OTEzNDg6MTc1NjY5NDk0OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MmRjNjQxMTAzMGJhMjA2Yjg4YzEzOGJkODIzNTk1NzhfNzRDcm05OFNvRUQ5V3E1MEEzVjZ5QXZxSk1rNGtZQnhfVG9rZW46Q040amJFVm45bzZDMWR4YnRlOWNrWU91bjZkXzE3NTY3MTU1OTY6MTc1NjcxOTE5Nl9WNA)
 
 ## 三、输入提示词
 
@@ -19,9 +19,9 @@ permalink: /ai/officeproject/em6jp88l/
 
 ## 四、deepseek在思考生成中
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTgxYWM0YjVhODI2ZjcyOWEzNWVjMWYwNWQ3MWVjNDJfbFVhRlh0aEdCang0a2RodkNXZnQ5ZWdnYVpWTDJibHNfVG9rZW46Smp4MWJ1ZFNIb1d3cHR4VXZVYWNCWnNOblJkXzE3NTY2OTEzNDg6MTc1NjY5NDk0OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NDk0ZjIzZTgzN2M0YzY4YjY4N2Y3YTA2YWYyMTg1MTlfYW5ackhWeXhoRk1WblJsOGE2NXVkSkFDM250SmViV1hfVG9rZW46Smp4MWJ1ZFNIb1d3cHR4VXZVYWNCWnNOblJkXzE3NTY3MTU1OTY6MTc1NjcxOTE5Nl9WNA)
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NjYxMWVjYzBhMzNiNTMwZjNjZDM1M2FmM2FmNTRhNzRfaE44YWpCaUlrU3pLa0pnVGtzd2RSUTN4MFRWQVFWZHJfVG9rZW46SWVwOGIwSmpKbzhYZTB4eHZHOGNUbUw2blFlXzE3NTY2OTEzNDg6MTc1NjY5NDk0OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NmZhYzc0MDY0NGYwYmU4YTk5MzY3NmIxNzIzYWY5MzBfN3B1aHRJNGh6a3NidU1BSkFSbXZpOXhCSXltdkV1bXdfVG9rZW46SWVwOGIwSmpKbzhYZTB4eHZHOGNUbUw2blFlXzE3NTY3MTU1OTY6MTc1NjcxOTE5Nl9WNA)
 
 ## 五、继续编写提示词符合mermaid的语法
 
@@ -108,20 +108,20 @@ mindmap
 
 1. https://www.mermaidchart.com/
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmM3OWYzZjE5NWRlMzc3NjMzMzE2YzIzZTFlZjhhYmFfbnlxUjVDSGpqaGs0ZjA3bVZIYlpWRGhiWnF3NWZiS2xfVG9rZW46WWNIU2JzM0sxb0xreUZ4eDQwSWNZcXZ2bkJlXzE3NTY2OTEzNDg6MTc1NjY5NDk0OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MTRhMTg0MzVhODM4ZWUyYjI0NTdjY2I1YzgyMTkyODZfQzZkU1lmRnFYNFhabDNxVjM1VmNhNTFFeHVBVkUzcDZfVG9rZW46WWNIU2JzM0sxb0xreUZ4eDQwSWNZcXZ2bkJlXzE3NTY3MTU1OTY6MTc1NjcxOTE5Nl9WNA)
 
 1. https://mermaid.live/edit#pako:eNpVkMFugzAMhl_F8mmTygtwmLTC1kunVlpPgx4sMCQqiaMQVFXAuy-ANm0-2f4__7L-ESupGVNsOrlXinyAS15aiPVaZMrrPhjqr5AkL9OBAxix_Jhg_3QQ6JU4p237vPH7BYJsPC4YQ1Da3uZNytb7k-UJ8uJILoi7_lUud5ngrdBnFe3_K8pzvHovGkobSirykJFfEdyhYW9I1_H9cdmUGBQbLjGNbc0NDV0osbRzRGkI8vmwFabBD7xDL0OrMHp2fZwGV1PgXFPryfwgjuyXiPmFuNZB_MeW1xrb_A2TWGez
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MmJkMzUzY2E5Yzg0MjZiOWY1ZmU0YzdkM2Y5ZjIyYTNfaVN6bUJRUWFEemlyYVNEZjNrMWp2NnVTQlNlc1pNWk9fVG9rZW46S0lkc2JTT01ibzlNbGh4dVY0eGNsMkhHbmZlXzE3NTY2OTEzNDg6MTc1NjY5NDk0OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MmEzN2Q2NjRiY2M4Y2YwYjBjYTQ0Y2YwYzgxMjE3ZmFfVzNMR2REOGxFNkRERXZwRmZZWTdmbHZaSFpBN0dsRXJfVG9rZW46S0lkc2JTT01ibzlNbGh4dVY0eGNsMkhHbmZlXzE3NTY3MTU1OTY6MTc1NjcxOTE5Nl9WNA)
 
 1. 在code输入刚才生成的内容
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=YjZjZjljMzUwY2Q2MzQwNDU1YTZjMWUyZGFkN2YyZTlfZWFFT015b1ZSaHVmalJBRWE4TEhwMWlia2dzYkNDVDdfVG9rZW46VkZjM2I2Tlpvb25BTDZ4YW1uUmNSWmJpbm5iXzE3NTY2OTEzNDg6MTc1NjY5NDk0OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MTRlNjg4MDI5NTVkMDdjZjA1Yjc1ODNiMTQwY2Y1Y2VfTTZET2t1Njlya21QYnZPOEpRbVlDa0laMmZmSGNEUW5fVG9rZW46VkZjM2I2Tlpvb25BTDZ4YW1uUmNSWmJpbm5iXzE3NTY3MTU1OTY6MTc1NjcxOTE5Nl9WNA)
 
 1. 导出
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MTUzMDk4ODFiZDY5YzY1NTNjMjM0ZGQwNjNiOWZmNzRfSXRMd3lrUTUyb1ZzaG1VZ00yUlVGek94c3QwY0t4OHJfVG9rZW46Wk1pdmJaWGRxb1kxZ2h4blpXVGNOV0xzbmVjXzE3NTY2OTEzNDg6MTc1NjY5NDk0OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=OGNmMjUzMzdhN2YzMjIzYmZiMGQ5ZWFmYjE3MTM3YWNfa05mMm9ldEVna1k4WXJndWJXWVU0QWRZMDB4dmVzSUJfVG9rZW46Wk1pdmJaWGRxb1kxZ2h4blpXVGNOV0xzbmVjXzE3NTY3MTU1OTY6MTc1NjcxOTE5Nl9WNA)
 
 ## 7、可以进行注册然后生成图
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NGU2MTIxMDQyNzkwZDRiY2M3ZmQ5MjE2NWJhMWFlNWFfVFlWRkJha3h0TWIwU3MzTWZJZUFBdVdnd2JRTEo4MWlfVG9rZW46TVY5dmJPMFlpb2NHUkp4ajRGS2NhcmdubmloXzE3NTY2OTEzNDg6MTc1NjY5NDk0OF9WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NjJlMjdlNDc2MWFmMTU2OTcwOWFkYWU1ZWQ4NGZiMmZfM3gzQkNwWlRwUkxxRXVlZ3FlcVhpVllvZ3lKd1IwZjVfVG9rZW46TVY5dmJPMFlpb2NHUkp4ajRGS2NhcmdubmloXzE3NTY3MTU1OTY6MTc1NjcxOTE5Nl9WNA)

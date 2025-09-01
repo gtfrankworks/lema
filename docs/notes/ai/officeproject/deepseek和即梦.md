@@ -7,7 +7,7 @@ permalink: /ai/officeproject/iglpynw8/
 
 1. 打开官网 不用选择联网
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTcwOTNlOTI1YTg5YTRjNTA3YmVkMGI0MWViNTMwODJfMEJvZUFyS2l6MHlDdTdsdmtjQWZoZG1NVk1ESnRScTdfVG9rZW46SkQyQmIxUlBJb3p2Tmh4UmlpQ2NGY2ZEbkFoXzE3NTY2OTA5MTM6MTc1NjY5NDUxM19WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTgxOGVjYWZlMDQyNDI3OGIyZjc5NmZkZDI1ZWExZDNfbzRlVkVOcHhXczY4Q1RKVklReENXdDZ3c1JDdmg2bW5fVG9rZW46SkQyQmIxUlBJb3p2Tmh4UmlpQ2NGY2ZEbkFoXzE3NTY3MTUzMjU6MTc1NjcxODkyNV9WNA)
 
 1. 输入提示词
 
@@ -39,18 +39,18 @@ permalink: /ai/officeproject/iglpynw8/
 
 1. 打开即梦的官网【https://jimeng.jianying.com/ai-tool/home/】
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWM1MTMyMGFlZmMwNWUxNTEyMDFhMGNlYTVlMzNiMzJfT1hxb2M5Q0VPV0NxNDU5VWVFdGJObHRWRkRxakIwV1RfVG9rZW46RVBlVmJscWlOb0o1Yjl4cGNkamM4d295bndkXzE3NTY2OTA5MTM6MTc1NjY5NDUxM19WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MjYzY2YwODI3ZTc0NTA3ZjU2YzhjZmQyOWUwNzExYjhfcEI4Vk5ZT0FhekFLRlJqWHplckxyWmR2eWJ5aGxJZ1pfVG9rZW46RVBlVmJscWlOb0o1Yjl4cGNkamM4d295bndkXzE3NTY3MTUzMjU6MTc1NjcxODkyNV9WNA)
 
 1. 选择视频生成
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MzNhYTBhZDEzYmZkN2JlM2ZhZTFlNDM1NDNkZjYzNWRfcXZDem83UkpIelFTdmsxNmQ0RU9VWUVMQnRVNVpoT1pfVG9rZW46WnhGemJDU0hBb21oeXV4cW1jeWNjZDFObnhnXzE3NTY2OTA5MTM6MTc1NjY5NDUxM19WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MGZmODdmMzk3MDUyZDJkYzk1YjMxMGU3MjM1YzM2OWRfT3VPbWZyejdjV1JBZG1nNTNMRkJxQkE5TXRvcGkxZldfVG9rZW46WnhGemJDU0hBb21oeXV4cW1jeWNjZDFObnhnXzE3NTY3MTUzMjU6MTc1NjcxODkyNV9WNA)
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2RhNWJjMDE2Y2I2Yjk5N2VjOTU4M2YxMDRmOWFiNjFfeHlaNm9UMDZvc1diMXI1SkxGTUlhazY1bUJHU3RhNXdfVG9rZW46WWROcWJvemtJb01PTUp4a2pQOGNWWFlMbkdoXzE3NTY2OTA5MTM6MTc1NjY5NDUxM19WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MTUxYjU4MmEyNmU5M2E1NTBlMjUxYTkzMzk0NDc1MDdfTGFZeXpINlZZOGdzR0Fncm1ndnl5Z1YyZmdVUmw3RkhfVG9rZW46WWROcWJvemtJb01PTUp4a2pQOGNWWFlMbkdoXzE3NTY3MTUzMjU6MTc1NjcxODkyNV9WNA)
 
 1. 输入刚才deepseek生成的提示词，视频开始生成
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=NWJkMmU1Njk5MTE5NTE4MGUyMjMyOTExOTc2OTg4MDJfR3RkeFp3VWdnUWJHaTZhUVBHd2dJQkxMcVRWdDR4MlBfVG9rZW46SWZoT2JRYjJ2b001Yjh4RUtxZGNubVdtblpCXzE3NTY2OTA5MTM6MTc1NjY5NDUxM19WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=OThmNzVmNDMwNmYwOTVlMGEzNGVmZTNiMjNhMjUwMTZfbThNb1EyQjVUNzJhTE5VRGFtanNPS0JCRkx4U1lLVDdfVG9rZW46SWZoT2JRYjJ2b001Yjh4RUtxZGNubVdtblpCXzE3NTY3MTUzMjU6MTc1NjcxODkyNV9WNA)
 
 1. 视频生成
 
-![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MmJjYmRhZmNkZTM2ZDU3MjZmYjgwZGQ3MDYyNzc4NGJfVWNIUmpyV25OMm14c0hpUVZlS3RFb2ZvY3d4MnNVWHZfVG9rZW46WTZLRWJBZ1Zlb0sxZUp4YmRoR2NFV0lKbkVlXzE3NTY2OTA5MTM6MTc1NjY5NDUxM19WNA)
+![img](https://pimpfzadssc.feishu.cn/space/api/box/stream/download/asynccode/?code=MDk5ZDNlMzllYzIzZDVjN2E4NTQ4YTMxZWY2OWQzOTRfY01MdGQwTUhSOVZiRzlkaFpyQXZBYWdibVpCWXpYTk5fVG9rZW46WTZLRWJBZ1Zlb0sxZUp4YmRoR2NFV0lKbkVlXzE3NTY3MTUzMjU6MTc1NjcxODkyNV9WNA)
